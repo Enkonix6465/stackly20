@@ -3,143 +3,614 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - AI Tools & Solutions</title>
+    <title>Stackly - Finance and accounting Services</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
+<div id="loader">
+    <div class="spinner"></div>
+</div>
 
+<div id="content" style="display:none;"></div>
 
 
     <!-- Sticky Header -->
-   <header class="header">
+  <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Budgeting & Forecasting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Audit & Compliance</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting  </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">+
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
+      </div>
+    </div>
   </div>
-</div>
-  </div>
-</header>
+</header> 
 
-<!-- ✅ Script -->
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/7681381/7681381-hd_1920_1080_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero.title">Modern Accounting Trends</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ai-hero">
+  <div class="container">
+    <h1 data-i18n="section2.heading">Modern Accounting Trends</h1>
+    <p style="text-align: justify;" data-i18n="section2.paragraph">
+      Shaping the future of finance with automation, cloud solutions, and data-driven insights.
+
+      Automation is revolutionizing financial operations by reducing manual effort, improving accuracy, and accelerating decision-making. From automated reporting and compliance checks to AI-powered forecasting, businesses can streamline their processes and focus more on strategic growth rather than repetitive tasks.
+
+      Cloud solutions are enabling real-time collaboration, scalability, and secure access to financial data from anywhere in the world. By leveraging cloud technology, organizations gain flexibility, cost efficiency, and the ability to adopt innovative tools seamlessly. When combined with data-driven insights, these solutions empower leaders to make informed decisions, predict trends, and unlock new opportunities for sustainable financial growth.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="ai-intro">
+  <div class="container">
+    <h2 data-i18n="section3.heading">Introduction</h2>
+    <p data-i18n="section3.para1">
+      The field of accounting is rapidly evolving with the adoption of modern technologies. 
+      Automation, AI, and cloud-based platforms are streamlining bookkeeping, reporting, 
+      and compliance like never before.
+    </p>
+    <p data-i18n="section3.para2">
+      Businesses are embracing real-time financial dashboards, smarter auditing tools, 
+      and digital tax solutions to improve accuracy, efficiency, and decision-making. 
+      These trends are transforming accounting into a strategic driver of business growth.
+
+      Moreover, the integration of advanced analytics allows organizations to forecast trends, identify risks, and uncover growth opportunities with greater precision. Accountants are no longer limited to recording transactions—they are becoming key advisors who help shape long-term strategies through data-driven insights.
+    </p>
+    <p data-i18n="section3.para3">
+      At the same time, regulatory frameworks are evolving alongside technology. With governments adopting e-filing systems, digital tax policies, and stricter compliance requirements, businesses must remain proactive. This shift highlights the importance of combining innovation with governance to ensure accuracy, transparency, and sustainable financial practices.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="ai-usecases">
+  <div class="container">
+    <h2 data-i18n="section4.heading">Key Modern Accounting Trends</h2>
+    <div class="use-grid">
+      <div class="use-card">
+        <h3 data-i18n="section4.card1.title">☁️ Cloud Accounting</h3>
+        <p data-i18n="section4.card1.text">Businesses are shifting to cloud-based platforms for real-time access, collaboration, and secure data storage.</p>
+      </div>
+      <div class="use-card">
+        <h3 data-i18n="section4.card2.title">🤖 Automation & AI</h3>
+        <p data-i18n="section4.card2.text">Automation tools streamline bookkeeping, invoicing, and reconciliation, reducing manual effort and errors.</p>
+      </div>
+      <div class="use-card">
+        <h3 data-i18n="section4.card3.title">📊 Data-Driven Insights</h3>
+        <p data-i18n="section4.card3.text">Advanced analytics help organizations turn financial data into actionable insights for smarter decisions.</p>
+      </div>
+      <div class="use-card">
+        <h3 data-i18n="section4.card4.title">🔒 Compliance & Security</h3>
+        <p data-i18n="section4.card4.text">Modern solutions emphasize regulatory compliance and enhanced cybersecurity to protect sensitive financial data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="ai-challenges">
+  <div class="container">
+    <div class="challenge-content">
+      <h2 data-i18n="section5.heading">Challenges in Modern Accounting</h2>
+      <p data-i18n="section5.para1">
+        The evolution of accounting practices brings both opportunities and challenges. 
+        Businesses face issues such as adapting to new technologies, managing compliance with 
+        ever-changing regulations, and maintaining financial transparency.
+      </p>
+      <p data-i18n="section5.para2">
+        Additionally, ensuring data security, protecting against cyber threats, and balancing automation 
+        with human judgment remain critical concerns in the modern accounting landscape.
+      </p>
+    </div>
+    <div class="challenge-image">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop" data-i18n="section5.imageAlt" alt="Modern Accounting Challenges">
+    </div>
+  </div>
+</section>
+
+<!-- Section : 6 -->
+<section class="ai-future">
+  <div class="container">
+    <h2 data-i18n="section6.heading">The Future of Modern Accounting</h2>
+    <p data-i18n="section6.para1">
+      The future of accounting is being shaped by automation, cloud platforms, and AI-powered tools. 
+      These innovations are streamlining repetitive tasks, improving accuracy, and giving accountants 
+      more time to focus on strategic decision-making. 
+    </p>
+    <p data-i18n="section6.para2">
+      Modern accounting will rely heavily on real-time financial insights, advanced analytics, and 
+      integration with business intelligence platforms. Companies adopting these trends are already 
+      seeing better forecasting and stronger financial control.
+    </p>
+    <p data-i18n="section6.para3">
+      As digital transformation accelerates, accountants will need to balance technology with 
+      professional judgment, ensuring compliance, ethical practices, and trust in financial reporting. 
+      The future belongs to firms that embrace innovation while maintaining transparency and accountability.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="section7.heading">Get In Touch With Our Accounting Experts</h2>
+      <p data-i18n="section7.paragraph">Looking to streamline your finances? Contact us today for expert guidance and tailored accounting solutions.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="section7.button">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Bookkeeping Services",
+    "service_2": "Tax Preparation & Filing",
+    "service_3": "Financial Reporting",
+    "service_4": "Payroll Management",
+    "service_5": "Budgeting & Forecasting",
+    "service_6": "Audit & Compliance",
+    "service6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Tax Planning",
+    "blog_2": "Financial Growth Strategies",
+    "blog_3": "Modern Accounting Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Bookkeeping Services",
+    "footer_service2": "Tax Preparation & Filing",
+    "footer_service3": "Financial Reporting",
+    "footer_service4": "Payroll Management",
+    "footer_service5": "Budgeting & Forecasting",
+    "footer_service6": "Audit & Compliance",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    "hero.title": "Modern Accounting Trends",
+
+    "section2.heading": "Modern Accounting Trends",
+    "section2.paragraph": "Shaping the future of finance with automation, cloud solutions, and data-driven insights.\n\nAutomation is revolutionizing financial operations by reducing manual effort, improving accuracy, and accelerating decision-making. From automated reporting and compliance checks to AI-powered forecasting, businesses can streamline their processes and focus more on strategic growth rather than repetitive tasks.\n\nCloud solutions are enabling real-time collaboration, scalability, and secure access to financial data from anywhere in the world. By leveraging cloud technology, organizations gain flexibility, cost efficiency, and the ability to adopt innovative tools seamlessly. When combined with data-driven insights, these solutions empower leaders to make informed decisions, predict trends, and unlock new opportunities for sustainable financial growth.",
+
+    "section3.heading": "Introduction",
+    "section3.para1": "The field of accounting is rapidly evolving with the adoption of modern technologies. Automation, AI, and cloud-based platforms are streamlining bookkeeping, reporting, and compliance like never before.",
+    "section3.para2": "Businesses are embracing real-time financial dashboards, smarter auditing tools, and digital tax solutions to improve accuracy, efficiency, and decision-making. These trends are transforming accounting into a strategic driver of business growth.\n\nMoreover, the integration of advanced analytics allows organizations to forecast trends, identify risks, and uncover growth opportunities with greater precision. Accountants are no longer limited to recording transactions—they are becoming key advisors who help shape long-term strategies through data-driven insights.",
+    "section3.para3": "At the same time, regulatory frameworks are evolving alongside technology. With governments adopting e-filing systems, digital tax policies, and stricter compliance requirements, businesses must remain proactive. This shift highlights the importance of combining innovation with governance to ensure accuracy, transparency, and sustainable financial practices.",
+
+    "section4.heading": "Key Modern Accounting Trends",
+    "section4.card1.title": "☁️ Cloud Accounting",
+    "section4.card1.text": "Businesses are shifting to cloud-based platforms for real-time access, collaboration, and secure data storage.",
+    "section4.card2.title": "🤖 Automation & AI",
+    "section4.card2.text": "Automation tools streamline bookkeeping, invoicing, and reconciliation, reducing manual effort and errors.",
+    "section4.card3.title": "📊 Data-Driven Insights",
+    "section4.card3.text": "Advanced analytics help organizations turn financial data into actionable insights for smarter decisions.",
+    "section4.card4.title": "🔒 Compliance & Security",
+    "section4.card4.text": "Modern solutions emphasize regulatory compliance and enhanced cybersecurity to protect sensitive financial data.",
+
+    "section5.heading": "Challenges in Modern Accounting",
+    "section5.para1": "The evolution of accounting practices brings both opportunities and challenges. Businesses face issues such as adapting to new technologies, managing compliance with ever-changing regulations, and maintaining financial transparency.",
+    "section5.para2": "Additionally, ensuring data security, protecting against cyber threats, and balancing automation with human judgment remain critical concerns in the modern accounting landscape.",
+    "section5.imageAlt": "Modern Accounting Challenges",
+
+    "section6.heading": "The Future of Modern Accounting",
+    "section6.para1": "The future of accounting is being shaped by automation, cloud platforms, and AI-powered tools. These innovations are streamlining repetitive tasks, improving accuracy, and giving accountants more time to focus on strategic decision-making.",
+    "section6.para2": "Modern accounting will rely heavily on real-time financial insights, advanced analytics, and integration with business intelligence platforms. Companies adopting these trends are already seeing better forecasting and stronger financial control.",
+    "section6.para3": "As digital transformation accelerates, accountants will need to balance technology with professional judgment, ensuring compliance, ethical practices, and trust in financial reporting. The future belongs to firms that embrace innovation while maintaining transparency and accountability.",
+
+    "section7.heading": "Get In Touch With Our Accounting Experts",
+    "section7.paragraph": "Looking to streamline your finances? Contact us today for expert guidance and tailored accounting solutions.",
+    "section7.button": "Contact Us",
+              
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "خدمات مسك الدفاتر",
+    "service_2": "إعداد وتقديم الضرائب",
+    "service_3": "التقارير المالية",
+    "service_4": "إدارة الرواتب",
+    "service_5": "إعداد الميزانية والتوقعات",
+    "service_6": "التدقيق والامتثال",
+    "service6": "الدعم القانوني والوثائق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "التخطيط الضريبي الذكي",
+    "blog_2": "استراتيجيات النمو المالي",
+    "blog_3": "اتجاهات المحاسبة الحديثة",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الرئيسية 2",
+    "footer_aboutUs": "معلومات عنا",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "خدمات مسك الدفاتر",
+    "footer_service2": "إعداد وتقديم الضرائب",
+    "footer_service3": "التقارير المالية",
+    "footer_service4": "إدارة الرواتب",
+    "footer_service5": "إعداد الميزانية والتوقعات",
+    "footer_service6": "التدقيق والامتثال",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 شارع ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+    "hero.title": "اتجاهات المحاسبة الحديثة",
+
+    "section2.heading": "اتجاهات المحاسبة الحديثة",
+    "section2.paragraph": "تشكيل مستقبل التمويل من خلال الأتمتة والحلول السحابية والرؤى المستندة إلى البيانات.\n\nتحدث الأتمتة ثورة في العمليات المالية من خلال تقليل الجهد اليدوي وتحسين الدقة وتسريع عملية اتخاذ القرار. بدءًا من التقارير الآلية وفحوصات الامتثال إلى التنبؤ المدعوم بالذكاء الاصطناعي، يمكن للشركات تبسيط عملياتها والتركيز أكثر على النمو الاستراتيجي بدلاً من المهام المتكررة.\n\nتمكّن الحلول السحابية التعاون في الوقت الفعلي، وقابلية التوسع، والوصول الآمن إلى البيانات المالية من أي مكان في العالم. ومن خلال الاستفادة من التكنولوجيا السحابية، تكتسب المؤسسات المرونة والكفاءة من حيث التكلفة والقدرة على اعتماد الأدوات المبتكرة بسلاسة. وعند دمجها مع الرؤى المستندة إلى البيانات، تمنح هذه الحلول القادة القدرة على اتخاذ قرارات مستنيرة، والتنبؤ بالاتجاهات، وفتح فرص جديدة للنمو المالي المستدام.",
+
+    "section3.heading": "مقدمة",
+    "section3.para1": "يتطور مجال المحاسبة بسرعة مع اعتماد التقنيات الحديثة. تعمل الأتمتة والذكاء الاصطناعي والمنصات السحابية على تبسيط مسك الدفاتر وإعداد التقارير والامتثال كما لم يحدث من قبل.",
+    "section3.para2": "تتبنى الشركات لوحات المعلومات المالية في الوقت الفعلي، وأدوات التدقيق الأكثر ذكاءً، والحلول الرقمية للضرائب لتحسين الدقة والكفاءة واتخاذ القرار. تعمل هذه الاتجاهات على تحويل المحاسبة إلى محرك استراتيجي لنمو الأعمال.\n\nعلاوة على ذلك، يسمح دمج التحليلات المتقدمة للمؤسسات بالتنبؤ بالاتجاهات وتحديد المخاطر والكشف عن فرص النمو بدقة أكبر. لم يعد المحاسبون يقتصرون على تسجيل المعاملات – بل أصبحوا مستشارين رئيسيين يساعدون في تشكيل الاستراتيجيات طويلة الأمد من خلال الرؤى المستندة إلى البيانات.",
+    "section3.para3": "في الوقت نفسه، تتطور الأطر التنظيمية جنبًا إلى جنب مع التكنولوجيا. ومع اعتماد الحكومات أنظمة الإيداع الإلكتروني والسياسات الضريبية الرقمية ومتطلبات الامتثال الأكثر صرامة، يجب على الشركات أن تظل استباقية. ويؤكد هذا التحول على أهمية الجمع بين الابتكار والحوكمة لضمان الدقة والشفافية والممارسات المالية المستدامة.",
+
+    "section4.heading": "أهم اتجاهات المحاسبة الحديثة",
+    "section4.card1.title": "☁️ المحاسبة السحابية",
+    "section4.card1.text": "تتحول الشركات إلى منصات قائمة على السحابة للوصول في الوقت الفعلي والتعاون وتخزين البيانات بشكل آمن.",
+    "section4.card2.title": "🤖 الأتمتة والذكاء الاصطناعي",
+    "section4.card2.text": "تعمل أدوات الأتمتة على تبسيط مسك الدفاتر والفواتير والتسويات، مما يقلل من الجهد اليدوي والأخطاء.",
+    "section4.card3.title": "📊 رؤى مستندة إلى البيانات",
+    "section4.card3.text": "تساعد التحليلات المتقدمة المؤسسات على تحويل البيانات المالية إلى رؤى قابلة للتنفيذ لاتخاذ قرارات أكثر ذكاءً.",
+    "section4.card4.title": "🔒 الامتثال والأمان",
+    "section4.card4.text": "تركز الحلول الحديثة على الامتثال التنظيمي وتعزيز الأمن السيبراني لحماية البيانات المالية الحساسة.",
+
+    "section5.heading": "التحديات في المحاسبة الحديثة",
+    "section5.para1": "يجلب تطور ممارسات المحاسبة كلاً من الفرص والتحديات. تواجه الشركات قضايا مثل التكيف مع التقنيات الجديدة، وإدارة الامتثال مع اللوائح المتغيرة باستمرار، والحفاظ على الشفافية المالية.",
+    "section5.para2": "بالإضافة إلى ذلك، تظل ضمان أمان البيانات والحماية من التهديدات الإلكترونية وموازنة الأتمتة مع الحكم البشري من القضايا الحرجة في مشهد المحاسبة الحديث.",
+    "section5.imageAlt": "تحديات المحاسبة الحديثة",
+
+    "section6.heading": "مستقبل المحاسبة الحديثة",
+    "section6.para1": "يتم تشكيل مستقبل المحاسبة من خلال الأتمتة والمنصات السحابية والأدوات المدعومة بالذكاء الاصطناعي. تعمل هذه الابتكارات على تبسيط المهام المتكررة وتحسين الدقة ومنح المحاسبين المزيد من الوقت للتركيز على اتخاذ القرارات الاستراتيجية.",
+    "section6.para2": "ستعتمد المحاسبة الحديثة بشكل كبير على الرؤى المالية في الوقت الفعلي، والتحليلات المتقدمة، والتكامل مع منصات ذكاء الأعمال. ترى الشركات التي تتبنى هذه الاتجاهات بالفعل تنبؤات أفضل وتحكمًا ماليًا أقوى.",
+    "section6.para3": "مع تسارع التحول الرقمي، سيحتاج المحاسبون إلى موازنة التكنولوجيا مع الحكم المهني، مما يضمن الامتثال والممارسات الأخلاقية والثقة في التقارير المالية. المستقبل ينتمي إلى الشركات التي تتبنى الابتكار مع الحفاظ على الشفافية والمساءلة.",
+
+    "section7.heading": "تواصل مع خبراء المحاسبة لدينا",
+    "section7.paragraph": "هل تتطلع إلى تبسيط أمورك المالية؟ اتصل بنا اليوم للحصول على إرشادات الخبراء وحلول المحاسبة المصممة خصيصًا.",
+    "section7.button": "اتصل بنا",
+  
+
+
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספקית מובילה של פתרונות בינה מלאכותית, המסייעת לעסקים לעבור שינוי באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודות",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "שירותי הנהלת חשבונות",
+    "footer_service2": "הכנת והגשת מסים",
+    "footer_service3": "דוחות כספיים",
+    "footer_service4": "ניהול שכר",
+    "footer_service5": "תכנון תקציב ותחזיות",
+    "footer_service6": "ביקורת וציות",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 דרך חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+ 
+    "hero.title": "מגמות חשבונאות מודרניות",
+
+    "section2.heading": "מגמות חשבונאות מודרניות",
+    "section2.paragraph": "עיצוב עתיד הפיננסים באמצעות אוטומציה, פתרונות ענן ותובנות מונחות נתונים.\n\nהאוטומציה מהפכת את הפעילות הפיננסית על ידי הפחתת מאמץ ידני, שיפור הדיוק והאצת קבלת ההחלטות. מדוחות אוטומטיים ובדיקות תאימות ועד תחזיות מבוססות בינה מלאכותית, עסקים יכולים לייעל את תהליכיהם ולהתמקד יותר בצמיחה אסטרטגית במקום במשימות חוזרות.\n\nפתרונות ענן מאפשרים שיתוף פעולה בזמן אמת, מדרגיות וגישה מאובטחת לנתונים פיננסיים מכל מקום בעולם. באמצעות טכנולוגיית הענן, ארגונים זוכים לגמישות, יעילות עלויות ויכולת לאמץ כלים חדשניים בצורה חלקה. כאשר משלבים זאת עם תובנות מונחות נתונים, פתרונות אלה מעניקים למנהיגים יכולת לקבל החלטות מושכלות, לחזות מגמות ולפתוח הזדמנויות חדשות לצמיחה פיננסית בת קיימא.",
+
+    "section3.heading": "הקדמה",
+    "section3.para1": "תחום החשבונאות מתפתח במהירות עם אימוץ טכנולוגיות מודרניות. אוטומציה, בינה מלאכותית ופלטפורמות מבוססות ענן מייעלות הנהלת חשבונות, דיווח וציות כפי שלא היה מעולם.",
+    "section3.para2": "עסקים מאמצים לוחות מחוונים פיננסיים בזמן אמת, כלים חכמים יותר לביקורת ופתרונות מיסוי דיגיטליים לשיפור הדיוק, היעילות וקבלת ההחלטות. מגמות אלו הופכות את החשבונאות למניע אסטרטגי של צמיחת עסקים.\n\nיתרה מכך, שילוב ניתוחים מתקדמים מאפשר לארגונים לחזות מגמות, לזהות סיכונים ולגלות הזדמנויות צמיחה בדיוק רב יותר. רואי החשבון כבר אינם מוגבלים לרישום עסקאות – הם הופכים ליועצים מרכזיים המסייעים בעיצוב אסטרטגיות ארוכות טווח באמצעות תובנות מונחות נתונים.",
+    "section3.para3": "במקביל, מסגרות רגולטוריות מתפתחות לצד הטכנולוגיה. עם ממשלות המאמצות מערכות הגשה אלקטרונית, מדיניות מס דיגיטלית ודרישות תאימות מחמירות יותר, עסקים חייבים להישאר פרואקטיביים. שינוי זה מדגיש את חשיבות השילוב בין חדשנות לממשל כדי להבטיח דיוק, שקיפות ופרקטיקות פיננסיות בנות קיימא.",
+
+    "section4.heading": "מגמות חשבונאות מודרניות מרכזיות",
+    "section4.card1.title": "☁️ חשבונאות ענן",
+    "section4.card1.text": "עסקים עוברים לפלטפורמות מבוססות ענן לצורך גישה בזמן אמת, שיתוף פעולה ואחסון נתונים מאובטח.",
+    "section4.card2.title": "🤖 אוטומציה ובינה מלאכותית",
+    "section4.card2.text": "כלי אוטומציה מייעלים הנהלת חשבונות, הפקת חשבוניות והתאמות, ומפחיתים מאמץ ידני וטעויות.",
+    "section4.card3.title": "📊 תובנות מונחות נתונים",
+    "section4.card3.text": "ניתוחים מתקדמים עוזרים לארגונים להפוך נתונים פיננסיים לתובנות מעשיות לקבלת החלטות חכמות יותר.",
+    "section4.card4.title": "🔒 ציות ואבטחה",
+    "section4.card4.text": "פתרונות מודרניים מדגישים תאימות רגולטורית ואבטחת סייבר משופרת כדי להגן על נתונים פיננסיים רגישים.",
+
+    "section5.heading": "אתגרים בחשבונאות מודרנית",
+    "section5.para1": "התפתחות פרקטיקות החשבונאות מביאה עמה הן הזדמנויות והן אתגרים. עסקים מתמודדים עם נושאים כמו הסתגלות לטכנולוגיות חדשות, ניהול תאימות לתקנות המשתנות ללא הרף ושמירה על שקיפות פיננסית.",
+    "section5.para2": "בנוסף, הבטחת אבטחת נתונים, הגנה מפני איומי סייבר ואיזון בין אוטומציה לשיפוט אנושי נותרות סוגיות קריטיות בנוף החשבונאות המודרני.",
+    "section5.imageAlt": "אתגרים בחשבונאות מודרנית",
+
+    "section6.heading": "עתיד החשבונאות המודרנית",
+    "section6.para1": "עתיד החשבונאות מעוצב על ידי אוטומציה, פלטפורמות ענן וכלים מבוססי בינה מלאכותית. חידושים אלה מייעלים משימות חוזרות, משפרים דיוק ומעניקים לרואי החשבון יותר זמן להתמקד בקבלת החלטות אסטרטגיות.",
+    "section6.para2": "החשבונאות המודרנית תסתמך רבות על תובנות פיננסיות בזמן אמת, ניתוחים מתקדמים ואינטגרציה עם פלטפורמות בינה עסקית. חברות המאמצות מגמות אלה כבר רואות תחזיות טובות יותר ושליטה פיננסית חזקה יותר.",
+    "section6.para3": "עם האצת הטרנספורמציה הדיגיטלית, רואי החשבון יצטרכו לאזן בין טכנולוגיה לשיפוט מקצועי, ולהבטיח תאימות, פרקטיקות אתיות ואמון בדיווח פיננסי. העתיד שייך לחברות שמאמצות חדשנות תוך שמירה על שקיפות ואחריות.",
+
+    "section7.heading": "צור קשר עם מומחי החשבונאות שלנו",
+    "section7.paragraph": "מחפש לייעל את הפיננסים שלך? פנה אלינו היום לקבלת ייעוץ מומחים ופתרונות חשבונאות מותאמים אישית.",
+    "section7.button": "צור קשר"
+
+   
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -155,126 +626,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -295,22 +889,10 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- 🔷 HERO SECTION START video_code  -->
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/7681381/7681381-hd_1920_1080_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in"> AI in Business</h1>
-      
-    </div>
-  </div>
-</section>
+
+<!-- Section : 1 -->
 
 <style>
   /* Hero Section */
@@ -434,88 +1016,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 <!-- 🔷 HERO SECTION END -->
 
 
-<!-- 🌟 Blog 3: AI in Business -->
-<section class="ai-hero">
-  <div class="container">
-    <h1>AI in Business</h1>
-    <p>Transforming industries with automation, intelligence, and data-driven strategies.</p>
-  </div>
-</section>
 
-<!-- 🌟 Section 1: Introduction -->
-<section class="ai-intro">
-  <div class="container">
-    <h2>Introduction</h2>
-    <p>
-      Artificial Intelligence (AI) has become a core driver of digital transformation. 
-      Businesses worldwide are using AI to unlock new opportunities, improve customer 
-      experiences, and optimize operations.
-    </p>
-    <p>
-      From predictive analytics to chatbots, AI is enabling smarter decisions 
-      and driving innovation across all industries.
-    </p>
-  </div>
-</section>
-
-<!-- 🌟 Section 2: Business Use Cases -->
-<section class="ai-usecases">
-  <div class="container">
-    <h2>Key AI Applications in Business</h2>
-    <div class="use-grid">
-      <div class="use-card">
-        <h3>📈 Marketing & Sales</h3>
-        <p>AI enables personalized campaigns, customer insights, and lead scoring for higher conversions.</p>
-      </div>
-      <div class="use-card">
-        <h3>🤖 Customer Support</h3>
-        <p>Chatbots and virtual assistants deliver 24/7 service, reducing costs and improving satisfaction.</p>
-      </div>
-      <div class="use-card">
-        <h3>🏭 Supply Chain</h3>
-        <p>AI predicts demand, optimizes logistics, and reduces inefficiencies in global operations.</p>
-      </div>
-      <div class="use-card">
-        <h3>💼 HR & Recruitment</h3>
-        <p>Smart tools help businesses identify talent, reduce bias, and improve employee engagement.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 3: Challenges -->
-<section class="ai-challenges">
-  <div class="container">
-    <div class="challenge-content">
-      <h2>Challenges & Ethical Considerations</h2>
-      <p>
-        While AI creates opportunities, it also raises challenges. Data privacy, workforce displacement, 
-        and ethical concerns are major areas businesses must address.
-      </p>
-      <p>
-        Building trust requires transparency in AI models, responsible data handling, and fairness in decision-making.
-      </p>
-    </div>
-    <div class="challenge-image">
-      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?w=1200&auto=format&fit=crop" alt="AI Challenges in Business">
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 4: Future Outlook -->
-<section class="ai-future">
-  <div class="container">
-    <h2>The Future of AI in Business</h2>
-    <p>
-      The future of business lies in AI-driven strategies. Companies adopting AI today 
-      are gaining a competitive edge by improving efficiency and unlocking innovation.
-    </p>
-    <p>
-      As AI continues to evolve, businesses that embrace responsible, human-centered AI 
-      will thrive in a more connected and data-driven world.
-    </p>
-  </div>
-</section>
 
 <style>
 /* General */
@@ -581,19 +1082,8 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
 
 
+<!-- Section : 7 -->
 
-
-   
-<!-- Section 7: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Get In Touch With Our AI Experts</h2>
-            <p>Ready to discuss your AI project? Contact us today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
 
 <style>
     .contact-banner {
@@ -693,16 +1183,17 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
 
     <!-- Footer -->
-     <footer class="footer">
+    <!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -713,48 +1204,51 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Bookkeeping Services</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Tax Preparation & Filing</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Financial Reporting</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Payroll Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Budgeting & Forecasting</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Audit & Compliance</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
+
+
+
 
 <style>
 .footer {
@@ -762,6 +1256,14 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -796,7 +1298,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -807,7 +1309,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -823,19 +1325,32 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
 
+</div>
 
     <script src="assets/js/script.js"></script>
 </body>

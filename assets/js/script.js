@@ -163,7 +163,7 @@ function handleLogin(event) {
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('username');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 // Check Authentication
@@ -172,10 +172,10 @@ function checkAuth() {
     const currentPage = window.location.pathname.split('/').pop();
     
     if (currentPage === 'admin-dashboard.html' && !isLoggedIn) {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
     }
     
-    if ((currentPage === 'login.html' || currentPage === '') && isLoggedIn) {
+    if ((currentPage === 'index.html' || currentPage === '') && isLoggedIn) {
         // User is already logged in, they can still access login page
     }
 }
@@ -215,7 +215,7 @@ function handleForgotPassword(event) {
         
         // In a real application, this would be sent via email
         setTimeout(() => {
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }, 2000);
     } else {
         showError(document.getElementById('email'), 'Email not found in our system');
@@ -315,4 +315,10 @@ document.addEventListener('DOMContentLoaded', function() {
             item.classList.add('active');
         }
     });
+});
+// spinner
+
+window.addEventListener("load", function () {
+  document.body.classList.add("loaded");
+  document.getElementById("content").style.display = "block";
 });

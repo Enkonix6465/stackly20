@@ -3,140 +3,765 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Development Services - Stackly</title>
+    <title>Stackly - Finance and accounting Services</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+  <div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
     <!-- Sticky Header -->
-     <!-- Sticky Header -->
-     <header class="header">
+    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Budgeting & Forecasting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Audit & Compliance</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting  </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">+
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
+      </div>
+    </div>
+  </div>
+</header> 
 
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
+<!-- Section : 1 -->
 
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/5743032/5743032-uhd_2732_1440_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="payroll.hero_title">Payroll Management</h1>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- Section : 2 -->
+
+<section class="ai-section">
+    <h1 class="ai-heading" data-i18n="payroll.section2_heading">Payroll Management</h1>
+    <div class="ai-content">
+        <div class="ai-text">
+            <p data-i18n="payroll.section2_paragraph">
+                Streamline your employee payroll with our reliable payroll management services. 
+                From salary processing to tax compliance, we ensure accuracy, timeliness, 
+                and complete transparency, so you can focus on growing your business.
+            </p>
+
+            <!-- Feature Points -->
+            <ul class="hero-features fade-in-up delay-2">
+                <li data-i18n="payroll.feature1"><span>✔</span> Automated salary & wage processing</li>
+                <li data-i18n="payroll.feature2"><span>✔</span> Employee attendance & leave tracking</li>
+                <li data-i18n="payroll.feature3"><span>✔</span> Statutory compliance (PF, ESI, TDS)</li>
+                <li data-i18n="payroll.feature4"><span>✔</span> Payslip generation & distribution</li>
+                <li data-i18n="payroll.feature5"><span>✔</span> Custom payroll reports & analytics</li>
+            </ul>
+
+            <div class="ai-buttons">
+                <a href="services.html" class="btn btn-primary" data-i18n="payroll.btn_explore">Explore Services</a>
+                <a href="contact.html" class="btn btn-primary" data-i18n="payroll.btn_get_started">Get Started</a>
+            </div>
+        </div>
+
+        <div class="ai-image">
+            <img src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg" 
+                 alt="Payroll Management" data-i18n-alt="payroll.img_alt">
+        </div>
+    </div>
+</section>
+
+ <!-- Section : 3 -->
+    
+<section class="advanced-features">
+  <div class="advanced-features-container">
+    <!-- Section Header -->
+    <div class="features-header fade-in-up">
+      <h2 data-i18n="payroll.section3_heading">Payroll Management Solutions</h2>
+      <p data-i18n="payroll.section3_paragraph">
+        Simplify payroll processing with our accurate and reliable payroll management services. 
+        From salary calculations to tax compliance, we ensure your employees are paid on time, 
+        every time, while keeping you compliant with regulations.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="features-cards">
+      <!-- Card 1 -->
+      <div class="feature-box fade-in-up delay-1">
+        <div class="feature-icon">
+          <i class="fas fa-money-check-alt"></i>
+        </div>
+        <h3 data-i18n="payroll.card1_heading">Salary & Wage Processing</h3>
+        <p data-i18n="payroll.card1_paragraph">
+          Automate salary disbursement with accuracy and timeliness. 
+          We handle calculations, deductions, and transfers seamlessly.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-box fade-in-up delay-2">
+        <div class="feature-icon">
+          <i class="fas fa-user-clock"></i>
+        </div>
+        <h3 data-i18n="payroll.card2_heading">Attendance & Leave Integration</h3>
+        <p data-i18n="payroll.card2_paragraph">
+          Link payroll with employee attendance and leave records to 
+          eliminate manual errors and streamline processing.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-box fade-in-up delay-3">
+        <div class="feature-icon">
+          <i class="fas fa-file-invoice-dollar"></i>
+        </div>
+        <h3 data-i18n="payroll.card3_heading">Compliance & Payslips</h3>
+        <p data-i18n="payroll.card3_paragraph">
+          Stay compliant with statutory requirements like PF, ESI, and TDS. 
+          Generate professional payslips and reports instantly.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Section : 4 -->
+
+<section class="development-process">
+  <div class="development-process-container">
+
+    <!-- Top Heading -->
+    <div class="process-header fade-in-up">
+      <h2 data-i18n="payroll.section4_heading">Smart Payroll Management Services</h2>
+      <p data-i18n="payroll.section4_paragraph">
+        Simplify payroll operations with our advanced payroll solutions. 
+        We ensure accurate salary processing, seamless compliance, and 
+        transparent reporting, giving your business efficiency and employees peace of mind.
+      </p>
+    </div>
+
+    <!-- Content Row -->
+    <div class="process-row">
+      <!-- Left Image -->
+      <div class="process-image slide-in-right">
+        <img src="https://i.pinimg.com/1200x/54/f9/ea/54f9ea14bec6245f4430aeaa10d538e8.jpg" 
+             alt="Smart Payroll Management" data-i18n-alt="payroll.section4_img_alt">
+      </div>
+
+      <!-- Right Content -->
+      <div class="process-content fade-in-up delay-1">
+        <!-- Paragraph intro -->
+        <p class="process-intro" data-i18n="payroll.section4_intro">
+          Our payroll services are designed to handle everything from attendance tracking to final payouts. 
+          With automated processes, timely disbursements, and full compliance, we make payroll stress-free for your organization.
+        </p>
+
+        <!-- Steps -->
+        <div class="process-steps">
+          <div class="step"><span class="step-number">01</span><p data-i18n="payroll.step1">Employee Onboarding & Data Setup</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="payroll.step2">Attendance & Leave Synchronization</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="payroll.step3">Accurate Payroll Calculations</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="payroll.step4">Salary Disbursement & Direct Transfers</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="payroll.step5">Tax Filing & Compliance Management</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="payroll.step6">Payslip Delivery & Payroll Reports</p></div>
+        </div>
+      </div>
+    </div>
 
   </div>
-</div>
-  </div>
-</header>
+</section>
 
-<!-- ✅ Script -->
+<!-- Section : 5 -->
+
+
+   <section class="service-showcase">
+  <div class="service-container">
+    <!-- Heading -->
+    <div class="service-header animate-fade-up">
+      <h2 data-i18n="payroll.section5_heading">Payroll Management Services</h2>
+      <p data-i18n="payroll.section5_paragraph">
+        We offer reliable and efficient payroll management solutions that ensure timely salary processing, 
+        compliance with statutory regulations, and complete transparency for both employers and employees.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="service-grid">
+      <div class="service-card animate-slide-up delay-1">
+        <h3 data-i18n="payroll.card5_1_heading">Salary Processing</h3>
+        <p data-i18n="payroll.card5_1_paragraph">Accurate calculation and disbursement of employee salaries, allowances, and bonuses without delays.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-2">
+        <h3 data-i18n="payroll.card5_2_heading">Attendance & Leave Integration</h3>
+        <p data-i18n="payroll.card5_2_paragraph">Seamlessly link attendance and leave records with payroll for error-free salary generation.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-3">
+        <h3 data-i18n="payroll.card5_3_heading">Compliance & Tax Deductions</h3>
+        <p data-i18n="payroll.card5_3_paragraph">Automated deductions for PF, ESI, and TDS, ensuring compliance with government regulations.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-4">
+        <h3 data-i18n="payroll.card5_4_heading">Payslip & Reporting</h3>
+        <p data-i18n="payroll.card5_4_paragraph">Generate detailed payslips and payroll reports that provide clarity and maintain transparency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section : 6 -->  
+
+   <section class="bookkeeping-services">
+  <div class="services-container">
+    <!-- Left Side (Image) -->
+    <div class="services-image animate-slide-in">
+      <img src="https://i.pinimg.com/736x/6e/0a/1d/6e0a1d1c56bd02b5e2b66d30f7e76036.jpg" alt="Bookkeeping Services" data-i18n-alt="payroll.section6_img_alt">
+    </div>
+
+    <!-- Right Side (Content) -->
+        <div class="services-content">
+      <h2 class="animate-fade-up" data-i18n="payroll.section6_heading">Reliable Payroll Management</h2>
+      <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="payroll.section6_paragraph">
+        Our payroll management services simplify salary disbursement, tax compliance, and reporting. 
+        From calculating employee salaries to generating payslips, we ensure accuracy, transparency, 
+        and timely processing so you can focus on your core business operations.
+      </p>
+
+      <!-- Card 1 -->
+      <div class="service-card animate-fade-up delay-2">
+        <h3 data-i18n="payroll.card6_1_heading">Salary & Wage Processing</h3>
+        <p data-i18n="payroll.card6_1_paragraph">Automated and accurate salary calculations, including allowances, overtime, and deductions.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card animate-fade-up delay-3">
+        <h3 data-i18n="payroll.card6_2_heading">Compliance & Payslips</h3>
+        <p data-i18n="payroll.card6_2_paragraph">Ensure statutory compliance with PF, ESI, and TDS while generating clear, professional payslips for employees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+
+<section class="contact-banner section-padding">
+    <div class="container">
+        <div class="contact-banner-content">
+            <h2 data-i18n="payroll.section7_heading">Ready to Simplify Your Payroll?</h2>
+            <p data-i18n="payroll.section7_paragraph">Let’s streamline salary processing, compliance, and reporting with our tailored payroll management solutions.</p>
+            <a href="contact.html" class="btn btn-primary" data-i18n="payroll.section7_btn">Get Started</a>
+        </div>
+    </div>
+</section>
+
+
+
 <script>
-  // Hamburger toggle
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Bookkeeping Services",
+    "service_2": "Tax Preparation & Filing",
+    "service_3": "Financial Reporting",
+    "service_4": "Payroll Management",
+    "service_5": "Budgeting & Forecasting",
+    "service_6": "Audit & Compliance",
+    "service6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Tax Planning",
+    "blog_2": "Financial Growth Strategies",
+    "blog_3": "Modern Accounting Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Bookkeeping Services",
+    "footer_service2": "Tax Preparation & Filing",
+    "footer_service3": "Financial Reporting",
+    "footer_service4": "Payroll Management",
+    "footer_service5": "Budgeting & Forecasting",
+    "footer_service6": "Audit & Compliance",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
+    
+    "payroll.hero_title": "Payroll Management",
+    "payroll.section2_heading": "Payroll Management",
+    "payroll.section2_paragraph": "Streamline your employee payroll with our reliable payroll management services. From salary processing to tax compliance, we ensure accuracy, timeliness, and complete transparency, so you can focus on growing your business.",
+    "payroll.feature1": "Automated salary & wage processing",
+    "payroll.feature2": "Employee attendance & leave tracking",
+    "payroll.feature3": "Statutory compliance (PF, ESI, TDS)",
+    "payroll.feature4": "Payslip generation & distribution",
+    "payroll.feature5": "Custom payroll reports & analytics",
+    "payroll.btn_explore": "Explore Services",
+    "payroll.btn_get_started": "Get Started",
+    "payroll.img_alt": "Payroll Management",
+    "payroll.section3_heading": "Payroll Management Solutions",
+    "payroll.section3_paragraph": "Simplify payroll processing with our accurate and reliable payroll management services. From salary calculations to tax compliance, we ensure your employees are paid on time, every time, while keeping you compliant with regulations.",
+    "payroll.card1_heading": "Salary & Wage Processing",
+    "payroll.card1_paragraph": "Automate salary disbursement with accuracy and timeliness. We handle calculations, deductions, and transfers seamlessly.",
+    "payroll.card2_heading": "Attendance & Leave Integration",
+    "payroll.card2_paragraph": "Link payroll with employee attendance and leave records to eliminate manual errors and streamline processing.",
+    "payroll.card3_heading": "Compliance & Payslips",
+    "payroll.card3_paragraph": "Stay compliant with statutory requirements like PF, ESI, and TDS. Generate professional payslips and reports instantly.",
+    "payroll.section4_heading": "Smart Payroll Management Services",
+    "payroll.section4_paragraph": "Simplify payroll operations with our advanced payroll solutions. We ensure accurate salary processing, seamless compliance, and transparent reporting, giving your business efficiency and employees peace of mind.",
+    "payroll.section4_intro": "Our payroll services are designed to handle everything from attendance tracking to final payouts. With automated processes, timely disbursements, and full compliance, we make payroll stress-free for your organization.",
+    "payroll.step1": "Employee Onboarding & Data Setup",
+    "payroll.step2": "Attendance & Leave Synchronization",
+    "payroll.step3": "Accurate Payroll Calculations",
+    "payroll.step4": "Salary Disbursement & Direct Transfers",
+    "payroll.step5": "Tax Filing & Compliance Management",
+    "payroll.step6": "Payslip Delivery & Payroll Reports",
+    "payroll.section4_img_alt": "Smart Payroll Management",
+    "payroll.section5_heading": "Payroll Management Services",
+    "payroll.section5_paragraph": "We offer reliable and efficient payroll management solutions that ensure timely salary processing, compliance with statutory regulations, and complete transparency for both employers and employees.",
+    "payroll.card5_1_heading": "Salary Processing",
+    "payroll.card5_1_paragraph": "Accurate calculation and disbursement of employee salaries, allowances, and bonuses without delays.",
+    "payroll.card5_2_heading": "Attendance & Leave Integration",
+    "payroll.card5_2_paragraph": "Seamlessly link attendance and leave records with payroll for error-free salary generation.",
+    "payroll.card5_3_heading": "Compliance & Tax Deductions",
+    "payroll.card5_3_paragraph": "Automated deductions for PF, ESI, and TDS, ensuring compliance with government regulations.",
+    "payroll.card5_4_heading": "Payslip & Reporting",
+    "payroll.card5_4_paragraph": "Generate detailed payslips and payroll reports that provide clarity and maintain transparency.",
+    "payroll.section6_heading": "Reliable Payroll Management",
+    "payroll.section6_paragraph": "Our payroll management services simplify salary disbursement, tax compliance, and reporting. From calculating employee salaries to generating payslips, we ensure accuracy, transparency, and timely processing so you can focus on your core business operations.",
+    "payroll.card6_1_heading": "Salary & Wage Processing",
+    "payroll.card6_1_paragraph": "Automated and accurate salary calculations, including allowances, overtime, and deductions.",
+    "payroll.card6_2_heading": "Compliance & Payslips",
+    "payroll.card6_2_paragraph": "Ensure statutory compliance with PF, ESI, and TDS while generating clear, professional payslips for employees.",
+    "payroll.section6_img_alt": "Bookkeeping Services",
+    "payroll.section7_heading": "Ready to Simplify Your Payroll?",
+    "payroll.section7_paragraph": "Let’s streamline salary processing, compliance, and reporting with our tailored payroll management solutions.",
+    "payroll.section7_btn": "Get Started",
+      
+    
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "خدمات مسك الدفاتر",
+    "service_2": "إعداد وتقديم الضرائب",
+    "service_3": "التقارير المالية",
+    "service_4": "إدارة الرواتب",
+    "service_5": "إعداد الميزانية والتوقعات",
+    "service_6": "التدقيق والامتثال",
+    "service6": "الدعم القانوني والوثائق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "التخطيط الضريبي الذكي",
+    "blog_2": "استراتيجيات النمو المالي",
+    "blog_3": "اتجاهات المحاسبة الحديثة",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الرئيسية 2",
+    "footer_aboutUs": "معلومات عنا",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "خدمات مسك الدفاتر",
+    "footer_service2": "إعداد وتقديم الضرائب",
+    "footer_service3": "التقارير المالية",
+    "footer_service4": "إدارة الرواتب",
+    "footer_service5": "إعداد الميزانية والتوقعات",
+    "footer_service6": "التدقيق والامتثال",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 شارع ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+
+    "payroll.hero_title": "إدارة الرواتب",
+    "payroll.section2_heading": "إدارة الرواتب",
+    "payroll.section2_paragraph": "قم بتبسيط إدارة رواتب الموظفين من خلال خدماتنا الموثوقة. من معالجة الرواتب إلى الامتثال الضريبي، نضمن الدقة والسرعة والشفافية التامة، حتى تتمكن من التركيز على نمو عملك.",
+    "payroll.feature1": "معالجة الرواتب والأجور تلقائيًا",
+    "payroll.feature2": "تتبع حضور الموظفين والإجازات",
+    "payroll.feature3": "الامتثال القانوني (PF، ESI، TDS)",
+    "payroll.feature4": "إنشاء وتوزيع قسائم الرواتب",
+    "payroll.feature5": "تقارير وتحليلات الرواتب المخصصة",
+    "payroll.btn_explore": "استكشف الخدمات",
+    "payroll.btn_get_started": "ابدأ الآن",
+    "payroll.img_alt": "إدارة الرواتب",
+    "payroll.section3_heading": "حلول إدارة الرواتب",
+    "payroll.section3_paragraph": "قم بتبسيط معالجة الرواتب من خلال خدماتنا الدقيقة والموثوقة. من حساب الرواتب إلى الامتثال الضريبي، نضمن دفع الرواتب في الوقت المحدد دائمًا، مع الالتزام باللوائح.",
+    "payroll.card1_heading": "معالجة الرواتب والأجور",
+    "payroll.card1_paragraph": "قم بأتمتة صرف الرواتب بدقة وفي الوقت المحدد. نحن نتعامل مع الحسابات والخصومات والتحويلات بسلاسة.",
+    "payroll.card2_heading": "دمج الحضور والإجازات",
+    "payroll.card2_paragraph": "اربط الرواتب بسجلات حضور الموظفين وإجازاتهم للقضاء على الأخطاء اليدوية وتبسيط المعالجة.",
+    "payroll.card3_heading": "الامتثال وقسائم الرواتب",
+    "payroll.card3_paragraph": "التزم بالمتطلبات القانونية مثل PF و ESI و TDS. قم بإنشاء قسائم الرواتب والتقارير المهنية على الفور.",
+    "payroll.section4_heading": "خدمات إدارة الرواتب الذكية",
+    "payroll.section4_paragraph": "قم بتبسيط عمليات الرواتب من خلال حلولنا المتقدمة. نحن نضمن معالجة الرواتب بدقة، والامتثال السلس، والتقارير الشفافة، مما يمنح عملك الكفاءة وراحة البال للموظفين.",
+    "payroll.section4_intro": "تم تصميم خدمات الرواتب لدينا للتعامل مع كل شيء من تتبع الحضور إلى المدفوعات النهائية. مع العمليات المؤتمتة والمدفوعات في الوقت المناسب والامتثال الكامل، نجعل الرواتب خالية من التوتر لمؤسستك.",
+    "payroll.step1": "تسجيل الموظفين وإعداد البيانات",
+    "payroll.step2": "مزامنة الحضور والإجازات",
+    "payroll.step3": "حساب الرواتب بدقة",
+    "payroll.step4": "صرف الرواتب والتحويلات المباشرة",
+    "payroll.step5": "إدارة الامتثال وتقديم الضرائب",
+    "payroll.step6": "تسليم قسائم الرواتب وتقارير الرواتب",
+    "payroll.section4_img_alt": "إدارة الرواتب الذكية",
+    "payroll.section5_heading": "خدمات إدارة الرواتب",
+    "payroll.section5_paragraph": "نقدم حلول إدارة رواتب موثوقة وفعالة لضمان صرف الرواتب في الوقت المحدد، والامتثال للوائح القانونية، والشفافية التامة لأصحاب العمل والموظفين.",
+    "payroll.card5_1_heading": "معالجة الرواتب",
+    "payroll.card5_1_paragraph": "حساب وصرف الرواتب والبدلات والمكافآت بدقة وبدون تأخير.",
+    "payroll.card5_2_heading": "دمج الحضور والإجازات",
+    "payroll.card5_2_paragraph": "ربط سجلات الحضور والإجازات بالرواتب بسلاسة لضمان عدم وجود أخطاء.",
+    "payroll.card5_3_heading": "الامتثال والخصومات الضريبية",
+    "payroll.card5_3_paragraph": "خصومات آلية لـ PF و ESI و TDS لضمان الامتثال للوائح الحكومية.",
+    "payroll.card5_4_heading": "قسائم الرواتب والتقارير",
+    "payroll.card5_4_paragraph": "إنشاء قسائم وتقارير مفصلة للرواتب توفر الوضوح وتحافظ على الشفافية.",
+    "payroll.section6_heading": "إدارة رواتب موثوقة",
+    "payroll.section6_paragraph": "تبسط خدمات إدارة الرواتب لدينا صرف الرواتب، والامتثال الضريبي، والتقارير. من حساب الرواتب إلى إنشاء قسائم الرواتب، نضمن الدقة والشفافية والمعالجة في الوقت المحدد.",
+    "payroll.card6_1_heading": "معالجة الرواتب والأجور",
+    "payroll.card6_1_paragraph": "حسابات دقيقة للرواتب بما في ذلك البدلات والعمل الإضافي والخصومات.",
+    "payroll.card6_2_heading": "الامتثال وقسائم الرواتب",
+    "payroll.card6_2_paragraph": "ضمان الامتثال القانوني مع PF و ESI و TDS أثناء إنشاء قسائم واضحة ومهنية للموظفين.",
+    "payroll.section6_img_alt": "خدمات المحاسبة",
+    "payroll.section7_heading": "هل أنت جاهز لتبسيط إدارة الرواتب؟",
+    "payroll.section7_paragraph": "دعونا نبسط معالجة الرواتب والامتثال والتقارير من خلال حلولنا المخصصة لإدارة الرواتب.",
+    "payroll.section7_btn": "ابدأ الآن",
+
+
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספקית מובילה של פתרונות בינה מלאכותית, המסייעת לעסקים לעבור שינוי באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודות",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "שירותי הנהלת חשבונות",
+    "footer_service2": "הכנת והגשת מסים",
+    "footer_service3": "דוחות כספיים",
+    "footer_service4": "ניהול שכר",
+    "footer_service5": "תכנון תקציב ותחזיות",
+    "footer_service6": "ביקורת וציות",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 דרך חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+ 
+    "payroll.hero_title": "ניהול שכר",
+    "payroll.section2_heading": "ניהול שכר",
+    "payroll.section2_paragraph": "ייעל את שכר העובדים שלך עם שירותי ניהול שכר אמינים שלנו. ממעבדת שכר ועד עמידה בדרישות המס, אנו מבטיחים דיוק, מועדיות ושקיפות מלאה, כך שתוכל להתמקד בצמיחת העסק שלך.",
+    "payroll.feature1": "עיבוד שכר ושכר אוטומטי",
+    "payroll.feature2": "מעקב נוכחות וחופשות עובדים",
+    "payroll.feature3": "עמידה בדרישות החוק (PF, ESI, TDS)",
+    "payroll.feature4": "הפקת תלושי שכר והפצה",
+    "payroll.feature5": "דוחות ושירותי ניתוח מותאמים אישית",
+    "payroll.btn_explore": "חקור שירותים",
+    "payroll.btn_get_started": "התחל עכשיו",
+    "payroll.img_alt": "ניהול שכר",
+    "payroll.section3_heading": "פתרונות ניהול שכר",
+    "payroll.section3_paragraph": "פשט את תהליך השכר עם שירותי ניהול השכר המדויקים והאמינים שלנו. מחישוב שכר ועד עמידה בדרישות המס, אנו מבטיחים שהעובדים יקבלו את שכרם בזמן ובצורה מדויקת.",
+    "payroll.card1_heading": "עיבוד שכר ושכר",
+    "payroll.card1_paragraph": "אוטומציה של הפצת השכר בצורה מדויקת ובזמן. אנו מטפלים בחישובים, ניכויים והעברות בצורה חלקה.",
+    "payroll.card2_heading": "שילוב נוכחות וחופשות",
+    "payroll.card2_paragraph": "קשר את השכר עם נוכחות העובדים ורשומות החופשה כדי למנוע טעויות ידניות ולפשט את התהליך.",
+    "payroll.card3_heading": "עמידה בדרישות החוק ותלושי שכר",
+    "payroll.card3_paragraph": "עמוד בדרישות החוק כגון PF, ESI ו-TDS. הפק תלושי שכר מקצועיים ודוחות באופן מיידי.",
+    "payroll.section4_heading": "שירותי ניהול שכר חכמים",
+    "payroll.section4_paragraph": "פשט את פעולות השכר עם פתרונות השכר המתקדמים שלנו. אנו מבטיחים עיבוד מדויק של השכר, עמידה בדרישות החוק ודיווח שקוף, מה שמעניק לעסק שלך יעילות ורוגע לעובדים.",
+    "payroll.section4_intro": "שירותי השכר שלנו תוכננו כדי להתמודד עם כל דבר, החל ממעקב נוכחות ועד תשלומים סופיים. עם תהליכים אוטומטיים, תשלומים בזמן ועמידה מלאה בדרישות החוק, אנו עושים את ניהול השכר ללא סטרס עבור הארגון שלך.",
+    "payroll.step1": "קליטת עובדים והגדרת נתונים",
+    "payroll.step2": "סנכרון נוכחות וחופשות",
+    "payroll.step3": "חישובי שכר מדויקים",
+    "payroll.step4": "תשלומי שכר והעברות ישירות",
+    "payroll.step5": "דיווח ועמידה בדרישות החוק",
+    "payroll.step6": "מסירת תלושי שכר ודוחות שכר",
+    "payroll.section4_img_alt": "שירותי ניהול שכר חכמים",
+    "payroll.section5_heading": "שירותי ניהול שכר",
+    "payroll.section5_paragraph": "אנו מציעים פתרונות ניהול שכר אמינים ויעילים שמבטיחים תשלום שכר בזמן, עמידה בדרישות החוק ושקיפות מלאה למעסיקים ולעובדים.",
+    "payroll.card5_1_heading": "עיבוד שכר",
+    "payroll.card5_1_paragraph": "חישוב והפצת שכר, קצבאות ובונוסים מדויקת ללא עיכובים.",
+    "payroll.card5_2_heading": "שילוב נוכחות וחופשות",
+    "payroll.card5_2_paragraph": "חיבור רשומות נוכחות וחופשות עם השכר בצורה חלקה להבטחת הפקת שכר ללא טעויות.",
+    "payroll.card5_3_heading": "עמידה בדרישות החוק וניכויי מס",
+    "payroll.card5_3_paragraph": "ניכויים אוטומטיים עבור PF, ESI ו-TDS, תוך הבטחת עמידה בדרישות החוק.",
+    "payroll.card5_4_heading": "תלושי שכר ודוחות",
+    "payroll.card5_4_paragraph": "הפקת תלושי שכר ודוחות מפורטים שמספקים בהירות ושומרים על שקיפות.",
+    "payroll.section6_heading": "ניהול שכר אמין",
+    "payroll.section6_paragraph": "שירותי ניהול השכר שלנו מפשטים את הפצת השכר, עמידה בדרישות החוק ודיווח. מחישוב שכר העובדים ועד הפקת תלושי שכר, אנו מבטיחים דיוק, שקיפות ועיבוד בזמן.",
+    "payroll.card6_1_heading": "עיבוד שכר ושכר",
+    "payroll.card6_1_paragraph": "חישובי שכר אוטומטיים ומדויקים, כולל קצבאות, שעות נוספות וניכויים.",
+    "payroll.card6_2_heading": "עמידה בדרישות החוק ותלושי שכר",
+    "payroll.card6_2_paragraph": "הבטחת עמידה בדרישות החוק עבור PF, ESI ו-TDS תוך הפקת תלושי שכר ברורים ומקצועיים לעובדים.",
+    "payroll.section6_img_alt": "שירותי הנהלת חשבונות",
+    "payroll.section7_heading": "מוכן לפשט את ניהול השכר שלך?",
+    "payroll.section7_paragraph": "בואו נ streamline את תהליך השכר, עמידה בדרישות החוק ודיווח עם פתרונות ניהול השכר המותאמים שלנו.",
+    "payroll.section7_btn": "התחל עכשיו",
+   
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -152,126 +777,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -290,21 +1038,10 @@ if (currentUserEmail && users[currentUserEmail]) {
     }
   </script>
 
-<!-- 🔷 HERO SECTION START -->
 
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/4751312/4751312-hd_1920_1080_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Process Automation</h1>
-      
-    </div>
-  </div>
-</section>
+
+<!-- Section : 1 -->
 
 <style>
 
@@ -426,45 +1163,17 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
-<section class="ai-section">
-    <h1 class="ai-heading">Intelligent Process Automation</h1>
-    <div class="ai-content">
-        <div class="ai-text">
-            <p>
-                We design and implement intelligent systems that streamline workflows, 
-                eliminate repetitive tasks, and enhance operational efficiency while maintaining 
-                accuracy and reliability across all organizational processes.
-            </p>
 
-            <!-- Feature Points -->
-            <ul class="hero-features fade-in-up delay-2">
-                <li><span>✔</span> End-to-End Workflow Automation</li>
-                <li><span>✔</span> AI-Powered Decision Making</li>
-                <li><span>✔</span> Seamless System Integration</li>
-                <li><span>✔</span> Enhanced Efficiency & Accuracy</li>
-                <li><span>✔</span> Scalable & Adaptive Processes</li>
-            </ul>
 
-            <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="services.html" class="btn btn-primary">Get started</a>
-            </div>
-        </div>
-
-        <div class="ai-image">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1000&h=700&fit=crop&auto=format" alt="AI Solutions">
-        </div>
-    </div>
-</section>
+<!-- Section : 2 -->
 
 <style>
 :root {
     --black: #000;
     --dark-gray: #444;
     --white: #fff;
-    --blue: #007bff;
+    --blue: #a68e4c;
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -520,7 +1229,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .ai-buttons .btn:hover {
-    background-color: #0056b3;
+    background-color: #a68e4c;
 }
 
 /* Features List */
@@ -640,59 +1349,11 @@ if (currentUserEmail && users[currentUserEmail]) {
 
   
 
-    <!-- Section 2: Development Capabilities -->
-    <!-- Advanced Features Section -->
-<section class="advanced-features">
-  <div class="advanced-features-container">
-    <!-- Section Header -->
-    <div class="features-header fade-in-up">
-      <h2>Automation Capabilities</h2>
-      <p>
-        Transform your business processes with intelligent automation that learns, adapts, and optimizes performance continuously.
-      </p>
-    </div>
+    
+   
 
-    <!-- Features Grid -->
-    <div class="features-cards">
-      <!-- Card 1 -->
-      <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon">
-          
-          <i class="fas fa-robot"></i>
-        </div>
-        <h3>Robotic Process Automation</h3>
-        <p>
-          Deploy intelligent bots that handle repetitive tasks, data entry, and 
-          routine processes with precision and consistency, freeing your team for strategic work.
-        </p>
-      </div>
+<!-- Section : 3 -->
 
-      <!-- Card 2 -->
-      <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon">
-          <i class="fas fa-sync-alt"></i>
-        </div>
-        <h3>Workflow Optimization</h3>
-        <p>
-          Streamline complex business workflows through intelligent orchestration
-           and automated decision-making that reduces processing time and eliminates bottlenecks.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon">
-          <i class="fas fa-cogs"></i>
-        </div>
-        <h3>Smart Integration</h3>
-        <p>
-          Connect disparate systems and applications through seamless automation that ensures data 
-          consistency and operational continuity across your entire technology stack.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <style>
 /* Section Styling */
@@ -752,7 +1413,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 .feature-icon {
   font-size: 2.2rem;
-  color: #007bff;
+  color: #a68e4c; /* golden theme */
   margin-bottom: 15px;
 }
 
@@ -825,54 +1486,16 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Section 3: Development Process -->
-   <!-- Advanced Development Process Section -->
-<section class="development-process">
-  <div class="development-process-container">
 
-    <!-- Top Heading -->
-    <div class="process-header fade-in-up">
-      <h2>Automation Benefits</h2>
-      <p>
-        We adopt an agile and transparent methodology for Process Automation. 
-      </p>
-    </div>
+   
 
-    <!-- Content Row -->
-    <div class="process-row">
-      <!-- Left Image -->
-      <div class="process-image slide-in-right">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&auto=format" alt="AI Development Process">
-      </div>
-
-      <!-- Right Content -->
-      <div class="process-content fade-in-up delay-1">
-        <!-- Paragraph intro -->
-        <p class="process-intro">
-          Our automation solutions deliver immediate and long-term benefits that transform 
-          operational efficiency and business performance.
-        </p>
-
-        <!-- Steps -->
-        <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p>80% reduction in processing time</p></div>
-          <div class="step"><span class="step-number">02</span><p>95% accuracy improvement</p></div>
-          <div class="step"><span class="step-number">03</span><p>60% cost reduction</p></div>
-          <div class="step"><span class="step-number">04</span><p>24/7 operational availability</p></div>
-          <div class="step"><span class="step-number">05</span><p>Scalable solution architecture</p></div>
-          <div class="step"><span class="step-number">06</span><p>Real-time monitoring & reporting</p></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+ <!-- Section : 4 -->
 
 <style>
 /* Section Base */
 .development-process {
   width: 100%;
-  background: #ffffff;
+  background: #ffffff; /* updated background */
   padding: 30px 20px 50px;
   box-sizing: border-box;
 }
@@ -941,7 +1564,7 @@ if (currentUserEmail && users[currentUserEmail]) {
   margin-bottom: 16px;
 }
 .step-number {
-  background: #007bff;
+  background: #a68e4c; /* updated golden accent */
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -985,26 +1608,23 @@ if (currentUserEmail && users[currentUserEmail]) {
   }
 }
 
-/* 📱 Mobile Responsive */
-
-
-  /* Responsive */
+/* Responsive */
 @media (max-width: 992px) {
   .process-row {
     flex-direction: column;
     text-align: center;
-    gap: 30px; /* reduce gap */
+    gap: 30px;
   }
 
   .process-image,
   .process-content {
-    flex: 1 1 auto;   /* reset the 600px flex-basis */
-    width: 100%;      /* force full width */
-    max-width: 100%;  /* prevent overflow */
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
   }
 
   .process-image img {
-    width: 100%;  /* responsive image */
+    width: 100%;
     height: auto;
     border-radius: 15px;
   }
@@ -1015,8 +1635,6 @@ if (currentUserEmail && users[currentUserEmail]) {
     padding: 0 15px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   .development-process {
@@ -1047,41 +1665,15 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Section 4: Technologies & Tools -->
-   <section class="tech-showcase">
-  <div class="tech-container">
-    <!-- Heading -->
-    <div class="tech-header animate-fade-up">
-      <h2>Intelligent Process Automation</h2>
-      <p>We streamline operations by combining AI, machine learning, and robotic process automation 
-       to deliver efficiency, accuracy, and scalability across business workflows.</p>
-    </div>
+    
 
-    <!-- Grid -->
-    <div class="tech-grid">
-      <div class="tech-card animate-slide-up delay-1">
-        <h3>End-to-End Workflow Automation</h3>
-        <p>Automate repetitive tasks to reduce manual effort and save valuable time.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-2">
-        <h3>AI-Powered Decisions</h3>
-        <p>Leverage AI and analytics to enable smarter, data-driven business outcomes.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-3">
-        <h3>Seamless System Integration</h3>
-        <p>Connect and automate processes across multiple enterprise systems with ease.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-4">
-        <h3>Enhanced Efficiency</h3>
-        <p>Boost productivity by eliminating errors and improving process speed.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
+    <!-- Section : 5 -->
+
 
 <style>
 /* Section Styling */
-.tech-showcase {
+.service-showcase {
   width: 100%;
   padding: 50px;
   background: #edf0ee;
@@ -1089,20 +1681,20 @@ if (currentUserEmail && users[currentUserEmail]) {
   justify-content: center;
 }
 
-.tech-container {
+.service-container {
   max-width: 1450px;
   width: 100%;
   text-align: center;
 }
 
 /* Header */
-.tech-header h2 {
+.service-header h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 15px;
 }
 
-.tech-header p {
+.service-header p {
   font-size: 1.1rem;
   color: #333;
   max-width: 800px;
@@ -1111,14 +1703,14 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Grid */
-.tech-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 /* Card */
-.tech-card {
+.service-card {
   background: #fff;
   padding: 30px;
   border-radius: 15px;
@@ -1127,19 +1719,19 @@ if (currentUserEmail && users[currentUserEmail]) {
   text-align: left;
 }
 
-.tech-card h3 {
+.service-card h3 {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #a68e4c; /* gold accent */
   margin-bottom: 10px;
 }
 
-.tech-card p {
+.service-card p {
   font-size: 1rem;
   color: #000;
   line-height: 1.6;
 }
 
-.tech-card:hover {
+.service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
@@ -1178,94 +1770,58 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* ✅ Mobile View */
 @media (max-width: 768px) {
-  .tech-showcase {
-    padding: 30px 20px; /* reduce padding */
+  .service-showcase {
+    padding: 30px 20px;
   }
 
-  .tech-header h2 {
+  .service-header h2 {
     font-size: 1.8rem;
   }
 
-  .tech-header p {
+  .service-header p {
     font-size: 1rem;
     margin-bottom: 25px;
     padding: 0 10px;
   }
 
-  .tech-grid {
-    grid-template-columns: 1fr; /* 1 card per row */
+  .service-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .tech-card {
+  .service-card {
     padding: 20px;
-    text-align: center; /* center content */
+    text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  .tech-card h3 {
+  .service-card h3 {
     font-size: 1.3rem;
   }
 
-  .tech-card p {
+  .service-card p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
 }
 </style>
 
-<!-- Section 4: End -->
 
-<!-- Section 5: Projects -->  
 
-    <section class="projects-success">
-  <div class="projects-container">
-    <!-- Left Side (Image) -->
-    <div class="projects-image animate-slide-in">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format" alt="AI Project Success">
-    </div>
 
-    <!-- Right Side (Content) -->
-    <div class="projects-content">
-      <h2 class="animate-fade-up">Recent Project Success</h2>
-      <p class="animate-fade-up delay-1" style="text-align: justify;">
-        Our AI-driven projects empower industries with innovative solutions that optimize performance, reduce costs, and improve customer engagement. Each project demonstrates our commitment to delivering real business results.
-      </p>
-
-      <!-- Testimonial Card 1 -->
-      <div class="project-card animate-fade-up delay-2">
-        <blockquote>
-          “The custom AI solution developed by Stackly increased our production efficiency by 
-          <span class="highlight">45%</span> and reduced quality control errors by 
-          <span class="highlight">80%</span>. The system learns and adapts continuously.”
-        </blockquote>
-        <cite>— Robert Kim, Manufacturing Director</cite>
-      </div>
-
-      <!-- Testimonial Card 2 -->
-      <div class="project-card animate-fade-up delay-3">
-        <blockquote>
-          “Stackly’s recommendation engine boosted our customer engagement by 
-          <span class="highlight">60%</span> and improved conversions by 
-          <span class="highlight">35%</span>. The implementation was seamless and impactful.”
-        </blockquote>
-        <cite>— Lisa Chen, E-commerce Manager</cite>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Section : 6 --> 
 
 <style>
 /* Section Styling */
-.projects-success {
+.bookkeeping-services {
   width: 100%;
   padding: 40px 50px;
-  background: #fff;
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
 
-.projects-container {
+.services-container {
   max-width: 1450px;
   width: 100%;
   display: grid;
@@ -1275,7 +1831,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Image */
-.projects-image img {
+.services-image img {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -1283,71 +1839,52 @@ if (currentUserEmail && users[currentUserEmail]) {
   transition: transform 0.4s ease;
   display: block;
 }
-.projects-image img:hover {
+.services-image img:hover {
   transform: scale(1.03);
 }
 
 /* Content */
-.projects-content h2 {
+.services-content h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 10px;
 }
 
-.projects-content p {
+.services-content p {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.7;
 }
 
-/* Testimonial Cards */
-.project-card {
-  background: #edf0ee;
+/* Service Cards */
+.service-card {
+  background: #fff;
   padding: 25px;
   border-radius: 16px;
   margin-bottom: 15px;
   position: relative;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  border: 5px solid #a68e4c;
 }
 
-/* Gradient border effect */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 3px; /* border thickness */
-  border-radius: 16px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
-}
 
-.project-card:hover {
+
+.service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.project-card blockquote {
-  font-size: 1.05rem;
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #a68e4c;
+  margin-bottom: 8px;
+}
+.service-card p {
+  font-size: 1rem;
   color: #000;
   line-height: 1.6;
-  margin-bottom: 10px;
-}
-.project-card cite {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #007bff;
-}
-.highlight {
-  color: #007bff;
-  font-weight: bold;
 }
 
 /* Animations */
@@ -1375,65 +1912,57 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* Responsive Fixes */
 @media (max-width: 1024px) {
-  .projects-container {
+  .services-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-success {
+  .bookkeeping-services {
     padding: 20px;
   }
-  .projects-image img {
+  .services-image img {
     width: 100%;
-    height: auto;   /* prevent fixed height issues */
+    height: auto;
     object-fit: cover;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.8rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 1rem;
   }
-  .project-card {
+  .service-card {
     padding: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.5rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 0.95rem;
   }
-  .project-card blockquote {
-    font-size: 0.95rem;
+  .service-card h3 {
+    font-size: 1.05rem;
   }
 }
 </style>
 
 
 
-    <!-- Section 6: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Ready to Build Your Custom AI Solution?</h2>
-            <p>Let's discuss your requirements and create a tailored AI development plan.</p>
-            <a href="contact.html" class="btn btn-primary">Start Development</a>
-        </div>
-    </div>
-</section>
+
+<!-- Section : 7 -->
 
 <style>
     .contact-banner {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                    url('https://images.pexels.com/photos/8867275/pexels-photo-8867275.jpeg');
+                    url('https://i.pinimg.com/736x/21/5d/90/215d9047e983ffe664d285158f748b47.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -1501,17 +2030,18 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Footer -->
-     <footer class="footer">
+     <!-- Footer -->
+     <!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -1522,48 +2052,49 @@ if (currentUserEmail && users[currentUserEmail]) {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Bookkeeping Services</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Tax Preparation & Filing</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Financial Reporting</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Payroll Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Budgeting & Forecasting</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Audit & Compliance</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
+
 
 <style>
 .footer {
@@ -1571,6 +2102,14 @@ if (currentUserEmail && users[currentUserEmail]) {
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -1605,7 +2144,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -1616,7 +2155,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -1632,23 +2171,34 @@ if (currentUserEmail && users[currentUserEmail]) {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
-
+</div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
 
 <style>
 /* --- DARK MODE OVERRIDES --- */
@@ -1691,6 +2241,10 @@ body.dark-mode .ai-hero-paragraph {
 }
 
 body.dark-mode .ai-section,
+
+body.dark-mode .service-showcase,
+body.dark-mode .bookkeeping-services,
+body.dark-mode .service-card,
 body.dark-mode .ai-heading,
 body.dark-mode .ai-content,
 body.dark-mode .ai-text,
@@ -1824,4 +2378,3 @@ body.dark-mode .ai-heading {
   color: #00f7ff !important;
 }
 </style>
-

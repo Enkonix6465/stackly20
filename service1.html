@@ -3,139 +3,712 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Development Services - Stackly</title>
+    <title> Stackly - Finance and accounting Services</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
     <!-- Sticky Header -->
-    <!-- Sticky Header -->
-     <header class="header">
+    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Budgeting & Forecasting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Audit & Compliance</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting  </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">+
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
+      </div>
+    </div>
   </div>
-</div>
-  </div>
-</header>
+</header> 
 
-<!-- ✅ Script -->
+<!-- Section : 1-->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/7687999/7687999-uhd_2560_1440_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Bookkeeping Services</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ai-section">
+  <h1 class="ai-heading" data-i18n="section2_title">Precise Accounting & Bookkeeping</h1>
+  <div class="ai-content">
+    <div class="ai-text">
+      <p data-i18n="section2_paragraph">
+        Keep your finances accurate, organized, and stress-free with our expert bookkeeping services. 
+        We help businesses of all sizes track income, expenses, and financial performance, ensuring 
+        compliance and smarter decision-making.
+      </p>
+
+      <!-- Feature Points -->
+      <ul class="hero-features fade-in-up delay-2">
+        <li data-i18n="section2_feature1"><span>✔</span> Accurate financial record keeping</li>
+        <li data-i18n="section2_feature2"><span>✔</span> Payroll & expense management</li>
+        <li data-i18n="section2_feature3"><span>✔</span> Bank reconciliation & reporting</li>
+        <li data-i18n="section2_feature4"><span>✔</span> Tax-ready statements & compliance</li>
+        <li data-i18n="section2_feature5"><span>✔</span> Customized bookkeeping solutions</li>
+      </ul>
+
+      <div class="ai-buttons">
+        <a href="services.html" class="btn btn-primary" data-i18n="section2_btn1">Explore Services</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="section2_btn2">Get Started</a>
+      </div>
+    </div>
+
+    <div class="ai-image">
+      <img src="https://images.pexels.com/photos/210990/pexels-photo-210990.jpeg" alt="Bookkeeping Services">
+    </div>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="advanced-features">
+  <div class="advanced-features-container">
+    <div class="features-header fade-in-up">
+      <h2 data-i18n="section3_title">Smart Business Bookkeeping</h2>
+      <p data-i18n="section3_paragraph">
+        We provide reliable, accurate, and timely bookkeeping services to help businesses 
+        stay financially organized. From managing accounts to preparing detailed reports, 
+        we ensure your finances are always up to date.
+      </p>
+    </div>
+
+    <div class="features-cards">
+      <div class="feature-box fade-in-up delay-1">
+        <div class="feature-icon"><i class="fas fa-receipt"></i></div>
+        <h3 data-i18n="section3_card1_title">Expense & Income Tracking</h3>
+        <p data-i18n="section3_card1_text">
+          Maintain clear records of all financial transactions. 
+          We track expenses and income, ensuring your books reflect the true financial position.
+        </p>
+      </div>
+
+      <div class="feature-box fade-in-up delay-2">
+        <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+        <h3 data-i18n="section3_card2_title">Account Reconciliation</h3>
+        <p data-i18n="section3_card2_text">
+          Match bank statements with internal records to prevent errors 
+          and detect discrepancies early. Accurate reconciliation builds trust and compliance.
+        </p>
+      </div>
+
+      <div class="feature-box fade-in-up delay-3">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3 data-i18n="section3_card3_title">Financial Reporting</h3>
+        <p data-i18n="section3_card3_text">
+          Generate detailed financial reports and insights that support informed 
+          decision-making. We simplify data into clear, actionable summaries.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="development-process">
+  <div class="development-process-container">
+    <div class="process-header fade-in-up">
+      <h2 data-i18n="section4_title">Comprehensive Bookkeeping Solutions</h2>
+      <p data-i18n="section4_paragraph">
+        We provide accurate, reliable, and efficient bookkeeping services that help you focus on growing your business while we take care of your financial records. 
+      </p>
+    </div>
+
+    <div class="process-row">
+      <div class="process-image slide-in-right">
+        <img src="https://images.unsplash.com/photo-1554224155-3a58922a22c3?w=900&h=600&fit=crop&auto=format" alt="Bookkeeping Services">
+      </div>
+
+      <div class="process-content fade-in-up delay-1">
+        <p class="process-intro" data-i18n="section4_intro">
+          Our bookkeeping solutions are designed to give businesses peace of mind. From recording day-to-day transactions to managing financial statements, we make sure your accounts are clear, compliant, and easy to understand. Whether you're a startup or an established business, we deliver accurate financial insights that support smart decision-making.
+        </p>
+
+        <div class="process-steps">
+          <div class="step"><span class="step-number">01</span><p data-i18n="section4_step1">Recording Daily Financial Transactions</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="section4_step2">Maintaining General Ledger & Journals</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="section4_step3">Bank Reconciliation & Cash Flow Tracking</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="section4_step4">Payroll Processing & Expense Management</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="section4_step5">Financial Statement Preparation</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="section4_step6">Compliance & Tax-Ready Reports</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="service-showcase">
+  <div class="service-container">
+    <div class="service-header animate-fade-up">
+      <h2 data-i18n="section5_title">Business Accounting & Bookkeeping</h2>
+      <p data-i18n="section5_paragraph">We provide comprehensive bookkeeping solutions tailored to businesses of all sizes, ensuring accuracy, compliance, and financial clarity.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card animate-slide-up delay-1">
+        <h3 data-i18n="section5_card1_title">Financial Record Keeping</h3>
+        <p data-i18n="section5_card1_text">Accurate and timely recording of all financial transactions, ensuring your accounts are always up-to-date.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-2">
+        <h3 data-i18n="section5_card2_title">Accounts Payable & Receivable</h3>
+        <p data-i18n="section5_card2_text">Manage invoices, bills, and collections seamlessly to keep your cash flow running smoothly.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-3">
+        <h3 data-i18n="section5_card3_title">Payroll Management</h3>
+        <p data-i18n="section5_card3_text">End-to-end payroll processing with compliance to tax regulations and employee satisfaction in mind.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-4">
+        <h3 data-i18n="section5_card4_title">Tax Preparation Support</h3>
+        <p data-i18n="section5_card4_text">Organized records and reports to make tax filing accurate, fast, and stress-free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 6 -->  
+<section class="bookkeeping-services">
+  <div class="services-container">
+    <div class="services-image animate-slide-in">
+      <img src="https://i.pinimg.com/736x/dd/45/cb/dd45cb565575ea3808cdb3d68a02aade.jpg" alt="Bookkeeping Services">
+    </div>
+
+    <div class="services-content">
+      <h2 class="animate-fade-up" data-i18n="section6_title">Professional Bookkeeping Services</h2>
+      <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="section6_paragraph">
+        Our bookkeeping services are designed to help businesses maintain accurate financial records, streamline reporting, 
+        and ensure compliance. We handle everything from daily transactions to monthly reconciliations, so you can focus 
+        on growing your business with confidence.
+      </p>
+
+      <div class="service-card animate-fade-up delay-2">
+        <h3 data-i18n="section6_card1_title">Accurate Financial Tracking</h3>
+        <p data-i18n="section6_card1_text">We ensure precise tracking of all your income and expenses, giving you clarity and control over your financial position.</p>
+      </div>
+
+      <div class="service-card animate-fade-up delay-3">
+        <h3 data-i18n="section6_card2_title">Organized Record Keeping</h3>
+        <p data-i18n="section6_card2_text">Keep your records up-to-date and audit-ready with our systematic and transparent bookkeeping process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="section7_title">Ready to Build Your Custom AI Solution?</h2>
+      <p data-i18n="section7_paragraph">Let's discuss your requirements and create a tailored AI development plan.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="section7_btn">Start Development</a>
+    </div>
+  </div>
+</section>
+
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Bookkeeping Services",
+    "service_2": "Tax Preparation & Filing",
+    "service_3": "Financial Reporting",
+    "service_4": "Payroll Management",
+    "service_5": "Budgeting & Forecasting",
+    "service_6": "Audit & Compliance",
+    "service6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Tax Planning",
+    "blog_2": "Financial Growth Strategies",
+    "blog_3": "Modern Accounting Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Bookkeeping Services",
+    "footer_service2": "Tax Preparation & Filing",
+    "footer_service3": "Financial Reporting",
+    "footer_service4": "Payroll Management",
+    "footer_service5": "Budgeting & Forecasting",
+    "footer_service6": "Audit & Compliance",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
+
+    "hero_title": "Bookkeeping Services",
+    "section2_title": "Precise Accounting & Bookkeeping",
+    "section2_paragraph": "Keep your finances accurate, organized, and stress-free with our expert bookkeeping services. We help businesses of all sizes track income, expenses, and financial performance, ensuring compliance and smarter decision-making.",
+    "section2_feature1": "✔ Accurate financial record keeping",
+    "section2_feature2": "✔ Payroll & expense management",
+    "section2_feature3": "✔ Bank reconciliation & reporting",
+    "section2_feature4": "✔ Tax-ready statements & compliance",
+    "section2_feature5": "✔ Customized bookkeeping solutions",
+    "section2_btn1": "Explore Services",
+    "section2_btn2": "Get Started",
+    "section3_title": "Smart Business Bookkeeping",
+    "section3_paragraph": "We provide reliable, accurate, and timely bookkeeping services to help businesses stay financially organized. From managing accounts to preparing detailed reports, we ensure your finances are always up to date.",
+    "section3_card1_title": "Expense & Income Tracking",
+    "section3_card1_text": "Maintain clear records of all financial transactions. We track expenses and income, ensuring your books reflect the true financial position.",
+    "section3_card2_title": "Account Reconciliation",
+    "section3_card2_text": "Match bank statements with internal records to prevent errors and detect discrepancies early. Accurate reconciliation builds trust and compliance.",
+    "section3_card3_title": "Financial Reporting",
+    "section3_card3_text": "Generate detailed financial reports and insights that support informed decision-making. We simplify data into clear, actionable summaries.",
+    "section4_title": "Comprehensive Bookkeeping Solutions",
+    "section4_paragraph": "We provide accurate, reliable, and efficient bookkeeping services that help you focus on growing your business while we take care of your financial records.",
+    "section4_intro": "Our bookkeeping solutions are designed to give businesses peace of mind. From recording day-to-day transactions to managing financial statements, we make sure your accounts are clear, compliant, and easy to understand. Whether you're a startup or an established business, we deliver accurate financial insights that support smart decision-making.",
+    "section4_step1": "Recording Daily Financial Transactions",
+    "section4_step2": "Maintaining General Ledger & Journals",
+    "section4_step3": "Bank Reconciliation & Cash Flow Tracking",
+    "section4_step4": "Payroll Processing & Expense Management",
+    "section4_step5": "Financial Statement Preparation",
+    "section4_step6": "Compliance & Tax-Ready Reports",
+    "section5_title": "Business Accounting & Bookkeeping",
+    "section5_paragraph": "We provide comprehensive bookkeeping solutions tailored to businesses of all sizes, ensuring accuracy, compliance, and financial clarity.",
+    "section5_card1_title": "Financial Record Keeping",
+    "section5_card1_text": "Accurate and timely recording of all financial transactions, ensuring your accounts are always up-to-date.",
+    "section5_card2_title": "Accounts Payable & Receivable",
+    "section5_card2_text": "Manage invoices, bills, and collections seamlessly to keep your cash flow running smoothly.",
+    "section5_card3_title": "Payroll Management",
+    "section5_card3_text": "End-to-end payroll processing with compliance to tax regulations and employee satisfaction in mind.",
+    "section5_card4_title": "Tax Preparation Support",
+    "section5_card4_text": "Organized records and reports to make tax filing accurate, fast, and stress-free.",
+    "section6_title": "Professional Bookkeeping Services",
+    "section6_paragraph": "Our bookkeeping services are designed to help businesses maintain accurate financial records, streamline reporting, and ensure compliance. We handle everything from daily transactions to monthly reconciliations, so you can focus on growing your business with confidence.",
+    "section6_card1_title": "Accurate Financial Tracking",
+    "section6_card1_text": "We ensure precise tracking of all your income and expenses, giving you clarity and control over your financial position.",
+    "section6_card2_title": "Organized Record Keeping",
+    "section6_card2_text": "Keep your records up-to-date and audit-ready with our systematic and transparent bookkeeping process.",
+    "section7_title": "Ready to Build Your Custom AI Solution?",
+    "section7_paragraph": "Let's discuss your requirements and create a tailored AI development plan.",
+    "section7_btn": "Start Development",
+              
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "خدمات مسك الدفاتر",
+    "service_2": "إعداد وتقديم الضرائب",
+    "service_3": "التقارير المالية",
+    "service_4": "إدارة الرواتب",
+    "service_5": "إعداد الميزانية والتوقعات",
+    "service_6": "التدقيق والامتثال",
+    "service6": "الدعم القانوني والوثائق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "التخطيط الضريبي الذكي",
+    "blog_2": "استراتيجيات النمو المالي",
+    "blog_3": "اتجاهات المحاسبة الحديثة",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الرئيسية 2",
+    "footer_aboutUs": "معلومات عنا",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "خدمات مسك الدفاتر",
+    "footer_service2": "إعداد وتقديم الضرائب",
+    "footer_service3": "التقارير المالية",
+    "footer_service4": "إدارة الرواتب",
+    "footer_service5": "إعداد الميزانية والتوقعات",
+    "footer_service6": "التدقيق والامتثال",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 شارع ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+
+    "hero_title": "خدمات مسك الدفاتر",
+    "section2_title": "المحاسبة ومسك الدفاتر الدقيقة",
+    "section2_paragraph": "حافظ على دقة أموالك وتنظيمها وخالية من التوتر من خلال خدمات مسك الدفاتر المتخصصة لدينا. نحن نساعد الشركات من جميع الأحجام على تتبع الدخل والمصروفات والأداء المالي، مما يضمن الامتثال واتخاذ قرارات أكثر ذكاءً.",
+    "section2_feature1": "✔ حفظ السجلات المالية بدقة",
+    "section2_feature2": "✔ إدارة الرواتب والمصروفات",
+    "section2_feature3": "✔ تسوية الحسابات البنكية والتقارير",
+    "section2_feature4": "✔ بيانات جاهزة للضرائب وامتثال",
+    "section2_feature5": "✔ حلول مسك دفاتر مخصصة",
+    "section2_btn1": "استكشاف الخدمات",
+    "section2_btn2": "ابدأ الآن",
+    "section3_title": "مسك دفاتر الأعمال الذكية",
+    "section3_paragraph": "نحن نقدم خدمات مسك دفاتر موثوقة ودقيقة وفي الوقت المناسب لمساعدة الشركات على البقاء منظمة مالياً. من إدارة الحسابات إلى إعداد التقارير التفصيلية، نضمن أن تكون أموالك محدثة دائمًا.",
+    "section3_card1_title": "تتبع النفقات والدخل",
+    "section3_card1_text": "الحفاظ على سجلات واضحة لجميع المعاملات المالية. نحن نتتبع النفقات والدخل، مما يضمن أن تعكس دفاترك الوضع المالي الحقيقي.",
+    "section3_card2_title": "تسوية الحسابات",
+    "section3_card2_text": "مطابقة كشوفات البنوك مع السجلات الداخلية لمنع الأخطاء واكتشاف التناقضات مبكرًا. التسوية الدقيقة تبني الثقة والامتثال.",
+    "section3_card3_title": "التقارير المالية",
+    "section3_card3_text": "إنشاء تقارير مالية مفصلة ورؤى تدعم اتخاذ القرارات المستنيرة. نحن نبسط البيانات إلى ملخصات واضحة وقابلة للتنفيذ.",
+    "section4_title": "حلول شاملة لمسك الدفاتر",
+    "section4_paragraph": "نحن نقدم خدمات مسك دفاتر دقيقة وموثوقة وفعالة تساعدك على التركيز على تنمية عملك بينما نعتني بسجلاتك المالية.",
+    "section4_intro": "تم تصميم حلول مسك الدفاتر لدينا لمنح الشركات راحة البال. من تسجيل المعاملات اليومية إلى إدارة البيانات المالية، نتأكد من أن حساباتك واضحة ومتوافقة وسهلة الفهم. سواء كنت شركة ناشئة أو شركة راسخة، فإننا نقدم رؤى مالية دقيقة تدعم اتخاذ قرارات ذكية.",
+    "section4_step1": "تسجيل المعاملات المالية اليومية",
+    "section4_step2": "الحفاظ على دفتر الأستاذ العام والدفاتر اليومية",
+    "section4_step3": "تسوية الحسابات البنكية وتتبع التدفق النقدي",
+    "section4_step4": "معالجة الرواتب وإدارة المصروفات",
+    "section4_step5": "إعداد البيانات المالية",
+    "section4_step6": "تقارير جاهزة للضرائب وامتثال",
+    "section5_title": "المحاسبة ومسك الدفاتر للأعمال",
+    "section5_paragraph": "نحن نقدم حلول مسك الدفاتر الشاملة المصممة لتناسب الشركات من جميع الأحجام، مع ضمان الدقة والامتثال والوضوح المالي.",
+    "section5_card1_title": "حفظ السجلات المالية",
+    "section5_card1_text": "تسجيل دقيق وفي الوقت المناسب لجميع المعاملات المالية، مما يضمن أن حساباتك محدثة دائمًا.",
+    "section5_card2_title": "الحسابات المستحقة الدفع والقبض",
+    "section5_card2_text": "إدارة الفواتير والفواتير والتحصيل بسلاسة للحفاظ على سير التدفق النقدي.",
+    "section5_card3_title": "إدارة الرواتب",
+    "section5_card3_text": "معالجة الرواتب من البداية إلى النهاية مع الامتثال للوائح الضريبية وضمان رضا الموظفين.",
+    "section5_card4_title": "دعم إعداد الضرائب",
+    "section5_card4_text": "سجلات وتقارير منظمة لجعل تقديم الضرائب دقيقًا وسريعًا وخاليًا من التوتر.",
+    "section6_title": "خدمات مسك الدفاتر الاحترافية",
+    "section6_paragraph": "تم تصميم خدمات مسك الدفاتر لدينا لمساعدة الشركات على الحفاظ على سجلات مالية دقيقة، وتبسيط التقارير، وضمان الامتثال. نحن نتعامل مع كل شيء من المعاملات اليومية إلى التسويات الشهرية، حتى تتمكن من التركيز على تنمية عملك بثقة.",
+    "section6_card1_title": "تتبع مالي دقيق",
+    "section6_card1_text": "نحن نضمن تتبعًا دقيقًا لجميع إيراداتك ومصروفاتك، مما يمنحك وضوحًا وتحكمًا في وضعك المالي.",
+    "section6_card2_title": "حفظ السجلات المنظمة",
+    "section6_card2_text": "حافظ على تحديث سجلاتك وجاهزيتها للتدقيق باستخدام عملية مسك دفاتر منهجية وشفافة.",
+    "section7_title": "هل أنت مستعد لبناء حل ذكاء اصطناعي مخصص؟",
+    "section7_paragraph": "دعنا نناقش متطلباتك وننشئ خطة تطوير مخصصة.",
+    "section7_btn": "ابدأ التطوير",
+
+
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספקית מובילה של פתרונות בינה מלאכותית, המסייעת לעסקים לעבור שינוי באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודות",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "שירותי הנהלת חשבונות",
+    "footer_service2": "הכנת והגשת מסים",
+    "footer_service3": "דוחות כספיים",
+    "footer_service4": "ניהול שכר",
+    "footer_service5": "תכנון תקציב ותחזיות",
+    "footer_service6": "ביקורת וציות",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 דרך חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+ 
+     "hero_title": "שירותי הנהלת חשבונות",
+    "section2_title": "חשבונאות והנהלת חשבונות מדויקת",
+    "section2_paragraph": "שמור על כספיך מדויקים, מאורגנים וללא לחץ באמצעות שירותי הנהלת החשבונות המומחים שלנו. אנו עוזרים לעסקים בכל הגדלים לעקוב אחר הכנסות, הוצאות וביצועים פיננסיים, תוך הקפדה על תאימות וקבלת החלטות חכמה יותר.",
+    "section2_feature1": "✔ שמירה מדויקת של רשומות כספיות",
+    "section2_feature2": "✔ ניהול שכר והוצאות",
+    "section2_feature3": "✔ התאמת בנק ודיווח",
+    "section2_feature4": "✔ דוחות מוכנים למס הכנסה ותאימות",
+    "section2_feature5": "✔ פתרונות הנהלת חשבונות מותאמים אישית",
+    "section2_btn1": "חקור שירותים",
+    "section2_btn2": "התחל עכשיו",
+    "section3_title": "הנהלת חשבונות עסקית חכמה",
+    "section3_paragraph": "אנו מספקים שירותי הנהלת חשבונות אמינים, מדויקים ובזמן כדי לעזור לעסקים להישאר מאורגנים מבחינה כספית. מהניהול החשבונות ועד הכנת דוחות מפורטים, אנו מבטיחים שכספיך יהיו תמיד מעודכנים.",
+    "section3_card1_title": "מעקב הוצאות והכנסות",
+    "section3_card1_text": "שמירה על רשומות ברורות של כל העסקאות הפיננסיות. אנו עוקבים אחר הוצאות והכנסות, ומבטיחים שהספרים שלך ישקפו את המצב הפיננסי האמיתי.",
+    "section3_card2_title": "התאמת חשבונות",
+    "section3_card2_text": "התאמת דפי בנק עם רשומות פנימיות כדי למנוע שגיאות ולאתר אי-התאמות מוקדם. התאמה מדויקת בונה אמון ותאימות.",
+    "section3_card3_title": "דיווח כספי",
+    "section3_card3_text": "הפקת דוחות פיננסיים מפורטים ותובנות התומכות בקבלת החלטות מושכלות. אנו מפשטים נתונים לסיכומים ברורים ובר-פעולה.",
+    "section4_title": "פתרונות מקיפים להנהלת חשבונות",
+    "section4_paragraph": "אנו מספקים שירותי הנהלת חשבונות מדויקים, אמינים ויעילים המסייעים לך להתמקד בצמיחת העסק שלך בזמן שאנו מטפלים ברישומים הפיננסיים שלך.",
+    "section4_intro": "פתרונות הנהלת החשבונות שלנו נועדו להעניק לעסקים שקט נפשי. מהקלטת עסקאות יומיות ועד לניהול דוחות כספיים, אנו מבטיחים שהחשבונות שלך יהיו ברורים, תואמים וקלים להבנה. בין אם אתה סטארט-אפ או עסק מבוסס, אנו מספקים תובנות פיננסיות מדויקות התומכות בקבלת החלטות חכמה.",
+    "section4_step1": "רישום עסקאות פיננסיות יומיומיות",
+    "section4_step2": "ניהול ספרי חשבונות ויומנים כלליים",
+    "section4_step3": "התאמת בנק ומעקב תזרים מזומנים",
+    "section4_step4": "עיבוד שכר וניהול הוצאות",
+    "section4_step5": "הכנת דוחות כספיים",
+    "section4_step6": "דוחות מוכנים למס ותאימות",
+    "section5_title": "חשבונאות והנהלת חשבונות עסקית",
+    "section5_paragraph": "אנו מספקים פתרונות הנהלת חשבונות מקיפים המותאמים לעסקים בכל הגדלים, תוך הקפדה על דיוק, תאימות ובהירות פיננסית.",
+    "section5_card1_title": "שמירת רשומות כספיות",
+    "section5_card1_text": "רישום מדויק ובזמן של כל העסקאות הכספיות, המבטיח שהחשבונות שלך יהיו תמיד מעודכנים.",
+    "section5_card2_title": "חשבונות חייבים וזכאים",
+    "section5_card2_text": "ניהול חשבוניות, חשבונות וגבייה בצורה חלקה כדי לשמור על תזרים המזומנים.",
+    "section5_card3_title": "ניהול שכר",
+    "section5_card3_text": "עיבוד שכר מקצה לקצה תוך הקפדה על תקנות מס ושביעות רצון העובדים.",
+    "section5_card4_title": "תמיכה בהכנת מס",
+    "section5_card4_text": "רשומות ודוחות מאורגנים כדי להפוך את הגשת המס למדויקת, מהירה וללא לחץ.",
+    "section6_title": "שירותי הנהלת חשבונות מקצועיים",
+    "section6_paragraph": "שירותי הנהלת החשבונות שלנו נועדו לעזור לעסקים לשמור על רישומים פיננסיים מדויקים, לייעל דיווחים ולהבטיח תאימות. אנו מטפלים בכל דבר, מעסקאות יומיות ועד להתאמות חודשיות, כך שתוכל להתמקד בצמיחת העסק שלך בביטחון.",
+    "section6_card1_title": "מעקב פיננסי מדויק",
+    "section6_card1_text": "אנו מבטיחים מעקב מדויק אחר כל ההכנסות וההוצאות שלך, ומעניקים לך בהירות ושליטה על מצבך הפיננסי.",
+    "section6_card2_title": "שמירת רשומות מאורגנת",
+    "section6_card2_text": "שמור על רשומותיך מעודכנות ומוכנות לביקורת באמצעות תהליך הנהלת חשבונות שיטתי ושקוף.",
+    "section7_title": "מוכן לבנות פתרון בינה מלאכותית מותאם אישית?",
+    "section7_paragraph": "בוא נדון בדרישותיך וניצור תוכנית פיתוח מותאמת אישית.",
+    "section7_btn": "התחל פיתוח",  
+   
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -151,126 +724,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -290,21 +986,9 @@ if (currentUserEmail && users[currentUserEmail]) {
   </script>
 
 
-<!-- 🔷 HERO SECTION START -->
 
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/8086711/8086711-uhd_2560_1440_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">AI Development</h1>
-      
-    </div>
-  </div>
-</section>
+<!-- Section : 1 -->
 
 <style>
 
@@ -426,45 +1110,16 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
-<section class="ai-section">
-    <h1 class="ai-heading">AI Development Services</h1>
-    <div class="ai-content">
-        <div class="ai-text">
-            <p>
-                Empower your business with AI-driven transformation. We design and deliver 
-                intelligent systems that seamlessly integrate into your operations, optimize 
-                workflows, and accelerate growth with measurable results.
-            </p>
 
-            <!-- Feature Points -->
-            <ul class="hero-features fade-in-up delay-2">
-                <li><span>✔</span> Custom AI models tailored to your needs</li>
-                <li><span>✔</span> Scalable solutions for all business sizes</li>
-                <li><span>✔</span> Seamless integration with existing systems</li>
-                <li><span>✔</span> Data-driven insights & automation</li>
-                <li><span>✔</span> Ongoing support & optimization</li>
-            </ul>
-
-            <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="contact.html" class="btn btn-primary">Get started</a>
-            </div>
-        </div>
-
-        <div class="ai-image">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1000&h=700&fit=crop&auto=format" alt="AI Solutions">
-        </div>
-    </div>
-</section>
+<!-- Section : 2 -->
 
 <style>
 :root {
     --black: #000;
     --dark-gray: #444;
     --white: #fff;
-    --blue: #007bff;
+    --blue: #a68e4c;
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -520,7 +1175,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .ai-buttons .btn:hover {
-    background-color: #0056b3;
+    background-color: #a68e4c;
 }
 
 /* Features List */
@@ -640,61 +1295,8 @@ if (currentUserEmail && users[currentUserEmail]) {
 
   
 
-    <!-- Section 2: Development Capabilities -->
-    <!-- Advanced Features Section -->
-<section class="advanced-features">
-  <div class="advanced-features-container">
-    <!-- Section Header -->
-    <div class="features-header fade-in-up">
-      <h2>Our AI Development Capabilities</h2>
-      <p>
-        We leverage cutting-edge technologies and proven methodologies to build 
-        sophisticated AI solutions. Our systems are designed to address complex 
-        challenges while ensuring scalability, adaptability, and reliability for your business.
-      </p>
-    </div>
 
-    <!-- Features Grid -->
-    <div class="features-cards">
-      <!-- Card 1 -->
-      <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <h3>Custom Algorithm Development</h3>
-        <p>
-          Create proprietary AI algorithms tailored to your unique business needs. 
-          Our solutions deliver efficiency and accuracy through advanced computational 
-          models and intelligent automation.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <h3>Neural Network Architecture</h3>
-        <p>
-          Design deep learning systems, convolutional and recurrent models for 
-          complex decision-making, pattern recognition, and predictive analytics.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon">
-          <i class="fas fa-cogs"></i>
-        </div>
-        <h3>AI System Integration</h3>
-        <p>
-          Integrate AI seamlessly into your existing infrastructure. Ensure smooth 
-          compatibility, minimal disruption, and maximum operational efficiency.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+ <!-- Section : 3 -->
 
 <style>
 /* Section Styling */
@@ -754,7 +1356,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 .feature-icon {
   font-size: 2.2rem;
-  color: #007bff;
+  color: #a68e4c; /* golden theme */
   margin-bottom: 15px;
 }
 
@@ -827,56 +1429,16 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Section 3: Development Process -->
-   <!-- Advanced Development Process Section -->
-<section class="development-process">
-  <div class="development-process-container">
 
-    <!-- Top Heading -->
-    <div class="process-header fade-in-up">
-      <h2>Our Development Process</h2>
-      <p>
-        We adopt an agile and transparent methodology for AI development. 
-      </p>
-    </div>
+    
 
-    <!-- Content Row -->
-    <div class="process-row">
-      <!-- Left Image -->
-      <div class="process-image slide-in-right">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&auto=format" alt="AI Development Process">
-      </div>
-
-      <!-- Right Content -->
-      <div class="process-content fade-in-up delay-1">
-        <!-- Paragraph intro -->
-        <p class="process-intro">
-          Our approach is designed to balance innovation with practicality. From initial planning to 
-          deployment, every stage ensures your AI solution is business-ready and built for long-term success. 
-          We emphasize collaboration at every step, ensuring that your team stays aligned with the progress. 
-          With continuous feedback loops, we deliver solutions that not only meet expectations but exceed them.
-        </p>
-
-        <!-- Steps -->
-        <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p>Requirements Analysis & Strategic Planning</p></div>
-          <div class="step"><span class="step-number">02</span><p>Data Collection, Cleaning & Preprocessing</p></div>
-          <div class="step"><span class="step-number">03</span><p>Algorithm Design & Smart Implementation</p></div>
-          <div class="step"><span class="step-number">04</span><p>Model Training, Testing & Fine-Tuning</p></div>
-          <div class="step"><span class="step-number">05</span><p>End-to-End Validation & Quality Assurance</p></div>
-          <div class="step"><span class="step-number">06</span><p>Deployment, Monitoring & Continuous Improvement</p></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+ <!-- Section : 4 -->
 
 <style>
 /* Section Base */
 .development-process {
   width: 100%;
-  background: #ffffff;
+  background: #ffffff; /* updated background */
   padding: 30px 20px 50px;
   box-sizing: border-box;
 }
@@ -945,7 +1507,7 @@ if (currentUserEmail && users[currentUserEmail]) {
   margin-bottom: 16px;
 }
 .step-number {
-  background: #007bff;
+  background: #a68e4c; /* updated golden accent */
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -989,26 +1551,23 @@ if (currentUserEmail && users[currentUserEmail]) {
   }
 }
 
-/* 📱 Mobile Responsive */
-
-
-  /* Responsive */
+/* Responsive */
 @media (max-width: 992px) {
   .process-row {
     flex-direction: column;
     text-align: center;
-    gap: 30px; /* reduce gap */
+    gap: 30px;
   }
 
   .process-image,
   .process-content {
-    flex: 1 1 auto;   /* reset the 600px flex-basis */
-    width: 100%;      /* force full width */
-    max-width: 100%;  /* prevent overflow */
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
   }
 
   .process-image img {
-    width: 100%;  /* responsive image */
+    width: 100%;
     height: auto;
     border-radius: 15px;
   }
@@ -1019,8 +1578,6 @@ if (currentUserEmail && users[currentUserEmail]) {
     padding: 0 15px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   .development-process {
@@ -1051,40 +1608,13 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Section 4: Technologies & Tools -->
-   <section class="tech-showcase">
-  <div class="tech-container">
-    <!-- Heading -->
-    <div class="tech-header animate-fade-up">
-      <h2>Technologies We Use</h2>
-      <p>Our AI development leverages state-of-the-art programming languages, frameworks, and platforms to deliver intelligent, scalable, and future-ready solutions.</p>
-    </div>
+   
 
-    <!-- Grid -->
-    <div class="tech-grid">
-      <div class="tech-card animate-slide-up delay-1">
-        <h3>Python</h3>
-        <p>The backbone of our AI development, enabling rapid prototyping, scalability, and integration with leading frameworks.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-2">
-        <h3>TensorFlow</h3>
-        <p>A powerful open-source library for building and deploying machine learning models with high efficiency.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-3">
-        <h3>PyTorch</h3>
-        <p>Our preferred framework for deep learning research and production, offering dynamic computation and flexibility.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-4">
-        <h3>AWS / Azure</h3>
-        <p>Robust cloud infrastructure that powers our AI solutions with reliability, scalability, and enterprise-grade security.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Section : 5-->
 
 <style>
 /* Section Styling */
-.tech-showcase {
+.service-showcase {
   width: 100%;
   padding: 50px;
   background: #edf0ee;
@@ -1092,20 +1622,20 @@ if (currentUserEmail && users[currentUserEmail]) {
   justify-content: center;
 }
 
-.tech-container {
+.service-container {
   max-width: 1450px;
   width: 100%;
   text-align: center;
 }
 
 /* Header */
-.tech-header h2 {
+.service-header h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 15px;
 }
 
-.tech-header p {
+.service-header p {
   font-size: 1.1rem;
   color: #333;
   max-width: 800px;
@@ -1114,14 +1644,14 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Grid */
-.tech-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 /* Card */
-.tech-card {
+.service-card {
   background: #fff;
   padding: 30px;
   border-radius: 15px;
@@ -1130,19 +1660,19 @@ if (currentUserEmail && users[currentUserEmail]) {
   text-align: left;
 }
 
-.tech-card h3 {
+.service-card h3 {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #a68e4c; /* gold accent */
   margin-bottom: 10px;
 }
 
-.tech-card p {
+.service-card p {
   font-size: 1rem;
   color: #000;
   line-height: 1.6;
 }
 
-.tech-card:hover {
+.service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
@@ -1181,94 +1711,57 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* ✅ Mobile View */
 @media (max-width: 768px) {
-  .tech-showcase {
-    padding: 30px 20px; /* reduce padding */
+  .service-showcase {
+    padding: 30px 20px;
   }
 
-  .tech-header h2 {
+  .service-header h2 {
     font-size: 1.8rem;
   }
 
-  .tech-header p {
+  .service-header p {
     font-size: 1rem;
     margin-bottom: 25px;
     padding: 0 10px;
   }
 
-  .tech-grid {
-    grid-template-columns: 1fr; /* 1 card per row */
+  .service-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .tech-card {
+  .service-card {
     padding: 20px;
-    text-align: center; /* center content */
+    text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  .tech-card h3 {
+  .service-card h3 {
     font-size: 1.3rem;
   }
 
-  .tech-card p {
+  .service-card p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
 }
 </style>
 
-<!-- Section 4: End -->
 
-<!-- Section 5: Projects -->  
 
-    <section class="projects-success">
-  <div class="projects-container">
-    <!-- Left Side (Image) -->
-    <div class="projects-image animate-slide-in">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format" alt="AI Project Success">
-    </div>
-
-    <!-- Right Side (Content) -->
-    <div class="projects-content">
-      <h2 class="animate-fade-up">Recent Project Success</h2>
-      <p class="animate-fade-up delay-1" style="text-align: justify;">
-        Our AI-driven projects empower industries with innovative solutions that optimize performance, reduce costs, and improve customer engagement. Each project demonstrates our commitment to delivering real business results.
-      </p>
-
-      <!-- Testimonial Card 1 -->
-      <div class="project-card animate-fade-up delay-2">
-        <blockquote>
-          “The custom AI solution developed by Stackly increased our production efficiency by 
-          <span class="highlight">45%</span> and reduced quality control errors by 
-          <span class="highlight">80%</span>. The system learns and adapts continuously.”
-        </blockquote>
-        <cite>— Robert Kim, Manufacturing Director</cite>
-      </div>
-
-      <!-- Testimonial Card 2 -->
-      <div class="project-card animate-fade-up delay-3">
-        <blockquote>
-          “Stackly’s recommendation engine boosted our customer engagement by 
-          <span class="highlight">60%</span> and improved conversions by 
-          <span class="highlight">35%</span>. The implementation was seamless and impactful.”
-        </blockquote>
-        <cite>— Lisa Chen, E-commerce Manager</cite>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Section : 6-->
 
 <style>
 /* Section Styling */
-.projects-success {
+.bookkeeping-services {
   width: 100%;
   padding: 40px 50px;
-  background: #fff;
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
 
-.projects-container {
+.services-container {
   max-width: 1450px;
   width: 100%;
   display: grid;
@@ -1278,7 +1771,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Image */
-.projects-image img {
+.services-image img {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -1286,71 +1779,52 @@ if (currentUserEmail && users[currentUserEmail]) {
   transition: transform 0.4s ease;
   display: block;
 }
-.projects-image img:hover {
+.services-image img:hover {
   transform: scale(1.03);
 }
 
 /* Content */
-.projects-content h2 {
+.services-content h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 10px;
 }
 
-.projects-content p {
+.services-content p {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.7;
 }
 
-/* Testimonial Cards */
-.project-card {
-  background: #edf0ee;
+/* Service Cards */
+.service-card {
+  background: #fff;
   padding: 25px;
   border-radius: 16px;
   margin-bottom: 15px;
   position: relative;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  border: 5px solid #a68e4c;
 }
 
-/* Gradient border effect */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 3px; /* border thickness */
-  border-radius: 16px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
-}
 
-.project-card:hover {
+
+.service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.project-card blockquote {
-  font-size: 1.05rem;
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #a68e4c;
+  margin-bottom: 8px;
+}
+.service-card p {
+  font-size: 1rem;
   color: #000;
   line-height: 1.6;
-  margin-bottom: 10px;
-}
-.project-card cite {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #007bff;
-}
-.highlight {
-  color: #007bff;
-  font-weight: bold;
 }
 
 /* Animations */
@@ -1378,60 +1852,52 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* Responsive Fixes */
 @media (max-width: 1024px) {
-  .projects-container {
+  .services-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-success {
+  .bookkeeping-services {
     padding: 20px;
   }
-  .projects-image img {
+  .services-image img {
     width: 100%;
-    height: auto;   /* prevent fixed height issues */
+    height: auto;
     object-fit: cover;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.8rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 1rem;
   }
-  .project-card {
+  .service-card {
     padding: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.5rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 0.95rem;
   }
-  .project-card blockquote {
-    font-size: 0.95rem;
+  .service-card h3 {
+    font-size: 1.05rem;
   }
 }
 </style>
 
 
 
-    <!-- Section 6: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Ready to Build Your Custom AI Solution?</h2>
-            <p>Let's discuss your requirements and create a tailored AI development plan.</p>
-            <a href="contact.html" class="btn btn-primary">Start Development</a>
-        </div>
-    </div>
-</section>
+
+    <!-- Section : 7 -->
 
 <style>
     .contact-banner {
@@ -1504,17 +1970,18 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Footer -->
-    <footer class="footer">
+     <!-- Footer -->
+     <!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -1525,45 +1992,45 @@ if (currentUserEmail && users[currentUserEmail]) {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Bookkeeping Services</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Tax Preparation & Filing</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Financial Reporting</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Payroll Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Budgeting & Forecasting</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Audit & Compliance</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -1574,6 +2041,14 @@ if (currentUserEmail && users[currentUserEmail]) {
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -1608,7 +2083,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -1619,7 +2094,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -1635,18 +2110,32 @@ if (currentUserEmail && users[currentUserEmail]) {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
+
+</div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
@@ -1692,6 +2181,10 @@ body.dark-mode .ai-hero-paragraph {
 }
 
 body.dark-mode .ai-section,
+
+body.dark-mode .service-showcase,
+body.dark-mode .bookkeeping-services,
+body.dark-mode .service-card,
 body.dark-mode .ai-heading,
 body.dark-mode .ai-content,
 body.dark-mode .ai-text,

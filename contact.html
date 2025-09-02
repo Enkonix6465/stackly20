@@ -3,138 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Stackly AI Tools</title>
+    <title>Stackly - Finance and accounting Services</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+  <div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>  
+  
+  <!-- Sticky Header -->
+   <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Budgeting & Forecasting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Audit & Compliance</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting  </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">+
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
+      </div>
+    </div>
   </div>
-</div>
-  </div>
-</header>
+</header> 
 
-<!-- ✅ Script -->
+
+<!-- Section : 1 -->
+
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/7682762/7682762-hd_1920_1080_24fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero.title">Contact Us</h1>
+    </div>
+  </div>
+</section>
+
+
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
   }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -150,127 +244,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
-// Hamburger toggle for mobile
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -290,22 +506,12 @@ if (currentUserEmail && users[currentUserEmail]) {
   </script>
 
 
- <!-- 🔷 HERO SECTION START video_code  -->
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/5452791/5452791-uhd_2560_1440_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Contact Us</h1>
-      
-    </div>
-  </div>
-</section>
+
+
+
+<!-- Section : 1 -->
 
 <style>
   /* Hero Section */
@@ -363,30 +569,9 @@ if (currentUserEmail && users[currentUserEmail]) {
     opacity: 0;
   }
 
-  .ai-hero-paragraph {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    opacity: 0;
-  }
 
-  .ai-hero-button {
-    display: inline-block;
-    padding: 14px 36px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    background: linear-gradient(90deg, #00f7ff, #007bff);
-    border-radius: 12px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-  }
 
-  .ai-hero-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00f7ff, 0 0 25px #007bff;
-  }
+ 
 
   /* Animations */
   @keyframes aiSlideIn {
@@ -426,7 +611,9 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
+
+
+<!-- Section : 2 -->
 
 
 
@@ -496,7 +683,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 
     .fancy-contact-form button {
       width: 100%;
-      background-color: #007bff;
+      background-color: #a68e4c;
       color: white;
       border: none;
       padding: 14px;
@@ -509,7 +696,7 @@ if (currentUserEmail && users[currentUserEmail]) {
     }
 
     .fancy-contact-form button:hover {
-      background-color: #007bff;
+      background-color: #a68e4c;
       transform: translateY(-2px);
     }
 
@@ -573,45 +760,43 @@ if (currentUserEmail && users[currentUserEmail]) {
     }
   </style>
 
-  <div class="fancy-contact-wrapper">
-    <div class="fancy-contact-form">
-      
-      <form action="https://formspree.io/f/xovlekvg" method="POST">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  <!-- Section : 2 -->
+<div class="fancy-contact-wrapper">
+  <div class="fancy-contact-form">
+    <form action="https://formspree.io/f/xovlekvg" method="POST">
+      <label for="name" data-i18n="section2.form.name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="" data-i18n-placeholder="section2.form.namePlaceholder" required>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+      <label for="email" data-i18n="section2.form.email">Email Address</label>
+      <input type="email" id="email" name="_replyto" placeholder="" data-i18n-placeholder="section2.form.emailPlaceholder" required>
 
-        <label for="phone">Phone Number (Optional)</label>
-        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+      <label for="phone" data-i18n="section2.form.phone">Phone Number (Optional)</label>
+      <input type="tel" id="phone" name="phone" placeholder="" data-i18n-placeholder="section2.form.phonePlaceholder">
 
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+      <label for="message" data-i18n="section2.form.message">Your Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="" data-i18n-placeholder="section2.form.messagePlaceholder" required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+      <button type="submit" data-i18n="section2.form.button">Send Message</button>
+    </form>
+  </div>
 
-    <div class="fancy-contact-image">
-      <img src="https://images.pexels.com/photos/879143/pexels-photo-879143.jpeg" alt="Contact Us">
-      <div>
-          <h2>Let’s Talk</h2>
-      <p class="contact-intro">Have questions ? Our team is ready to help. Fill out the form below and we'll respond within 24 hours.</p>
-      </div>
+  <div class="fancy-contact-image">
+    <img src="https://i.pinimg.com/736x/a0/d5/b9/a0d5b9c93d0f860e4bf1940c04e94fa2.jpg" alt="Contact Us" data-i18n-alt="section2.imageAlt">
+    <div>
+      <h2 data-i18n="section2.heading">Let’s Talk</h2>
+      <p class="contact-intro" data-i18n="section2.description">Have questions ? Our team is ready to help. Fill out the form below and we'll respond within 24 hours.</p>
     </div>
   </div>
+</div>
 </section>
 
-    <!-- Section 3: Contact Information -->
-   <section class="features-section section-padding">
+<!-- Section 3 -->
+<section class="features-section section-padding">
   <div class="container">
     <div class="section-header animate-fade-up">
-      <h2>Multiple Ways to Reach Us</h2>
-      <p class="text-justify">
-        We offer various communication channels to ensure you can connect with our
-        team in the most convenient way possible, whether you prefer direct
-        contact or scheduling a consultation.
+      <h2 data-i18n="section3.heading">Multiple Ways to Connect</h2>
+      <p class="text-justify" data-i18n="section3.description">
+        We provide several channels to reach our accounting experts. Whether you prefer email, phone, or visiting our office, we ensure fast, reliable, and personalized support for your financial and accounting needs.
       </p>
     </div>
     <div class="features-grid">
@@ -619,44 +804,104 @@ if (currentUserEmail && users[currentUserEmail]) {
         <div class="feature-icon">
           <i class="fas fa-envelope"></i>
         </div>
-        <h3>Email Support</h3>
-        <p class="text-justify">
-          Send us detailed inquiries about your AI project requirements,
-          technical questions, or partnership opportunities. Our support team
-          responds within 24 hours to all email communications, providing
-          comprehensive answers and guidance.
+        <h3 data-i18n="section3.card1.title">Email Support</h3>
+        <p class="text-justify" data-i18n="section3.card1.text">
+          Send us inquiries about bookkeeping, tax planning, auditing, or financial advisory services. Our team responds promptly with expert guidance to help you optimize your financial processes.
         </p>
-        <strong>contact@stackly.ai</strong>
+        <strong data-i18n="section3.card1.contact">contact@stackly.in</strong>
       </div>
       <div class="feature-card animate-fade-up delay-2">
         <div class="feature-icon">
           <i class="fas fa-phone"></i>
         </div>
-        <h3>Phone Consultation</h3>
-        <p class="text-justify">
-          Speak directly with our AI consultants for immediate assistance and
-          personalized recommendations. Our phone support is available during
-          business hours to discuss project specifications, provide technical
-          guidance, and schedule comprehensive consultations.
+        <h3 data-i18n="section3.card2.title">Phone Consultation</h3>
+        <p class="text-justify" data-i18n="section3.card2.text">
+          Speak directly with our accounting specialists for personalized advice on budgeting, tax compliance, and financial growth strategies. Phone support is available during business hours for tailored consultations.
         </p>
-        <strong>+1 (555) 123-4567</strong>
+        <strong data-i18n="section3.card2.contact">+1 (555) 987-6543</strong>
       </div>
       <div class="feature-card animate-fade-up delay-3">
         <div class="feature-icon">
           <i class="fas fa-map-marker-alt"></i>
         </div>
-        <h3>Office Location</h3>
-        <p class="text-justify">
-          Visit our state-of-the-art facility to meet our team, tour our AI
-          development labs, and experience our technologies firsthand. Schedule
-          an appointment to discuss your projects in person with our expert
-          consultants and technical specialists.
+        <h3 data-i18n="section3.card3.title">Office Location</h3>
+        <p class="text-justify" data-i18n="section3.card3.text">
+          Visit our finance and accounting office to meet our team, review financial strategies, and get hands-on guidance for your business accounting needs. Schedule an appointment to discuss your finances in person.
         </p>
-        <strong>123 AI Innovation Drive<br />Tech City, TC 12345</strong>
+        <strong data-i18n="section3.card3.contact">456 Finance Avenue<br />Money City, MC 67890</strong>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Section 4 -->
+<section class="stats-section section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="section4.heading">Business Hours & Support</h2>
+      <p class="text-justify" data-i18n="section4.description">
+        Our team is available during the following hours to provide immediate assistance 
+        and support for your accounting, tax, and financial advisory needs.
+      </p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-i18n="section4.stat1.day">Mon-Fri</div>
+        <div class="stat-label" data-i18n="section4.stat1.time">9:00 AM - 6:00 PM</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-i18n="section4.stat2.day">Saturday</div>
+        <div class="stat-label" data-i18n="section4.stat2.time">10:00 AM - 4:00 PM</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-i18n="section4.stat3.day">24/7</div>
+        <div class="stat-label" data-i18n="section4.stat3.time">Emergency Support</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-i18n="section4.stat4.day">&lt; 2 Hours</div>
+        <div class="stat-label" data-i18n="section4.stat4.time">Response Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5 -->
+<section class="testimonials-section section-padding faq-section">
+  <div class="container">
+    <div class="content-layout reverse">
+      <!-- Left Content -->
+      <div class="content-text">
+        <h2 class="animate-fade-up" data-i18n="section5.heading">Frequently Asked Questions</h2>
+        <p class="text-justify animate-fade-up delay-1" data-i18n="section5.description">
+          Find quick answers to common questions about our finance and accounting services, tax planning, and advisory solutions. This FAQ section covers the key details for working with our expert team.
+        </p>
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item animate-fade-up delay-2">
+          <blockquote class="text-justify">
+            <strong data-i18n="section5.q1">Q: How long does it take to set up financial planning or accounting services?</strong><br>
+            <span data-i18n="section5.a1">A: The timeline depends on the complexity of your accounts and reporting needs, but most setups are completed within 1-4 weeks. We provide a clear schedule during our initial consultation.</span>
+          </blockquote>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item animate-fade-up delay-3">
+          <blockquote class="text-justify">
+            <strong data-i18n="section5.q2">Q: Do you offer ongoing support for accounting and tax services?</strong><br>
+            <span data-i18n="section5.a2">A: Yes, we provide continuous support including bookkeeping, tax filing assistance, financial reporting, and advisory services to ensure your business remains compliant and financially optimized.</span>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="content-image animate-slide-in delay-2">
+        <img src="https://images.pexels.com/photos/4386374/pexels-photo-4386374.jpeg?w=800&h=600&auto=format&fit=crop" alt="Finance FAQ" data-i18n-alt="section5.imageAlt">
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <style>
 /* 🌟 General Section */
@@ -714,7 +959,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 .feature-card h3 {
   font-size: 1.6rem;
   margin: 15px 0;
-  color: #007bff;
+  color: #a68e4c;
 }
 
 .feature-card p {
@@ -734,7 +979,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 /* 🌟 Icons */
 .feature-icon {
   font-size: 40px;
-  color: #007bff;
+  color: #a68e4c;
   margin-bottom: 15px;
 }
 
@@ -762,41 +1007,14 @@ if (currentUserEmail && users[currentUserEmail]) {
    
     
 
-    <!-- Section 4: Business Hours -->
-   <section class="stats-section section-padding">
-  <div class="container">
-    <div class="section-header">
-      <h2>Business Hours & Support</h2>
-      <p class="text-justify">
-        Our team is available during the following hours to provide immediate assistance 
-        and support for your AI projects and technical inquiries.
-      </p>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">Mon-Fri</div>
-        <div class="stat-label">9:00 AM - 6:00 PM</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">Saturday</div>
-        <div class="stat-label">10:00 AM - 4:00 PM</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">24/7</div>
-        <div class="stat-label">Emergency Support</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">&lt; 2 Hours</div>
-        <div class="stat-label">Response Time</div>
-      </div>
-    </div>
-  </div>
-</section>
+   
+
+<!-- Section : 4 -->
 
 <style>
 /* Section background */
 .stats-section {
-  background: #007bff;
+  background: #a68e4c;
   padding: 50px;
   width: 100%;
   box-sizing: border-box;
@@ -884,39 +1102,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Section 5: FAQ -->
-    <section class="testimonials-section section-padding faq-section">
-  <div class="container">
-    <div class="content-layout reverse">
-      <!-- Left Content -->
-      <div class="content-text">
-        <h2 class="animate-fade-up">Frequently Asked Questions</h2>
-        <p class="text-justify animate-fade-up delay-1">
-          Get quick answers to common questions about our AI services, implementation processes, and support offerings. Our comprehensive FAQ section covers the most important aspects of working with our team.
-        </p>
-        
-        <!-- FAQ Item 1 -->
-        <div class="faq-item animate-fade-up delay-2">
-          <blockquote class="text-justify">
-            <strong>Q: How long does it typically take to implement an AI solution?</strong><br>
-            A: Implementation timeframes vary depending on project complexity, but most solutions are deployed within 4-12 weeks. We provide detailed project timelines during initial consultations.
-          </blockquote>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="faq-item animate-fade-up delay-3">
-          <blockquote class="text-justify">
-            <strong>Q: Do you provide ongoing support after implementation?</strong><br>
-            A: Yes, we offer comprehensive support packages including monitoring, optimization, updates, and technical assistance to ensure your AI solutions continue performing at peak efficiency.
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- Right Image -->
-      
-    </div>
-  </div>
-</section>
+    
 
 <style>
 /* Section Background */
@@ -993,7 +1179,7 @@ if (currentUserEmail && users[currentUserEmail]) {
   display: block;
   margin-bottom: 8px;
   font-size: 1.05rem;
-  color: #007bff;
+  color: #a68e4c;
 }
 
 /* Responsive */
@@ -1011,13 +1197,16 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
     <!-- Section 7: Contact Banner -->
-   <!-- Map Section -->
+  
 <section class="map-section section-padding">
   <div class="container">
     <div class="section-header">
-      <h2>Find Us on the Map</h2>
-      <p>Visit our office or connect with us in person. Our location is easily accessible for consultations, meetings, and collaborations.</p>
+      <h2 data-i18n="section6.heading">Find Us on the Map</h2>
+      <p data-i18n="section6.description">
+        Visit our office or connect with us in person. Our location is easily accessible for consultations, meetings, and collaborations.
+      </p>
     </div>
+
 
     <div class="map-container">
       <!-- Google Map Embed -->
@@ -1063,17 +1252,18 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Footer -->
-    <footer class="footer">
+     <!-- Footer -->
+     <!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -1084,48 +1274,361 @@ if (currentUserEmail && users[currentUserEmail]) {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section" style="margin-left: 100px;">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section" style="margin-left: 30px;">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Bookkeeping Services</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Tax Preparation & Filing</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Financial Reporting</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Payroll Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Budgeting & Forecasting</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Audit & Compliance</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
+
+<script>
+// Translation dictionary
+const translations = {
+  en: {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Bookkeeping Services",
+    "service_2": "Tax Preparation & Filing",
+    "service_3": "Financial Reporting",
+    "service_4": "Payroll Management",
+    "service_5": "Budgeting & Forecasting",
+    "service_6": "Audit & Compliance",
+    "service6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Tax Planning",
+    "blog_2": "Financial Growth Strategies",
+    "blog_3": "Modern Accounting Trends",
+    "contact": "Contact",
+    "logout": "Logout",
+
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Bookkeeping Services",
+    "footer_service2": "Tax Preparation & Filing",
+    "footer_service3": "Financial Reporting",
+    "footer_service4": "Payroll Management",
+    "footer_service5": "Budgeting & Forecasting",
+    "footer_service6": "Audit & Compliance",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
+
+    "hero.title": "Contact Us",
+
+    "section2.form.name": "Full Name",
+    "section2.form.namePlaceholder": "Enter your name",
+    "section2.form.email": "Email Address",
+    "section2.form.emailPlaceholder": "Enter your email",
+    "section2.form.phone": "Phone Number (Optional)",
+    "section2.form.phonePlaceholder": "Enter your phone number",
+    "section2.form.message": "Your Message",
+    "section2.form.messagePlaceholder": "Write your message...",
+    "section2.form.button": "Send Message",
+    "section2.imageAlt": "Contact Us",
+    "section2.heading": "Let’s Talk",
+    "section2.description": "Have questions ? Our team is ready to help. Fill out the form below and we'll respond within 24 hours.",
+
+    "section3.heading": "Multiple Ways to Connect",
+    "section3.description": "We provide several channels to reach our accounting experts. Whether you prefer email, phone, or visiting our office, we ensure fast, reliable, and personalized support for your financial and accounting needs.",
+    "section3.card1.title": "Email Support",
+    "section3.card1.text": "Send us inquiries about bookkeeping, tax planning, auditing, or financial advisory services. Our team responds promptly with expert guidance to help you optimize your financial processes.",
+    "section3.card1.contact": "contact@stackly.in",
+    "section3.card2.title": "Phone Consultation",
+    "section3.card2.text": "Speak directly with our accounting specialists for personalized advice on budgeting, tax compliance, and financial growth strategies. Phone support is available during business hours for tailored consultations.",
+    "section3.card2.contact": "+1 (555) 987-6543",
+    "section3.card3.title": "Office Location",
+    "section3.card3.text": "Visit our finance and accounting office to meet our team, review financial strategies, and get hands-on guidance for your business accounting needs. Schedule an appointment to discuss your finances in person.",
+    "section3.card3.contact": "456 Finance Avenue\nMoney City, MC 67890",
+
+    "section4.heading": "Business Hours & Support",
+    "section4.description": "Our team is available during the following hours to provide immediate assistance and support for your accounting, tax, and financial advisory needs.",
+    "section4.stat1.day": "Mon-Fri",
+    "section4.stat1.time": "9:00 AM - 6:00 PM",
+    "section4.stat2.day": "Saturday",
+    "section4.stat2.time": "10:00 AM - 4:00 PM",
+    "section4.stat3.day": "24/7",
+    "section4.stat3.time": "Emergency Support",
+    "section4.stat4.day": "< 2 Hours",
+    "section4.stat4.time": "Response Time",
+
+    "section5.heading": "Frequently Asked Questions",
+    "section5.description": "Find quick answers to common questions about our finance and accounting services, tax planning, and advisory solutions. This FAQ section covers the key details for working with our expert team.",
+    "section5.q1": "Q: How long does it take to set up financial planning or accounting services?",
+    "section5.a1": "A: The timeline depends on the complexity of your accounts and reporting needs, but most setups are completed within 1-4 weeks. We provide a clear schedule during our initial consultation.",
+    "section5.q2": "Q: Do you offer ongoing support for accounting and tax services?",
+    "section5.a2": "A: Yes, we provide continuous support including bookkeeping, tax filing assistance, financial reporting, and advisory services to ensure your business remains compliant and financially optimized.",
+    "section5.imageAlt": "Finance FAQ",
+
+     "section6.heading": "Find Us on the Map",
+    "section6.description": "Visit our office or connect with us in person. Our location is easily accessible for consultations, meetings, and collaborations."
+ 
+              
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "خدمات مسك الدفاتر",
+    "service_2": "إعداد وتقديم الضرائب",
+    "service_3": "التقارير المالية",
+    "service_4": "إدارة الرواتب",
+    "service_5": "إعداد الميزانية والتوقعات",
+    "service_6": "التدقيق والامتثال",
+    "service6": "الدعم القانوني والوثائق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "التخطيط الضريبي الذكي",
+    "blog_2": "استراتيجيات النمو المالي",
+    "blog_3": "اتجاهات المحاسبة الحديثة",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الرئيسية 2",
+    "footer_aboutUs": "معلومات عنا",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "خدمات مسك الدفاتر",
+    "footer_service2": "إعداد وتقديم الضرائب",
+    "footer_service3": "التقارير المالية",
+    "footer_service4": "إدارة الرواتب",
+    "footer_service5": "إعداد الميزانية والتوقعات",
+    "footer_service6": "التدقيق والامتثال",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 شارع ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+     
+    "hero.title": "اتصل بنا",
+
+    "section2.form.name": "الاسم الكامل",
+    "section2.form.namePlaceholder": "أدخل اسمك",
+    "section2.form.email": "عنوان البريد الإلكتروني",
+    "section2.form.emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "section2.form.phone": "رقم الهاتف (اختياري)",
+    "section2.form.phonePlaceholder": "أدخل رقم هاتفك",
+    "section2.form.message": "رسالتك",
+    "section2.form.messagePlaceholder": "اكتب رسالتك...",
+    "section2.form.button": "إرسال الرسالة",
+    "section2.imageAlt": "اتصل بنا",
+    "section2.heading": "لنتحدث",
+    "section2.description": "هل لديك أسئلة؟ فريقنا جاهز للمساعدة. املأ النموذج أدناه وسنرد خلال 24 ساعة.",
+
+    "section3.heading": "طرق متعددة للتواصل",
+    "section3.description": "نوفر عدة قنوات للتواصل مع خبراء المحاسبة لدينا. سواء كنت تفضل البريد الإلكتروني أو الهاتف أو زيارة مكتبنا، فإننا نضمن دعمًا سريعًا وموثوقًا وشخصيًا لاحتياجاتك المالية والمحاسبية.",
+    "section3.card1.title": "دعم عبر البريد الإلكتروني",
+    "section3.card1.text": "أرسل إلينا استفسارات حول مسك الدفاتر أو التخطيط الضريبي أو التدقيق أو خدمات الاستشارات المالية. يرد فريقنا بسرعة بإرشادات الخبراء لمساعدتك على تحسين عملياتك المالية.",
+    "section3.card1.contact": "contact@stackly.in",
+    "section3.card2.title": "استشارة هاتفية",
+    "section3.card2.text": "تحدث مباشرة مع متخصصي المحاسبة لدينا للحصول على نصائح مخصصة بشأن إعداد الميزانية والامتثال الضريبي واستراتيجيات النمو المالي. يتوفر الدعم عبر الهاتف خلال ساعات العمل للاستشارات المخصصة.",
+    "section3.card2.contact": "+1 (555) 987-6543",
+    "section3.card3.title": "موقع المكتب",
+    "section3.card3.text": "قم بزيارة مكتبنا المالي والمحاسبي لمقابلة فريقنا ومراجعة الاستراتيجيات المالية والحصول على إرشادات عملية لاحتياجات عملك المحاسبية. حدد موعدًا لمناقشة أمورك المالية شخصيًا.",
+    "section3.card3.contact": "456 شارع المالية\nمدينة المال، MC 67890",
+
+    "section4.heading": "ساعات العمل والدعم",
+    "section4.description": "فريقنا متاح خلال الساعات التالية لتقديم المساعدة الفورية والدعم لاحتياجاتك في المحاسبة والضرائب والاستشارات المالية.",
+    "section4.stat1.day": "الاثنين - الجمعة",
+    "section4.stat1.time": "9:00 صباحًا - 6:00 مساءً",
+    "section4.stat2.day": "السبت",
+    "section4.stat2.time": "10:00 صباحًا - 4:00 مساءً",
+    "section4.stat3.day": "24/7",
+    "section4.stat3.time": "دعم طارئ",
+    "section4.stat4.day": "< ساعتين",
+    "section4.stat4.time": "وقت الاستجابة",
+
+    "section5.heading": "الأسئلة الشائعة",
+    "section5.description": "اعثر على إجابات سريعة للأسئلة الشائعة حول خدماتنا المالية والمحاسبية والتخطيط الضريبي والحلول الاستشارية. يغطي هذا القسم التفاصيل الأساسية للعمل مع فريقنا الخبير.",
+    "section5.q1": "س: كم من الوقت يستغرق إعداد خدمات التخطيط المالي أو المحاسبة؟",
+    "section5.a1": "ج: يعتمد الجدول الزمني على مدى تعقيد حساباتك واحتياجات التقارير الخاصة بك، ولكن معظم الإعدادات تكتمل خلال 1-4 أسابيع. نحن نقدم جدولاً زمنيًا واضحًا خلال الاستشارة الأولية.",
+    "section5.q2": "س: هل تقدمون دعمًا مستمرًا لخدمات المحاسبة والضرائب؟",
+    "section5.a2": "ج: نعم، نحن نقدم دعمًا مستمرًا يشمل مسك الدفاتر، والمساعدة في تقديم الضرائب، والتقارير المالية، وخدمات الاستشارات لضمان بقاء عملك ملتزمًا ومحسنًا ماليًا.",
+    "section5.imageAlt": "الأسئلة الشائعة المالية",
+ 
+    "section6.heading": "اعثر علينا على الخريطة",
+    "section6.description": "قم بزيارة مكتبنا أو تواصل معنا شخصيًا. موقعنا يسهل الوصول إليه للاستشارات والاجتماعات والتعاون.",
+    
+    
+
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספקית מובילה של פתרונות בינה מלאכותית, המסייעת לעסקים לעבור שינוי באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודות",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "שירותי הנהלת חשבונות",
+    "footer_service2": "הכנת והגשת מסים",
+    "footer_service3": "דוחות כספיים",
+    "footer_service4": "ניהול שכר",
+    "footer_service5": "תכנון תקציב ותחזיות",
+    "footer_service6": "ביקורת וציות",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 דרך חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+ 
+    "hero.title": "צור קשר",
+
+    "section2.form.name": "שם מלא",
+    "section2.form.namePlaceholder": "הכנס את שמך",
+    "section2.form.email": "כתובת אימייל",
+    "section2.form.emailPlaceholder": "הכנס את האימייל שלך",
+    "section2.form.phone": "מספר טלפון (אופציונלי)",
+    "section2.form.phonePlaceholder": "הכנס את מספר הטלפון שלך",
+    "section2.form.message": "ההודעה שלך",
+    "section2.form.messagePlaceholder": "כתוב את ההודעה שלך...",
+    "section2.form.button": "שלח הודעה",
+    "section2.imageAlt": "צור קשר",
+    "section2.heading": "בוא נדבר",
+    "section2.description": "יש לך שאלות? הצוות שלנו מוכן לעזור. מלא את הטופס למטה ונחזור אליך תוך 24 שעות.",
+
+    "section3.heading": "דרכים שונות ליצור קשר",
+    "section3.description": "אנו מספקים מספר ערוצים ליצירת קשר עם מומחי החשבונאות שלנו. בין אם אתה מעדיף אימייל, טלפון או ביקור במשרדנו, אנו מבטיחים תמיכה מהירה, אמינה ואישית לצרכים הפיננסיים והחשבונאיים שלך.",
+    "section3.card1.title": "תמיכה באימייל",
+    "section3.card1.text": "שלח לנו פניות בנושא הנהלת חשבונות, תכנון מס, ביקורת או שירותי ייעוץ פיננסי. הצוות שלנו מגיב במהירות עם הדרכה מקצועית שיעזור לך לייעל את התהליכים הפיננסיים שלך.",
+    "section3.card1.contact": "contact@stackly.in",
+    "section3.card2.title": "ייעוץ טלפוני",
+    "section3.card2.text": "שוחח ישירות עם מומחי החשבונאות שלנו לקבלת ייעוץ מותאם אישית בנוגע לתקצוב, ציות מס ואסטרטגיות צמיחה פיננסיות. התמיכה הטלפונית זמינה בשעות העבודה להתייעצות מותאמת.",
+    "section3.card2.contact": "+1 (555) 987-6543",
+    "section3.card3.title": "מיקום המשרד",
+    "section3.card3.text": "בקר במשרד הפיננסים והחשבונאות שלנו כדי לפגוש את הצוות, לעבור על אסטרטגיות פיננסיות ולקבל הדרכה מעשית לצרכי החשבונאות של העסק שלך. קבע פגישה כדי לדון בענייניך הפיננסיים באופן אישי.",
+    "section3.card3.contact": "456 שדרת הפיננסים\nעיר הכסף, MC 67890",
+
+    "section4.heading": "שעות פעילות ותמיכה",
+    "section4.description": "הצוות שלנו זמין בשעות הבאות כדי לספק סיוע מיידי ותמיכה לצרכי החשבונאות, המס והייעוץ הפיננסי שלך.",
+    "section4.stat1.day": "ב'-ו'",
+    "section4.stat1.time": "9:00 - 18:00",
+    "section4.stat2.day": "שבת",
+    "section4.stat2.time": "10:00 - 16:00",
+    "section4.stat3.day": "24/7",
+    "section4.stat3.time": "תמיכה דחופה",
+    "section4.stat4.day": "< שעתיים",
+    "section4.stat4.time": "זמן תגובה",
+
+    "section5.heading": "שאלות נפוצות",
+    "section5.description": "מצא תשובות מהירות לשאלות נפוצות על שירותי הפיננסים והחשבונאות שלנו, תכנון מס ופתרונות ייעוץ. סעיף זה מכסה את הפרטים המרכזיים לעבודה עם הצוות המומחה שלנו.",
+    "section5.q1": "ש: כמה זמן לוקח להקים שירותי תכנון פיננסי או חשבונאות?",
+    "section5.a1": "ת: לוח הזמנים תלוי במורכבות החשבונות וצרכי הדיווח שלך, אך רוב ההקמות מושלמות תוך 1-4 שבועות. אנו מספקים לוח זמנים ברור במהלך הייעוץ הראשוני.",
+    "section5.q2": "ש: האם אתם מציעים תמיכה מתמשכת לשירותי חשבונאות ומסים?",
+    "section5.a2": "ת: כן, אנו מספקים תמיכה רציפה הכוללת ניהול ספרים, סיוע בהגשת מסים, דיווח כספי ושירותי ייעוץ כדי להבטיח שהעסק שלך יישאר תואם ואופטימלי מבחינה פיננסית.",
+    "section5.imageAlt": "שאלות נפוצות פיננסיות",
+   
+    "section6.heading": "מצא אותנו על המפה",
+    "section6.description": "בקר במשרדנו או התחבר איתנו באופן אישי. המיקום שלנו נגיש בקלות לייעוץ, פגישות ושיתופי פעולה.",
+
+  }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
 
 <style>
 .footer {
@@ -1133,6 +1636,14 @@ if (currentUserEmail && users[currentUserEmail]) {
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -1167,7 +1678,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -1178,7 +1689,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -1194,19 +1705,35 @@ if (currentUserEmail && users[currentUserEmail]) {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
 
+</div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
 <!-- --- DARK MODE OVERRIDES --- -->
 <style>
 body.dark-mode {

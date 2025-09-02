@@ -3,143 +3,678 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - AI Tools & Solutions</title>
+    <title>Stackly - Finance and accounting Services</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
+<div id="loader">
+    <div class="spinner"></div>
+</div>
 
+<div id="content" style="display:none;"></div>
 
 
     <!-- Sticky Header -->
-   <header class="header">
+    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Budgeting & Forecasting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Audit & Compliance</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting  </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">+
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/7792021/7792021-hd_1920_1080_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="blog.hero_title">Strategic Financial Services</h1>
+      <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="blog.hero_subtitle">Clarity, Compliance, Growth, Always.</p>
+      <a href="services.html" class="btn custom-btn" data-i18n="blog.btn_explore">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="blog-intro">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog.intro_heading">Finance & Accounting Insights</h2>
+    <p class="section-subtext" style="text-align: justify;" data-i18n="blog.intro_paragraph">
+      Discover the latest trends, strategies, and expert insights in finance and accounting. Stay informed on how businesses are 
+      streamlining bookkeeping, improving compliance, and leveraging financial forecasting for sustainable growth. 
+      From effective tax planning to advanced auditing practices, our resources highlight practical approaches to achieving 
+      accuracy, transparency, and long-term financial stability.
+      <br><br>
+      As global markets evolve, organizations are embracing smarter accounting tools, automation, and compliance frameworks to 
+      stay ahead. Whether you're a startup managing cash flow or an enterprise aiming for financial transformation, 
+      our articles provide clarity, actionable guidance, and thought leadership to help you succeed.
+    </p>
+    <div class="blog-image" style="margin-top:20px; text-align:center;">
+      <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=900&h=600&fit=crop&auto=format" 
+           alt="Finance and Accounting Services" 
+           data-i18n-alt="blog.intro_img_alt"
+           style="max-width:100%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+    </div>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="blog-featured">
+  <div class="container featured-grid">
+    <!-- Left Side (Image) -->
+    <div class="featured-image">
+      <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?w=1200&h=800&fit=crop&auto=format" alt="Finance and Accounting Services" data-i18n-alt="blog.featured_img_alt">
+    </div>
+
+    <!-- Right Side (Content) -->
+    <div class="featured-content">
+      <h3 data-i18n="blog.featured_heading">Financial Planning & Forecasting</h3>
+      <p style="text-align: justify;" data-i18n="blog.featured_paragraph1">
+        Gain insights into the evolving world of finance and accounting services that drive smarter decision-making. 
+        From strategic budgeting to accurate forecasting, modern financial practices help businesses achieve stability 
+        and long-term growth. Effective planning ensures that organizations remain agile and prepared for changing 
+        market conditions. 
+      </p>
+      <p style="text-align: justify;" data-i18n="blog.featured_paragraph2">
+        Today’s enterprises are moving beyond traditional accounting, embracing automation, cloud-based tools, and 
+        real-time reporting for greater efficiency. With precise forecasting, companies can optimize cash flow, 
+        reduce risks, and unlock new opportunities for sustainable growth.
+      </p>
+      <a href="blog1.html" class="btn btn-primary" data-i18n="blog.btn_readmore1">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 4-->
+<section class="finance-services-2024">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog.services_heading">Key Finance & Accounting Services</h2>
+    <div class="trends-grid">
+      <!-- Card 1 -->
+      <div class="trend-card">
+        <h3 data-i18n="blog.service1_heading">Financial Planning</h3>
+        <p data-i18n="blog.service1_paragraph">Strategic budgeting and forecasting to help businesses manage resources effectively and achieve long-term growth.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="trend-card">
+        <h3 data-i18n="blog.service2_heading">Tax Compliance</h3>
+        <p data-i18n="blog.service2_paragraph">Stay updated with ever-changing tax regulations while ensuring accurate filing, reporting, and maximum savings.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="trend-card">
+        <h3 data-i18n="blog.service3_heading">Bookkeeping & Reporting</h3>
+        <p data-i18n="blog.service3_paragraph">Maintain accurate financial records with transparent reporting for audits, stakeholders, and better decision-making.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="trend-card">
+        <h3 data-i18n="blog.service4_heading">Payroll & Expense Management</h3>
+        <p data-i18n="blog.service4_paragraph">Automated payroll processing and expense tracking that ensures timely payments and improved cash flow control.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="blog-grid">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog.latest_heading">Latest Insights</h2>
+    <div class="grid-3">
+      <!-- Blog 1 -->
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1554224155-3a58922a22c3?w=800" alt="Tax Planning" data-i18n-alt="blog.latest1_img_alt">
+        <h4 data-i18n="blog.latest1_heading">Smart Tax Planning</h4>
+        <p data-i18n="blog.latest1_paragraph">Discover strategies to minimize liabilities and stay compliant with evolving tax regulations.</p>
+        <a href="blog1.html" class="btn btn-primary" data-i18n="blog.latest1_btn">Read More</a>
+      </div>
+      <!-- Blog 2 -->
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=800" alt="Financial Growth" data-i18n-alt="blog.latest2_img_alt">
+        <h4 data-i18n="blog.latest2_heading">Financial Growth Strategies</h4>
+        <p data-i18n="blog.latest2_paragraph">Learn effective methods for budgeting, forecasting, and optimizing financial performance.</p>
+        <a href="blog2.html" class="btn btn-primary" data-i18n="blog.latest2_btn">Read More</a>
+      </div>
+      <!-- Blog 3 -->
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" alt="Accounting Trends" data-i18n-alt="blog.latest3_img_alt">
+        <h4 data-i18n="blog.latest3_heading">Modern Accounting Trends</h4>
+        <p data-i18n="blog.latest3_paragraph">Explore how technology and automation are reshaping accounting practices worldwide.</p>
+        <a href="blog3.html" class="btn btn-primary" data-i18n="blog.latest3_btn">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 6 -->
+<section class="blog-categories">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog.categories_heading">Finance Categories</h2>
+    <div class="categories-list">
+      <span data-i18n="blog.cat1">Accounting Trends</span>
+      <span data-i18n="blog.cat2">Tax & Compliance</span>
+      <span data-i18n="blog.cat3">Financial Planning</span>
+      <span data-i18n="blog.cat4">Investment Insights</span>
+      <span data-i18n="blog.cat5">Corporate Finance</span>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding" style="background: url('https://images.unsplash.com/photo-1523289333742-be1143f6b766?w=1200') no-repeat center center/cover; background-size: cover;">
+  <div class="container">
+    <div class="contact-banner-content" style="background: rgba(0,0,0,0.6); padding: 30px; border-radius: 10px; color: #fff; text-align: center;">
+      <h2 data-i18n="blog.contact_heading">Partner With Our Financial Experts</h2>
+      <p data-i18n="blog.contact_paragraph">Looking for reliable accounting, tax, or financial planning services? Get expert guidance tailored to your business needs.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="blog.contact_btn">Get Started</a>
+    </div>
+  </div>
+</section>
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Bookkeeping Services",
+    "service_2": "Tax Preparation & Filing",
+    "service_3": "Financial Reporting",
+    "service_4": "Payroll Management",
+    "service_5": "Budgeting & Forecasting",
+    "service_6": "Audit & Compliance",
+    "service6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Tax Planning",
+    "blog_2": "Financial Growth Strategies",
+    "blog_3": "Modern Accounting Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Bookkeeping Services",
+    "footer_service2": "Tax Preparation & Filing",
+    "footer_service3": "Financial Reporting",
+    "footer_service4": "Payroll Management",
+    "footer_service5": "Budgeting & Forecasting",
+    "footer_service6": "Audit & Compliance",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+      "blog.hero_title": "Strategic Financial Services",
+    "blog.hero_subtitle": "Clarity, Compliance, Growth, Always.",
+    "blog.btn_explore": "Explore Services",
+
+    "blog.intro_heading": "Finance & Accounting Insights",
+    "blog.intro_paragraph": "Discover the latest trends, strategies, and expert insights in finance and accounting. Stay informed on how businesses are streamlining bookkeeping, improving compliance, and leveraging financial forecasting for sustainable growth. From effective tax planning to advanced auditing practices, our resources highlight practical approaches to achieving accuracy, transparency, and long-term financial stability.\n\nAs global markets evolve, organizations are embracing smarter accounting tools, automation, and compliance frameworks to stay ahead. Whether you're a startup managing cash flow or an enterprise aiming for financial transformation, our articles provide clarity, actionable guidance, and thought leadership to help you succeed.",
+    "blog.intro_img_alt": "Finance and Accounting Services",
+
+    "blog.featured_img_alt": "Finance and Accounting Services",
+    "blog.featured_heading": "Financial Planning & Forecasting",
+    "blog.featured_paragraph1": "Gain insights into the evolving world of finance and accounting services that drive smarter decision-making. From strategic budgeting to accurate forecasting, modern financial practices help businesses achieve stability and long-term growth. Effective planning ensures that organizations remain agile and prepared for changing market conditions.",
+    "blog.featured_paragraph2": "Today’s enterprises are moving beyond traditional accounting, embracing automation, cloud-based tools, and real-time reporting for greater efficiency. With precise forecasting, companies can optimize cash flow, reduce risks, and unlock new opportunities for sustainable growth.",
+    "blog.btn_readmore1": "Read More",
+
+    "blog.services_heading": "Key Finance & Accounting Services",
+    "blog.service1_heading": "Financial Planning",
+    "blog.service1_paragraph": "Strategic budgeting and forecasting to help businesses manage resources effectively and achieve long-term growth.",
+    "blog.service2_heading": "Tax Compliance",
+    "blog.service2_paragraph": "Stay updated with ever-changing tax regulations while ensuring accurate filing, reporting, and maximum savings.",
+    "blog.service3_heading": "Bookkeeping & Reporting",
+    "blog.service3_paragraph": "Maintain accurate financial records with transparent reporting for audits, stakeholders, and better decision-making.",
+    "blog.service4_heading": "Payroll & Expense Management",
+    "blog.service4_paragraph": "Automated payroll processing and expense tracking that ensures timely payments and improved cash flow control.",
+
+    "blog.latest_heading": "Latest Insights",
+    "blog.latest1_img_alt": "Tax Planning",
+    "blog.latest1_heading": "Smart Tax Planning",
+    "blog.latest1_paragraph": "Discover strategies to minimize liabilities and stay compliant with evolving tax regulations.",
+    "blog.latest1_btn": "Read More",
+    "blog.latest2_img_alt": "Financial Growth",
+    "blog.latest2_heading": "Financial Growth Strategies",
+    "blog.latest2_paragraph": "Learn effective methods for budgeting, forecasting, and optimizing financial performance.",
+    "blog.latest2_btn": "Read More",
+    "blog.latest3_img_alt": "Accounting Trends",
+    "blog.latest3_heading": "Modern Accounting Trends",
+    "blog.latest3_paragraph": "Explore how technology and automation are reshaping accounting practices worldwide.",
+    "blog.latest3_btn": "Read More",
+
+    "blog.categories_heading": "Finance Categories",
+    "blog.cat1": "Accounting Trends",
+    "blog.cat2": "Tax & Compliance",
+    "blog.cat3": "Financial Planning",
+    "blog.cat4": "Investment Insights",
+    "blog.cat5": "Corporate Finance",
+
+    "blog.contact_heading": "Partner With Our Financial Experts",
+    "blog.contact_paragraph": "Looking for reliable accounting, tax, or financial planning services? Get expert guidance tailored to your business needs.",
+    "blog.contact_btn": "Get Started"
+
+              
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "خدمات مسك الدفاتر",
+    "service_2": "إعداد وتقديم الضرائب",
+    "service_3": "التقارير المالية",
+    "service_4": "إدارة الرواتب",
+    "service_5": "إعداد الميزانية والتوقعات",
+    "service_6": "التدقيق والامتثال",
+    "service6": "الدعم القانوني والوثائق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "التخطيط الضريبي الذكي",
+    "blog_2": "استراتيجيات النمو المالي",
+    "blog_3": "اتجاهات المحاسبة الحديثة",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الرئيسية 2",
+    "footer_aboutUs": "معلومات عنا",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "خدمات مسك الدفاتر",
+    "footer_service2": "إعداد وتقديم الضرائب",
+    "footer_service3": "التقارير المالية",
+    "footer_service4": "إدارة الرواتب",
+    "footer_service5": "إعداد الميزانية والتوقعات",
+    "footer_service6": "التدقيق والامتثال",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 شارع ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+
+    "blog.hero_title": "الخدمات المالية الاستراتيجية",
+    "blog.hero_subtitle": "وضوح، امتثال، نمو، دائمًا.",
+    "blog.btn_explore": "استكشاف الخدمات",
+
+    "blog.intro_heading": "رؤى التمويل والمحاسبة",
+    "blog.intro_paragraph": "اكتشف أحدث الاتجاهات والاستراتيجيات والرؤى المتخصصة في التمويل والمحاسبة. ابقَ على اطلاع بكيفية قيام الشركات بتبسيط مسك الدفاتر، وتحسين الامتثال، والاستفادة من التنبؤ المالي للنمو المستدام. من التخطيط الضريبي الفعّال إلى ممارسات التدقيق المتقدمة، تسلط مواردنا الضوء على نهج عملي لتحقيق الدقة والشفافية والاستقرار المالي طويل الأجل.\n\nمع تطور الأسواق العالمية، تعتمد المؤسسات أدوات محاسبية أذكى، وأتمتة، وأطر امتثال للبقاء في الصدارة. سواء كنت شركة ناشئة تدير التدفق النقدي أو مؤسسة تسعى إلى التحول المالي، توفر مقالاتنا وضوحًا وإرشادات عملية وقيادة فكرية لمساعدتك على النجاح.",
+    "blog.intro_img_alt": "خدمات التمويل والمحاسبة",
+
+    "blog.featured_img_alt": "خدمات التمويل والمحاسبة",
+    "blog.featured_heading": "التخطيط المالي والتنبؤ",
+    "blog.featured_paragraph1": "احصل على رؤى في عالم التمويل والمحاسبة المتطور الذي يدفع اتخاذ قرارات أكثر ذكاءً. من إعداد الميزانية الاستراتيجية إلى التنبؤ الدقيق، تساعد الممارسات المالية الحديثة الشركات على تحقيق الاستقرار والنمو طويل الأجل.",
+    "blog.featured_paragraph2": "تتجاوز المؤسسات اليوم المحاسبة التقليدية، وتعتمد الأتمتة والأدوات السحابية والتقارير الفورية لتحقيق كفاءة أكبر. مع التنبؤ الدقيق، يمكن للشركات تحسين التدفق النقدي وتقليل المخاطر وفتح فرص جديدة للنمو المستدام.",
+    "blog.btn_readmore1": "اقرأ المزيد",
+
+    "blog.services_heading": "الخدمات الرئيسية في التمويل والمحاسبة",
+    "blog.service1_heading": "التخطيط المالي",
+    "blog.service1_paragraph": "إعداد الميزانية الاستراتيجية والتنبؤ لمساعدة الشركات على إدارة الموارد بفعالية وتحقيق النمو طويل الأجل.",
+    "blog.service2_heading": "الامتثال الضريبي",
+    "blog.service2_paragraph": "ابقَ على اطلاع دائم باللوائح الضريبية المتغيرة مع ضمان تقديم دقيق للتقارير وتحقيق أقصى قدر من التوفير.",
+    "blog.service3_heading": "مسك الدفاتر وإعداد التقارير",
+    "blog.service3_paragraph": "الحفاظ على سجلات مالية دقيقة مع تقارير شفافة للتدقيق وأصحاب المصلحة واتخاذ قرارات أفضل.",
+    "blog.service4_heading": "إدارة الرواتب والمصروفات",
+    "blog.service4_paragraph": "معالجة الرواتب بشكل آلي وتتبع المصروفات لضمان مدفوعات في الوقت المناسب وتحسين التحكم في التدفق النقدي.",
+
+    "blog.latest_heading": "أحدث الرؤى",
+    "blog.latest1_img_alt": "التخطيط الضريبي",
+    "blog.latest1_heading": "التخطيط الضريبي الذكي",
+    "blog.latest1_paragraph": "اكتشف استراتيجيات لتقليل الالتزامات والبقاء ممتثلاً للوائح الضريبية المتطورة.",
+    "blog.latest1_btn": "اقرأ المزيد",
+    "blog.latest2_img_alt": "النمو المالي",
+    "blog.latest2_heading": "استراتيجيات النمو المالي",
+    "blog.latest2_paragraph": "تعلّم طرقًا فعالة لإعداد الميزانيات والتنبؤ وتحسين الأداء المالي.",
+    "blog.latest2_btn": "اقرأ المزيد",
+    "blog.latest3_img_alt": "اتجاهات المحاسبة",
+    "blog.latest3_heading": "اتجاهات المحاسبة الحديثة",
+    "blog.latest3_paragraph": "استكشف كيف تعيد التكنولوجيا والأتمتة تشكيل ممارسات المحاسبة حول العالم.",
+    "blog.latest3_btn": "اقرأ المزيد",
+
+    "blog.categories_heading": "فئات التمويل",
+    "blog.cat1": "اتجاهات المحاسبة",
+    "blog.cat2": "الضرائب والامتثال",
+    "blog.cat3": "التخطيط المالي",
+    "blog.cat4": "رؤى الاستثمار",
+    "blog.cat5": "التمويل المؤسسي",
+
+    "blog.contact_heading": "تعاون مع خبرائنا الماليين",
+    "blog.contact_paragraph": "هل تبحث عن خدمات محاسبة أو ضرائب أو تخطيط مالي موثوقة؟ احصل على إرشادات متخصصة مخصصة لاحتياجات عملك.",
+    "blog.contact_btn": "ابدأ الآن",
+
+
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספקית מובילה של פתרונות בינה מלאכותית, המסייעת לעסקים לעבור שינוי באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודות",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "שירותי הנהלת חשבונות",
+    "footer_service2": "הכנת והגשת מסים",
+    "footer_service3": "דוחות כספיים",
+    "footer_service4": "ניהול שכר",
+    "footer_service5": "תכנון תקציב ותחזיות",
+    "footer_service6": "ביקורת וציות",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 דרך חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+ 
+     "blog.hero_title": "שירותים פיננסיים אסטרטגיים",
+    "blog.hero_subtitle": "בהירות, ציות, צמיחה – תמיד.",
+    "blog.btn_explore": "גלה שירותים",
+
+    "blog.intro_heading": "תובנות במימון וחשבונאות",
+    "blog.intro_paragraph": "גלה את המגמות האחרונות, אסטרטגיות ותובנות מומחים במימון וחשבונאות. הישאר מעודכן כיצד עסקים מייעלים הנהלת חשבונות, משפרים ציות, ומנצלים תחזיות פיננסיות לצמיחה בת קיימא. מתכנון מס יעיל ועד פרקטיקות ביקורת מתקדמות, המשאבים שלנו מדגישים גישות מעשיות להשגת דיוק, שקיפות ויציבות פיננסית לטווח ארוך.\n\nככל שהשווקים העולמיים מתפתחים, ארגונים מאמצים כלים חשבונאיים חכמים יותר, אוטומציה ומסגרות ציות כדי להישאר מובילים. בין אם אתה סטארט-אפ המנהל תזרים מזומנים או ארגון השואף לשינוי פיננסי, המאמרים שלנו מספקים בהירות, הדרכה יישומית והובלת מחשבה כדי לעזור לך להצליח.",
+    "blog.intro_img_alt": "שירותי מימון וחשבונאות",
+
+    "blog.featured_img_alt": "שירותי מימון וחשבונאות",
+    "blog.featured_heading": "תכנון ותחזיות פיננסיות",
+    "blog.featured_paragraph1": "קבל תובנות בעולם המתפתח של שירותי מימון וחשבונאות שמניעים קבלת החלטות חכמה יותר. מתכנון תקציבי אסטרטגי ועד תחזיות מדויקות, פרקטיקות פיננסיות מודרניות מסייעות לעסקים להשיג יציבות וצמיחה לטווח ארוך.",
+    "blog.featured_paragraph2": "הארגונים של היום מתקדמים מעבר לחשבונאות מסורתית, מאמצים אוטומציה, כלים מבוססי ענן ודיווח בזמן אמת ליעילות גבוהה יותר. עם תחזיות מדויקות, חברות יכולות לייעל את תזרים המזומנים, להפחית סיכונים ולפתוח הזדמנויות חדשות לצמיחה בת קיימא.",
+    "blog.btn_readmore1": "קרא עוד",
+
+    "blog.services_heading": "שירותי מימון וחשבונאות עיקריים",
+    "blog.service1_heading": "תכנון פיננסי",
+    "blog.service1_paragraph": "תכנון תקציבי אסטרטגי ותחזיות המסייעים לעסקים לנהל משאבים ביעילות ולהשיג צמיחה לטווח ארוך.",
+    "blog.service2_heading": "ציות מס",
+    "blog.service2_paragraph": "הישאר מעודכן עם רגולציות המס המשתנות תמיד תוך שמירה על דיווח נכון וחיסכון מקסימלי.",
+    "blog.service3_heading": "הנהלת חשבונות ודיווח",
+    "blog.service3_paragraph": "ניהול רשומות פיננסיות מדויקות עם דיווח שקוף לביקורות, בעלי עניין וקבלת החלטות טובה יותר.",
+    "blog.service4_heading": "ניהול שכר והוצאות",
+    "blog.service4_paragraph": "עיבוד שכר אוטומטי ומעקב הוצאות המבטיח תשלומים בזמן ושליטה טובה יותר בתזרים המזומנים.",
+
+    "blog.latest_heading": "תובנות אחרונות",
+    "blog.latest1_img_alt": "תכנון מס",
+    "blog.latest1_heading": "תכנון מס חכם",
+    "blog.latest1_paragraph": "גלה אסטרטגיות לצמצום התחייבויות ולהישאר בציות לרגולציות מס מתפתחות.",
+    "blog.latest1_btn": "קרא עוד",
+    "blog.latest2_img_alt": "צמיחה פיננסית",
+    "blog.latest2_heading": "אסטרטגיות צמיחה פיננסית",
+    "blog.latest2_paragraph": "למד שיטות יעילות לניהול תקציב, תחזיות ואופטימיזציה של ביצועים פיננסיים.",
+    "blog.latest2_btn": "קרא עוד",
+    "blog.latest3_img_alt": "מגמות חשבונאות",
+    "blog.latest3_heading": "מגמות חשבונאות מודרניות",
+    "blog.latest3_paragraph": "גלה כיצד טכנולוגיה ואוטומציה מעצבות מחדש את פרקטיקות החשבונאות ברחבי העולם.",
+    "blog.latest3_btn": "קרא עוד",
+
+    "blog.categories_heading": "קטגוריות מימון",
+    "blog.cat1": "מגמות חשבונאות",
+    "blog.cat2": "מס וציות",
+    "blog.cat3": "תכנון פיננסי",
+    "blog.cat4": "תובנות השקעה",
+    "blog.cat5": "מימון תאגידי",
+
+    "blog.contact_heading": "שתף פעולה עם המומחים הפיננסיים שלנו",
+    "blog.contact_paragraph": "מחפש שירותי חשבונאות, מס או תכנון פיננסי אמינים? קבל ייעוץ מומחה המותאם לצרכי העסק שלך.",
+    "blog.contact_btn": "התחל עכשיו",
+   
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -155,127 +690,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
-// Hamburger toggle for mobile
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -296,25 +953,11 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- 🔷 HERO SECTION START video_code  -->
+    
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/33402994/14218773_2560_1440_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Accelerate Your Journey with AI</h1>
-      <p class="ai-hero-paragraph animate-ai-fade-up">
-      Unlock smarter decisions and sustainable growth with AI.
-      </p>
-      <a href="services.html" class="btn btn-primary">Explore Tools</a>
-    </div>
-  </div>
-</section>
+
+<!-- Section : 1 -->
 
 <style>
   /* Hero Section */
@@ -379,23 +1022,20 @@ if (currentUserEmail && users[currentUserEmail]) {
     opacity: 0;
   }
 
-  .ai-hero-button {
-    display: inline-block;
-    padding: 14px 36px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    background: linear-gradient(90deg, #00f7ff, #007bff);
-    border-radius: 12px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-  }
+  .custom-btn {
+  background-color: #000000;
+  border: none;
+  color: #fff;        /* white text */
+  padding: 10px 20px;
+  border-radius: 6px; /* rounded corners */
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
 
-  .ai-hero-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00f7ff, 0 0 25px #007bff;
-  }
+.custom-btn:hover {
+  background-color: #222222; /* slightly darker shade on hover */
+}
 
   /* Animations */
   @keyframes aiSlideIn {
@@ -435,69 +1075,15 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
 
-<!-- 🌟 Section 2: Blog Intro -->
-<section class="blog-intro">
-  <div class="container">
-    <h2 class="section-heading">Stackly AI Blog</h2>
-    <p class="section-subtext" style="text-align: justify;">
-      Explore the latest insights in Artificial Intelligence, Machine Learning, and Business Applications. 
-      Stay updated with expert opinions, trends, and innovations shaping the future of AI.Artificial Intelligence (AI) and Machine Learning (ML) are remaining at the forefront of technological transformation, with enterprises and experts alike recognizing their profound impact across sectors. Financial institutions are embracing agentic AI and robotics, projected to contribute nearly $920 billion in annual net benefits and add up to $16 trillion to the S&P 500’s market value—spurred by productivity gains, cost savings, and new revenue opportunities that underscore AI’s economic potential.
-Business Insider
-Investopedia
- Meanwhile, in the enterprise realm, the conversation has shifted: it’s not just about more powerful models, but smarter integration. The “Agentic Mesh” concept envisions AI systems that behave like adaptive, autonomous networks embedded in business workflows, moving beyond isolated tools toward real-time, self-governing intelligence.
-    </p>
-  </div>
-</section>
 
-<!-- 🌟 Section 3: Featured Post -->
-<section class="blog-featured">
-  <div class="container featured-grid">
-    <div class="featured-image">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200" alt="AI Trends 2024">
-    </div>
-    <div class="featured-content">
-      <h3>🚀 AI Trends </h3>
-      <p style="text-align: justify;">Discover the most promising AI advancements of 2024 that are reshaping industries worldwide. From generative AI to autonomous systems, explore the future.
-        Artificial Intelligence in 2024 is no longer a futuristic concept but a mainstream driver of innovation across industries.
-         From generative AI tools enhancing creativity to natural language models transforming communication, businesses are
-          rapidly adopting AI to stay competitive. The year is witnessing breakthroughs in explainable AI, ethical frameworks, and real-time decision systems that make
-           AI more transparent and trustworthy. With governments and enterprises investing heavily in research, AI adoption is set to grow faster than ever before.
-      </p>
-      <p style="text-align: justify;">One of the most defining trends is the integration of AI into everyday workflows. Industries such as healthcare,
-         finance, and manufacturing are leveraging AI for predictive analytics,
-         automation, and personalized services.</p>
-      <a href="blog1.html" class="btn-read">Read More</a>
-    </div>
-  </div>
-</section>
 
-<!-- 🌟 Section: Key AI Trends 2024 -->
-<section class="ai-trends-2024">
-  <div class="container">
-    <h2 class="section-heading">Emerging AI Innovations </h2>
-    <div class="trends-grid">
-      <div class="trend-card">
-        <h3>🤖 Generative AI Everywhere</h3>
-        <p>AI-powered content creation, from text and design to music and code, is becoming standard across industries.</p>
-      </div>
-      <div class="trend-card">
-        <h3>⚡ Edge AI & Real-Time Processing</h3>
-        <p>AI models are running directly on devices, enabling faster decision-making without full cloud dependency.</p>
-      </div>
-      <div class="trend-card">
-        <h3>🌍 AI for Sustainability</h3>
-        <p>From energy optimization to smart agriculture, AI is helping solve critical global challenges responsibly.</p>
-      </div>
-      <div class="trend-card">
-        <h3>🛡️ Responsible & Ethical AI</h3>
-        <p>Governments and companies are building frameworks for fairness, transparency, and data protection in AI systems.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
+
+
+<!-- Section : 4-->
+
 
 <style>
 .ai-trends-2024 { background: #edf0ee; padding: 50px 20px; }
@@ -510,7 +1096,7 @@ Investopedia
   box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s;
 }
 .trend-card:hover { transform: translateY(-5px); }
-.trend-card h3 { color: #007bff; margin-bottom: 10px; font-size: 1.3rem; }
+.trend-card h3 { color: #a68e4c; margin-bottom: 10px; font-size: 1.3rem; }
 .trend-card p { color: #333; font-size: 1rem; }
 
 /* 📱 Responsive */
@@ -520,62 +1106,8 @@ Investopedia
 </style>
 
 
-<!-- 🌟 Section 4: Blog Grid -->
-<section class="blog-grid">
-  <div class="container">
-    <h2 class="section-heading">Latest Articles</h2>
-    <div class="grid-3">
-      <!-- Blog 1 duplicate (so 3 grid cards look filled) -->
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" alt="AI Trends">
-        <h4>AI Trends 2024</h4>
-        <p>Generative AI, automation, and intelligent systems leading global innovation.</p>
-        <a href="blog1.html" class="btn-read">Read More</a>
-      </div>
-      <!-- Blog 2 -->
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Future of ML">
-        <h4>Future of Machine Learning</h4>
-        <p>Machine Learning continues to evolve with new breakthroughs in automation, optimization, and decision-making.</p>
-        <a href="blog2.html" class="btn-read">Read More</a>
-      </div>
-      <!-- Blog 3 -->
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800" alt="AI in Business">
-        <h4>AI in Business</h4>
-        <p>Learn how AI is transforming organizations, from customer experience to predictive analytics and beyond.</p>
-        <a href="blog3.html" class="btn-read">Read More</a>
-      </div>
-      
-    </div>
-  </div>
-</section>
 
-<!-- 🌟 Section 5: Categories -->
-<section class="blog-categories">
-  <div class="container">
-    <h2 class="section-heading">Categories</h2>
-    <div class="categories-list">
-      <span>AI Trends</span>
-      <span>Machine Learning</span>
-      <span>Business Applications</span>
-      <span>Future Tech</span>
-      <span>Data Science</span>
-    </div>
-  </div>
-</section>
-
-   
-<!-- Section 7: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Get In Touch With Our AI Experts</h2>
-            <p>Ready to discuss your AI project? Contact us today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
+<!-- Section : 7 -->
 
 <style>
     .contact-banner {
@@ -674,17 +1206,18 @@ Investopedia
 
 
 
-    <!-- Footer -->
-     <footer class="footer">
+     <!-- Footer -->
+     <!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -695,48 +1228,49 @@ Investopedia
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Bookkeeping Services</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Tax Preparation & Filing</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Financial Reporting</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Payroll Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Budgeting & Forecasting</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Audit & Compliance</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
+
 
 <style>
 .footer {
@@ -744,6 +1278,14 @@ Investopedia
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -778,7 +1320,7 @@ Investopedia
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -789,7 +1331,7 @@ Investopedia
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -805,20 +1347,32 @@ Investopedia
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
 
-
+</div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
@@ -842,7 +1396,8 @@ section { width: 100%; padding: 50px 20px; }
 .featured-image img { width: 100%; border-radius: 15px; }
 .featured-content h3 { font-size: 2rem; margin-bottom: 15px; }
 .btn-read {
-  background: #007bff; color: white; padding: 12px 24px; border-radius: 30px;
+  background: 
+#a68e4c; color: white; padding: 12px 24px; border-radius: 30px;
   display: inline-block; text-decoration: none; transition: 0.3s;
 }
 .btn-read:hover { background: black; }
@@ -863,19 +1418,23 @@ section { width: 100%; padding: 50px 20px; }
 .blog-categories { background: #edf0ee; text-align: center; }
 .categories-list { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
 .categories-list span {
-  background: white; border: 1px solid #007bff; color: #007bff;
+  background: white; border: 1px solid 
+#a68e4c; color: 
+#a68e4c;
   padding: 10px 18px; border-radius: 30px; font-weight: 600;
 }
 
 /* Newsletter */
-.blog-newsletter { background: #007bff; color: white; text-align: center; }
+.blog-newsletter { background: 
+#a68e4c; color: white; text-align: center; }
 .blog-newsletter form { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
 .blog-newsletter input {
   padding: 12px 15px; border-radius: 30px; border: none;
   width: 300px; max-width: 100%;
 }
 .blog-newsletter button {
-  background: white; color: #007bff; border: none; font-weight: 600;
+  background: white; color: 
+#a68e4c; border: none; font-weight: 600;
   padding: 12px 25px; border-radius: 30px; cursor: pointer; transition: 0.3s;
 }
 .blog-newsletter button:hover { background: black; color: white; }

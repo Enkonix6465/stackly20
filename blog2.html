@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - AI Tools & Solutions</title>
+    <title>Stackly - Finance and accounting Services</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+<div id="loader">
+    <div class="spinner"></div>
+</div>
 
+<div id="content" style="display:none;"></div>
 
 
 
@@ -16,130 +20,604 @@
    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Budgeting & Forecasting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Audit & Compliance</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Bookkeeping Services</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Tax Preparation & Filing</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Financial Reporting  </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Payroll Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Tax Planning</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Financial Growth Strategies</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Modern Accounting Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">+
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
+      </div>
+    </div>
+  </div>
+</header> 
+
+
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/6929602/6929602-hd_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="growth.hero_title">Financial Growth Strategies</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ml-hero">
+  <div class="container">
+    <h1 data-i18n="growth.hero_heading">Financial Growth Strategies</h1>
+    <p data-i18n="growth.hero_paragraph">
+      Financial growth strategies are the foundation of building long-term wealth and stability. 
+      From smart investment planning and tax-efficient savings to diversification and risk management, 
+      these strategies empower individuals and businesses to maximize returns while safeguarding assets. 
+      By leveraging tools such as systematic investment plans, retirement accounts, and modern financial 
+      technologies, growth can be achieved in a sustainable and structured way. The key lies in balancing 
+      short-term goals with long-term objectives, ensuring steady progress toward financial independence 
+      and security in an ever-changing economic landscape.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="ml-intro">
+  <div class="container">
+    <h2 data-i18n="growth.intro_heading">Introduction</h2>
+    <p style="text-align: justify;" data-i18n="growth.intro_paragraph1">
+      Financial growth strategies play a vital role in helping individuals and businesses 
+      build long-term wealth, stability, and resilience. From effective budgeting and 
+      savings to investment planning and tax optimization, these strategies ensure that 
+      financial resources are allocated wisely to achieve both short-term needs and 
+      long-term goals. In today’s dynamic economy, a structured approach to financial 
+      planning helps minimize risks while maximizing opportunities for growth.
+    </p>
+    <p style="text-align: justify;" data-i18n="growth.intro_paragraph2">
+      True financial growth lies not just in increasing income, but in creating a balanced 
+      plan that includes wealth protection, diversification, and sustainable investments. 
+      By integrating smart tax planning, retirement savings, and modern financial tools, 
+      individuals and businesses can secure a stronger financial future while adapting to 
+      changing market conditions.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="ml-applications">
+  <div class="container">
+    <h2 data-i18n="growth.strategies_heading">Key Financial Growth Strategies</h2>
+    <div class="app-grid">
+      <div class="app-card">
+        <h3 data-i18n="growth.strategy1_heading">Investment Planning</h3>
+        <p data-i18n="growth.strategy1_paragraph">Building a diversified portfolio with stocks, bonds, and mutual funds helps create sustainable wealth over time.</p>
+      </div>
+      <div class="app-card">
+        <h3 data-i18n="growth.strategy2_heading">Smart Tax Planning</h3>
+        <p data-i18n="growth.strategy2_paragraph">Effective tax-saving strategies maximize income retention and ensure compliance with financial regulations.</p>
+      </div>
+      <div class="app-card">
+        <h3 data-i18n="growth.strategy3_heading">Wealth Protection</h3>
+        <p data-i18n="growth.strategy3_paragraph">Insurance, emergency funds, and risk management safeguard assets against uncertainties.</p>
+      </div>
+      <div class="app-card">
+        <h3 data-i18n="growth.strategy4_heading">Budgeting & Cash Flow</h3>
+        <p data-i18n="growth.strategy4_paragraph">Maintaining a disciplined budget and tracking expenses strengthens financial stability and long-term growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="ml-challenges">
+  <div class="container">
+    <div class="challenge-content">
+      <h2 data-i18n="growth.challenges_heading">Challenges in Financial Growth</h2>
+      <p data-i18n="growth.challenges_paragraph1">
+        While financial growth is essential for long-term success, individuals and businesses often face
+        challenges that can slow progress. Common issues include poor budgeting habits, lack of investment 
+        diversification, and inadequate planning for taxes. Without clear financial strategies, cash flow 
+        problems and debt accumulation can hinder stability and wealth creation.
+      </p>
+      <p data-i18n="growth.challenges_paragraph2">
+        Another challenge is adapting to changing market conditions. Inflation, economic downturns, and 
+        policy changes can impact savings and investments. To overcome these barriers, one must focus on 
+        disciplined spending, proactive investment management, and risk protection. Addressing these 
+        challenges effectively ensures steady and sustainable financial growth.
+      </p>
+    </div>
+    <div class="challenge-image">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop" alt="Financial Challenges" data-i18n-alt="growth.challenges_img_alt">
+    </div>
+  </div>
+</section>
+
+<!-- Section: 6 -->
+<section class="ml-trends">
+  <div class="container">
+    <h2 data-i18n="growth.trends_heading">Key Financial Growth Strategies</h2>
+    <ul>
+      <li data-i18n="growth.trend1">Diversifying investments across multiple asset classes to reduce risk.</li>
+      <li data-i18n="growth.trend2">Building strong savings and emergency funds for financial security.</li>
+      <li data-i18n="growth.trend3">Strategic tax planning to maximize returns and minimize liabilities.</li>
+      <li data-i18n="growth.trend4">Leveraging financial technology (FinTech) for smarter money management.</li>
     </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
   </div>
-</div>
-  </div>
-</header>
+</section>
 
-<!-- ✅ Script -->
+<!-- Section : 7 -->
+<section class="ml-future">
+  <div class="container">
+    <h2 data-i18n="growth.future_heading">The Road Ahead for Financial Growth</h2>
+    <p style="text-align: justify;" data-i18n="growth.future_paragraph1">
+      The future of financial growth lies in adopting smarter strategies that balance 
+      risk, innovation, and long-term security. Businesses and individuals must focus 
+      on diversification, strategic tax planning, and leveraging digital tools to build 
+      wealth more effectively. By aligning financial decisions with evolving market 
+      trends, sustainable growth becomes achievable while minimizing risks. 
+    </p>
+    <p style="text-align: justify;" data-i18n="growth.future_paragraph2">
+      As financial landscapes continue to evolve, collaboration between investors, 
+      advisors, and technology will play a crucial role. Embracing automation, 
+      data-driven insights, and global opportunities will help pave the way for 
+      stronger, resilient, and future-ready financial growth strategies. 
+    </p>
+  </div>
+</section>
+
+<!-- Section : 8 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="growth.contact_heading">Get In Touch With Our Financial Experts</h2>
+      <p data-i18n="growth.contact_paragraph">Looking to grow your wealth or scale your business? Connect with us today for a personalized financial strategy session.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="growth.contact_btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Bookkeeping Services",
+    "service_2": "Tax Preparation & Filing",
+    "service_3": "Financial Reporting",
+    "service_4": "Payroll Management",
+    "service_5": "Budgeting & Forecasting",
+    "service_6": "Audit & Compliance",
+    "service6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Tax Planning",
+    "blog_2": "Financial Growth Strategies",
+    "blog_3": "Modern Accounting Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Bookkeeping Services",
+    "footer_service2": "Tax Preparation & Filing",
+    "footer_service3": "Financial Reporting",
+    "footer_service4": "Payroll Management",
+    "footer_service5": "Budgeting & Forecasting",
+    "footer_service6": "Audit & Compliance",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+     "growth.hero_title": "Financial Growth Strategies",
+    "growth.hero_heading": "Financial Growth Strategies",
+    "growth.hero_paragraph": "Financial growth strategies are the foundation of building long-term wealth and stability. From smart investment planning and tax-efficient savings to diversification and risk management, these strategies empower individuals and businesses to maximize returns while safeguarding assets. By leveraging tools such as systematic investment plans, retirement accounts, and modern financial technologies, growth can be achieved in a sustainable and structured way. The key lies in balancing short-term goals with long-term objectives, ensuring steady progress toward financial independence and security in an ever-changing economic landscape.",
+    "growth.intro_heading": "Introduction",
+    "growth.intro_paragraph1": "Financial growth strategies play a vital role in helping individuals and businesses build long-term wealth, stability, and resilience. From effective budgeting and savings to investment planning and tax optimization, these strategies ensure that financial resources are allocated wisely to achieve both short-term needs and long-term goals. In today’s dynamic economy, a structured approach to financial planning helps minimize risks while maximizing opportunities for growth.",
+    "growth.intro_paragraph2": "True financial growth lies not just in increasing income, but in creating a balanced plan that includes wealth protection, diversification, and sustainable investments. By integrating smart tax planning, retirement savings, and modern financial tools, individuals and businesses can secure a stronger financial future while adapting to changing market conditions.",
+    "growth.strategies_heading": "Key Financial Growth Strategies",
+    "growth.strategy1_heading": "Investment Planning",
+    "growth.strategy1_paragraph": "Building a diversified portfolio with stocks, bonds, and mutual funds helps create sustainable wealth over time.",
+    "growth.strategy2_heading": "Smart Tax Planning",
+    "growth.strategy2_paragraph": "Effective tax-saving strategies maximize income retention and ensure compliance with financial regulations.",
+    "growth.strategy3_heading": "Wealth Protection",
+    "growth.strategy3_paragraph": "Insurance, emergency funds, and risk management safeguard assets against uncertainties.",
+    "growth.strategy4_heading": "Budgeting & Cash Flow",
+    "growth.strategy4_paragraph": "Maintaining a disciplined budget and tracking expenses strengthens financial stability and long-term growth.",
+    "growth.challenges_heading": "Challenges in Financial Growth",
+    "growth.challenges_paragraph1": "While financial growth is essential for long-term success, individuals and businesses often face challenges that can slow progress. Common issues include poor budgeting habits, lack of investment diversification, and inadequate planning for taxes. Without clear financial strategies, cash flow problems and debt accumulation can hinder stability and wealth creation.",
+    "growth.challenges_paragraph2": "Another challenge is adapting to changing market conditions. Inflation, economic downturns, and policy changes can impact savings and investments. To overcome these barriers, one must focus on disciplined spending, proactive investment management, and risk protection. Addressing these challenges effectively ensures steady and sustainable financial growth.",
+    "growth.challenges_img_alt": "Financial Challenges",
+    "growth.trends_heading": "Key Financial Growth Strategies",
+    "growth.trend1": "Diversifying investments across multiple asset classes to reduce risk.",
+    "growth.trend2": "Building strong savings and emergency funds for financial security.",
+    "growth.trend3": "Strategic tax planning to maximize returns and minimize liabilities.",
+    "growth.trend4": "Leveraging financial technology (FinTech) for smarter money management.",
+    "growth.future_heading": "The Road Ahead for Financial Growth",
+    "growth.future_paragraph1": "The future of financial growth lies in adopting smarter strategies that balance risk, innovation, and long-term security. Businesses and individuals must focus on diversification, strategic tax planning, and leveraging digital tools to build wealth more effectively. By aligning financial decisions with evolving market trends, sustainable growth becomes achievable while minimizing risks.",
+    "growth.future_paragraph2": "As financial landscapes continue to evolve, collaboration between investors, advisors, and technology will play a crucial role. Embracing automation, data-driven insights, and global opportunities will help pave the way for stronger, resilient, and future-ready financial growth strategies.",
+    "growth.contact_heading": "Get In Touch With Our Financial Experts",
+    "growth.contact_paragraph": "Looking to grow your wealth or scale your business? Connect with us today for a personalized financial strategy session.",
+    "growth.contact_btn": "Contact Us",
+              
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "خدمات مسك الدفاتر",
+    "service_2": "إعداد وتقديم الضرائب",
+    "service_3": "التقارير المالية",
+    "service_4": "إدارة الرواتب",
+    "service_5": "إعداد الميزانية والتوقعات",
+    "service_6": "التدقيق والامتثال",
+    "service6": "الدعم القانوني والوثائق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "التخطيط الضريبي الذكي",
+    "blog_2": "استراتيجيات النمو المالي",
+    "blog_3": "اتجاهات المحاسبة الحديثة",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الرئيسية 2",
+    "footer_aboutUs": "معلومات عنا",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "خدمات مسك الدفاتر",
+    "footer_service2": "إعداد وتقديم الضرائب",
+    "footer_service3": "التقارير المالية",
+    "footer_service4": "إدارة الرواتب",
+    "footer_service5": "إعداد الميزانية والتوقعات",
+    "footer_service6": "التدقيق والامتثال",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 شارع ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+
+     "growth.hero_title": "استراتيجيات النمو المالي",
+    "growth.hero_heading": "استراتيجيات النمو المالي",
+    "growth.hero_paragraph": "استراتيجيات النمو المالي هي الأساس لبناء الثروة والاستقرار على المدى الطويل. من التخطيط الاستثماري الذكي والادخار بكفاءة ضريبية إلى التنويع وإدارة المخاطر، تمكّن هذه الاستراتيجيات الأفراد والشركات من تعظيم العوائد مع حماية الأصول. من خلال الاستفادة من أدوات مثل خطط الاستثمار المنتظمة، وحسابات التقاعد، والتقنيات المالية الحديثة، يمكن تحقيق النمو بطريقة مستدامة ومنظمة. يكمن المفتاح في تحقيق التوازن بين الأهداف قصيرة الأجل والأهداف طويلة الأجل، مما يضمن التقدم المستمر نحو الاستقلال المالي والأمن في مشهد اقتصادي دائم التغير.",
+    "growth.intro_heading": "مقدمة",
+    "growth.intro_paragraph1": "تلعب استراتيجيات النمو المالي دوراً حيوياً في مساعدة الأفراد والشركات على بناء الثروة والاستقرار والمرونة على المدى الطويل. من إعداد الميزانية الفعالة والادخار إلى التخطيط الاستثماري وتحسين الضرائب، تضمن هذه الاستراتيجيات تخصيص الموارد المالية بحكمة لتحقيق الاحتياجات قصيرة المدى والأهداف طويلة المدى. في الاقتصاد الديناميكي اليوم، يساعد النهج المنظم للتخطيط المالي على تقليل المخاطر وتعظيم فرص النمو.",
+    "growth.intro_paragraph2": "لا يكمن النمو المالي الحقيقي فقط في زيادة الدخل، بل في إنشاء خطة متوازنة تشمل حماية الثروة، التنويع، والاستثمارات المستدامة. من خلال دمج التخطيط الضريبي الذكي، الادخار للتقاعد، والأدوات المالية الحديثة، يمكن للأفراد والشركات تأمين مستقبل مالي أقوى أثناء التكيف مع ظروف السوق المتغيرة.",
+    "growth.strategies_heading": "الاستراتيجيات الرئيسية للنمو المالي",
+    "growth.strategy1_heading": "التخطيط الاستثماري",
+    "growth.strategy1_paragraph": "يساعد بناء محفظة متنوعة تضم الأسهم والسندات وصناديق الاستثمار على خلق ثروة مستدامة بمرور الوقت.",
+    "growth.strategy2_heading": "التخطيط الضريبي الذكي",
+    "growth.strategy2_paragraph": "تعظم استراتيجيات توفير الضرائب الفعالة الاحتفاظ بالدخل وتضمن الامتثال للوائح المالية.",
+    "growth.strategy3_heading": "حماية الثروة",
+    "growth.strategy3_paragraph": "تحمي التأمينات وصناديق الطوارئ وإدارة المخاطر الأصول من عدم اليقين.",
+    "growth.strategy4_heading": "إعداد الميزانية والتدفق النقدي",
+    "growth.strategy4_paragraph": "يساعد الحفاظ على ميزانية منضبطة وتتبع النفقات على تعزيز الاستقرار المالي والنمو طويل الأجل.",
+    "growth.challenges_heading": "التحديات في النمو المالي",
+    "growth.challenges_paragraph1": "بينما يعد النمو المالي ضرورياً للنجاح على المدى الطويل، غالباً ما يواجه الأفراد والشركات تحديات يمكن أن تبطئ التقدم. تشمل القضايا الشائعة عادات إعداد الميزانية الضعيفة، نقص التنويع الاستثماري، وعدم كفاية التخطيط للضرائب. بدون استراتيجيات مالية واضحة، يمكن أن تعرقل مشاكل التدفق النقدي وتراكم الديون الاستقرار وبناء الثروة.",
+    "growth.challenges_paragraph2": "هناك تحد آخر وهو التكيف مع ظروف السوق المتغيرة. يمكن أن تؤثر التضخم، والانكماش الاقتصادي، والتغيرات السياسية على المدخرات والاستثمارات. للتغلب على هذه العوائق، يجب التركيز على الإنفاق المنضبط، الإدارة الاستباقية للاستثمارات، والحماية من المخاطر. يضمن التعامل مع هذه التحديات بفعالية نمواً مالياً ثابتاً ومستداماً.",
+    "growth.challenges_img_alt": "تحديات مالية",
+    "growth.trends_heading": "الاستراتيجيات الرئيسية للنمو المالي",
+    "growth.trend1": "تنويع الاستثمارات عبر فئات أصول متعددة لتقليل المخاطر.",
+    "growth.trend2": "بناء مدخرات قوية وصناديق طوارئ لضمان الأمان المالي.",
+    "growth.trend3": "التخطيط الضريبي الاستراتيجي لتعظيم العوائد وتقليل الالتزامات.",
+    "growth.trend4": "الاستفادة من التكنولوجيا المالية (FinTech) لإدارة أموال أكثر ذكاء.",
+    "growth.future_heading": "الطريق إلى الأمام للنمو المالي",
+    "growth.future_paragraph1": "يكمن مستقبل النمو المالي في تبني استراتيجيات أذكى تحقق التوازن بين المخاطر، الابتكار، والأمان طويل الأجل. يجب على الشركات والأفراد التركيز على التنويع، التخطيط الضريبي الاستراتيجي، والاستفادة من الأدوات الرقمية لبناء الثروة بشكل أكثر فعالية. من خلال مواءمة القرارات المالية مع اتجاهات السوق المتطورة، يصبح النمو المستدام قابلاً للتحقيق مع تقليل المخاطر.",
+    "growth.future_paragraph2": "مع استمرار تطور المشهد المالي، سيلعب التعاون بين المستثمرين والمستشارين والتكنولوجيا دوراً حيوياً. سيساعد اعتماد الأتمتة، والرؤى القائمة على البيانات، والفرص العالمية على تمهيد الطريق لاستراتيجيات نمو مالي أقوى وأكثر مرونة وجاهزة للمستقبل.",
+    "growth.contact_heading": "تواصل مع خبرائنا الماليين",
+    "growth.contact_paragraph": "هل تتطلع إلى تنمية ثروتك أو توسيع عملك؟ تواصل معنا اليوم للحصول على جلسة استراتيجية مالية مخصصة.",
+    "growth.contact_btn": "اتصل بنا"
+
+
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספקית מובילה של פתרונות בינה מלאכותית, המסייעת לעסקים לעבור שינוי באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודות",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "שירותי הנהלת חשבונות",
+    "footer_service2": "הכנת והגשת מסים",
+    "footer_service3": "דוחות כספיים",
+    "footer_service4": "ניהול שכר",
+    "footer_service5": "תכנון תקציב ותחזיות",
+    "footer_service6": "ביקורת וציות",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 דרך חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+ 
+    "growth.hero_title": "אסטרטגיות צמיחה פיננסית",
+    "growth.hero_heading": "אסטרטגיות צמיחה פיננסית",
+    "growth.hero_paragraph": "אסטרטגיות צמיחה פיננסית הן הבסיס לבניית עושר ויציבות לטווח הארוך. מתכנון השקעות חכם וחיסכון יעיל במס ועד לגיוון וניהול סיכונים, אסטרטגיות אלו מעניקות לאנשים ולעסקים את היכולת למקסם תשואות תוך הגנה על נכסים. על ידי שימוש בכלים כגון תוכניות השקעה שיטתיות, חשבונות פרישה וטכנולוגיות פיננסיות מודרניות, ניתן להשיג צמיחה בצורה בת קיימא ומובנית. המפתח טמון באיזון בין יעדים קצרים ליעדים ארוכים, תוך הבטחת התקדמות יציבה לעבר עצמאות פיננסית וביטחון במציאות כלכלית משתנה.",
+    "growth.intro_heading": "מבוא",
+    "growth.intro_paragraph1": "אסטרטגיות צמיחה פיננסית ממלאות תפקיד חשוב בסיוע ליחידים ולעסקים לבנות עושר, יציבות וחוסן לטווח הארוך. מתכנון תקציב וחיסכון יעיל ועד לתכנון השקעות ואופטימיזציה מס, אסטרטגיות אלו מבטיחות שהמשאבים מנוהלים בתבונה כדי לענות על צרכים קצרים ויעדים ארוכים. בכלכלה דינמית, גישה מובנית לתכנון פיננסי מסייעת לצמצם סיכונים תוך הגדלת הזדמנויות לצמיחה.",
+    "growth.intro_paragraph2": "צמיחה פיננסית אמיתית אינה טמונה רק בהגדלת ההכנסה, אלא ביצירת תוכנית מאוזנת הכוללת הגנה על עושר, גיוון והשקעות ברות קיימא. על ידי שילוב תכנון מס חכם, חיסכון לפרישה וכלים פיננסיים מודרניים, יחידים ועסקים יכולים להבטיח עתיד פיננסי חזק יותר תוך הסתגלות לתנאי שוק משתנים.",
+    "growth.strategies_heading": "אסטרטגיות מרכזיות לצמיחה פיננסית",
+    "growth.strategy1_heading": "תכנון השקעות",
+    "growth.strategy1_paragraph": "בניית תיק מגוון הכולל מניות, אג\"ח וקרנות נאמנות מסייעת ליצירת עושר בר קיימא לאורך זמן.",
+    "growth.strategy2_heading": "תכנון מס חכם",
+    "growth.strategy2_paragraph": "אסטרטגיות חיסכון במס יעילות ממקסמות שמירה על הכנסות ומבטיחות עמידה בתקנות פיננסיות.",
+    "growth.strategy3_heading": "הגנת עושר",
+    "growth.strategy3_paragraph": "ביטוח, קרנות חירום וניהול סיכונים מגנים על נכסים מפני אי-ודאות.",
+    "growth.strategy4_heading": "תקצוב ותזרים מזומנים",
+    "growth.strategy4_paragraph": "שמירה על תקציב ממושמע ומעקב אחר הוצאות מחזקת יציבות פיננסית וצמיחה לטווח הארוך.",
+    "growth.challenges_heading": "אתגרים בצמיחה פיננסית",
+    "growth.challenges_paragraph1": "בעוד שצמיחה פיננסית חיונית להצלחה לטווח הארוך, יחידים ועסקים נתקלים לעיתים באתגרים שעלולים להאט את ההתקדמות. בעיות נפוצות כוללות הרגלי תקציב חלשים, חוסר גיוון בהשקעות ותכנון מס לא מספק. ללא אסטרטגיות פיננסיות ברורות, בעיות בתזרים מזומנים והצטברות חובות עלולות לפגוע ביציבות ובבניית עושר.",
+    "growth.challenges_paragraph2": "אתגר נוסף הוא הסתגלות לתנאי שוק משתנים. אינפלציה, מיתון כלכלי ושינויים מדיניים יכולים להשפיע על חיסכון והשקעות. כדי להתגבר על מכשולים אלו, יש להתמקד בהוצאות ממושמעות, ניהול השקעות פרואקטיבי והגנה מפני סיכונים. טיפול יעיל באתגרים אלו מבטיח צמיחה פיננסית יציבה ובר קיימא.",
+    "growth.challenges_img_alt": "אתגרים פיננסיים",
+    "growth.trends_heading": "אסטרטגיות מרכזיות לצמיחה פיננסית",
+    "growth.trend1": "גיוון השקעות על פני מספר סוגי נכסים כדי לצמצם סיכון.",
+    "growth.trend2": "בניית חיסכון חזק וקרנות חירום לביטחון פיננסי.",
+    "growth.trend3": "תכנון מס אסטרטגי למקסום תשואות והפחתת התחייבויות.",
+    "growth.trend4": "ניצול טכנולוגיה פיננסית (FinTech) לניהול כספים חכם יותר.",
+    "growth.future_heading": "הדרך קדימה לצמיחה פיננסית",
+    "growth.future_paragraph1": "עתיד הצמיחה הפיננסית טמון באימוץ אסטרטגיות חכמות יותר שמאזנות בין סיכון, חדשנות וביטחון ארוך טווח. עסקים ויחידים חייבים להתמקד בגיוון, תכנון מס אסטרטגי ושימוש בכלים דיגיטליים כדי לבנות עושר בצורה יעילה יותר. על ידי התאמת החלטות פיננסיות למגמות שוק מתפתחות, ניתן להשיג צמיחה בת קיימא תוך צמצום סיכונים.",
+    "growth.future_paragraph2": "ככל שהנוף הפיננסי ממשיך להתפתח, שיתוף פעולה בין משקיעים, יועצים וטכנולוגיה ישחק תפקיד מכריע. אימוץ אוטומציה, תובנות מבוססות נתונים והזדמנויות גלובליות יסייעו לסלול את הדרך לאסטרטגיות צמיחה פיננסיות חזקות, עמידות ומוכנות לעתיד.",
+    "growth.contact_heading": "צור קשר עם המומחים הפיננסיים שלנו",
+    "growth.contact_paragraph": "מחפש להגדיל את עושרך או לפתח את העסק שלך? צור קשר איתנו עוד היום לפגישה אסטרטגית פיננסית מותאמת אישית.",
+    "growth.contact_btn": "צור קשר",
+
+   
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -155,126 +633,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -295,22 +896,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- 🔷 HERO SECTION START video_code  -->
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/4198845/4198845-hd_1920_1080_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Future of ML</h1>
-      
-    </div>
-  </div>
-</section>
+<!-- Section : 1 -->
 
 <style>
   /* Hero Section */
@@ -431,115 +1019,11 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
 
-<!-- 🌟 Blog 2: Future of ML -->
-<section class="ml-hero">
-  <div class="container">
-    <h1>Future of Machine Learning</h1>
-    <p>The future of Machine Learning (ML) is set to reshape industries, economies,
-       and everyday life by making systems smarter, faster, and more adaptive. With advancements
-        in deep learning, generative AI, and reinforcement learning, ML will enable breakthroughs in areas 
-        like autonomous systems, healthcare diagnostics, natural language processing, and personalized digital experiences. As data grows exponentially, machine learning models will become more capable of understanding complex patterns, predicting outcomes with higher accuracy, and automating tasks that once required human intelligence. Integration with technologies like edge computing and the Internet of Things (IoT) will further expand ML’s impact, allowing real-time decision-making at scale.</p>
-  </div>
-</section>
 
-<!-- 🌟 Section 1: Introduction -->
-<section class="ml-intro">
-  <div class="container">
-    <h2>Introduction</h2>
-    <p style="text-align: justify;">
-      Machine Learning (ML) has moved from research labs into the heart of 
-      industries worldwide. From personalized recommendations to fraud detection, 
-      ML is redefining efficiency, accuracy, and innovation.As ML continues to evolve, its applications are expanding beyond traditional domains into critical areas like climate modeling, drug discovery, supply chain optimization, and smart cities. By leveraging vast amounts of real-time data, machine learning systems are enabling faster decision-making, reducing operational costs, and uncovering insights that were previously hidden. This transformation is not only boosting business competitiveness but also addressing global challenges, making ML a cornerstone of the digital future.
 
-    </p>
-    <p style="text-align: justify;">
-      The future of ML lies not only in enhancing algorithms but in integrating 
-      them into everyday life — creating smarter systems that learn, adapt, and 
-      evolve seamlessly.
-    </p>
-  </div>
-</section>
 
-<!-- 🌟 Section 2: Applications -->
-<section class="ml-applications">
-  <div class="container">
-    <h2>Applications of ML in 2024 & Beyond</h2>
-    <div class="app-grid">
-      <div class="app-card">
-        <h3>🌐 Healthcare</h3>
-        <p>AI-driven diagnostics and predictive analytics are saving lives through early disease detection.</p>
-      </div>
-      <div class="app-card">
-        <h3>🏦 Finance</h3>
-        <p>Machine learning enhances fraud detection, algorithmic trading, and customer personalization.</p>
-      </div>
-      <div class="app-card">
-        <h3>🚗 Autonomous Vehicles</h3>
-        <p>ML powers decision-making for self-driving cars, making transport safer and smarter.</p>
-      </div>
-      <div class="app-card">
-        <h3>📊 Business Analytics</h3>
-        <p>Predictive models enable data-driven strategies for growth and efficiency.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 3: Challenges -->
-<section class="ml-challenges">
-  <div class="container">
-    <div class="challenge-content">
-      <h2>Challenges in ML Advancement</h2>
-      <p>
-        Despite its potential, ML faces challenges such as bias in data, lack of transparency in models, 
-        and the need for high-quality datasets. Ensuring ethical, fair, and explainable AI is crucial 
-        for building trust.
-        The advancement of Machine Learning (ML) comes with several challenges that need careful attention. One of the biggest issues is data quality and availability—ML models require massive amounts of clean, unbiased data, but real-world data is often noisy, incomplete, or imbalanced. This leads to models that may perform well in controlled settings but fail in real-world scenarios. Another major challenge is model interpretability—as algorithms, especially deep learning networks, grow more complex, it becomes increasingly difficult to explain how they arrive at specific decisions, raising concerns in sensitive areas like healthcare, finance, and law.
-      </p>
-      <p>
-        Another pressing challenge is scalability — deploying ML at enterprise and global levels 
-        requires robust infrastructure, compliance, and adaptability.
-      </p>
-    </div>
-    <div class="challenge-image">
-      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?w=1200&auto=format&fit=crop" alt="ML Challenges">
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 4: Key Future ML Trends -->
-<section class="ml-trends">
-  <div class="container">
-    <h2>Key Future ML Trends</h2>
-    <ul>
-      <li>⚡ Edge Machine Learning for real-time decision-making.</li>
-      <li>🔍 Explainable AI (XAI) to improve transparency and trust.</li>
-      <li>🌍 ML for climate change, sustainability, and global challenges.</li>
-      <li>🛡️ Federated Learning for secure and privacy-first data usage.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- 🌟 Section 5: The Road Ahead -->
-<section class="ml-future">
-  <div class="container">
-    <h2>The Road Ahead for ML</h2>
-    <p style="text-align: justify;">
-      The next decade of Machine Learning promises deeper integration into society, 
-      with AI systems augmenting human intelligence rather than replacing it. 
-      Success lies in balancing innovation with responsibility.
-      The road ahead for Machine Learning (ML) promises rapid growth, deeper integration, and more human-centered applications. With advancements in areas like generative AI, transfer learning, and reinforcement learning, ML will continue to push boundaries across industries. Healthcare will see more accurate predictive diagnostics, finance will benefit from smarter fraud detection, and education will leverage adaptive learning platforms to personalize student experiences.
-    </p>
-    <p style="text-align: justify;">
-      As industries adopt ML at scale, the collaboration between data scientists, 
-      engineers, and policymakers will determine how impactful and ethical ML 
-      becomes in shaping our world.
-    </p>
-  </div>
-</section>
 
 <style>
 /* General */
@@ -610,19 +1094,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
 
 
-
-
-   
-<!-- Section 7: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Get In Touch With Our AI Experts</h2>
-            <p>Ready to discuss your AI project? Contact us today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
+<!-- Section : 8 -->
 
 <style>
     .contact-banner {
@@ -721,17 +1193,18 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
 
 
+ <!-- Footer -->
     <!-- Footer -->
-     <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -742,45 +1215,45 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Bookkeeping Services</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Tax Preparation & Filing</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Financial Reporting</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Payroll Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Budgeting & Forecasting</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Audit & Compliance</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -791,6 +1264,14 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -825,7 +1306,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -836,7 +1317,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -852,19 +1333,32 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
 
+</div>
 
     <script src="assets/js/script.js"></script>
 </body>

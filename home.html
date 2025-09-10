@@ -67,6 +67,15 @@
         </div>
       </nav>
 
+      <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
           <li class="mobile-dropdown-parent">
@@ -103,14 +112,7 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+      
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
@@ -127,495 +129,6 @@
     </div>
   </div>
 </header> 
-
-<!-- Section : 1 -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="video/site_20_v1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Simplifying Finance. Empowering Businesses.</h1>
-      <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="hero_paragraph">
-        From bookkeeping to financial strategy, we’ve got you covered.
-      </p>
-      <a href="services.html" class="btn custom-btn" data-i18n="hero_btn">Explore services</a>
-    </div>
-  </div>
-</section>
-
-<!-- Section : 2 -->
-<section class="ai-section">
-  <h1 class="ai-heading" data-i18n="section2_title">Smart Accounting Solutions for Smarter Business Growth</h1>
-  <div class="ai-content">
-    <div class="ai-text">
-      <p data-i18n="section2_p1">
-        With our smart accounting approach, you gain more than just organized numbers; you gain the power to make informed, strategic decisions. From optimizing cash flow to identifying growth opportunities, our services are designed to unlock your business’s true potential. We simplify the complexities of finance so you can focus on what matters most — scaling your business with confidence.
-      </p>
-      <p data-i18n="section2_p2">
-        In today’s fast-paced business world, smart financial management is the foundation of sustainable growth. Our accounting solutions go beyond traditional bookkeeping — we provide real-time insights, streamlined processes, and tailored strategies that help businesses stay ahead.By combining expert knowledge with innovative tools, we ensure accuracy, compliance, and clarity at every step of your financial journey.
-      </p>
-      <div class="ai-buttons">
-        <a href="services.html" class="btn btn-primary" data-i18n="section2_btn1">Explore Services</a>
-        <a href="contact.html" class="btn btn-secondary" data-i18n="section2_btn2">Get Started</a>
-      </div>
-    </div>
-    <div class="ai-image">
-      <img src="https://i.pinimg.com/736x/be/94/a7/be94a73658ed1cdfd754e962d8c7644a.jpg" alt="AI Solutions">
-    </div>
-  </div>
-</section>
-
-<!-- Section : 3 -->
-<section class="features-section section-padding">
-  <div class="container">
-    <div class="section-header animate-fade-up">
-      <h2 data-i18n="section3_title">Why Choose Stackly for Finance & Accounting Services</h2>
-      <p class="text-justify" style="font-size: 18px; color: white; text-align: center;" data-i18n="section3_desc">
-        Our finance and accounting solutions are built to simplify complex financial processes, enhance accuracy, and drive smarter decision-making. With a focus on efficiency, compliance, and transparency, we help businesses manage their financial operations seamlessly while ensuring long-term growth and stability.
-      </p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card animate-fade-up delay-1">
-        <div class="feature-icon"><i class="fas fa-calculator"></i></div>
-        <h3 data-i18n="feature1_title">Advanced Financial Management</h3>
-        <p class="text-justify" style="font-size: 16px;" data-i18n="feature1_desc">
-          Utilize cutting-edge tools and strategies that streamline bookkeeping, payroll, tax management, and financial reporting. Our solutions are designed to reduce errors, improve compliance, and give you greater control over your business finances.
-        </p>
-      </div>
-      <div class="feature-card animate-fade-up delay-2">
-        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-        <h3 data-i18n="feature2_title">Data-Driven Financial Insights</h3>
-        <p class="text-justify" style="font-size: 16px;" data-i18n="feature2_desc">
-          Turn financial data into actionable strategies with our analytics-driven approach. We identify spending patterns, forecast financial trends, and provide tailored recommendations that help you optimize costs, maximize profits, and plan for sustainable growth.
-        </p>
-      </div>
-      <div class="feature-card animate-fade-up delay-3">
-        <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
-        <h3 data-i18n="feature3_title">Seamless System Integration</h3>
-        <p class="text-justify" style="font-size: 16px;" data-i18n="feature3_desc">
-          Our services integrate smoothly with your existing financial systems and ERP solutions, ensuring minimal disruption during implementation. This allows your business to maintain continuity while enhancing overall efficiency and accuracy in day-to-day financial operations.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section : 4 -->
-<section class="services-overview section-padding">
-  <h2 class="animate-fade-up heading-title" data-i18n="section4_title">Comprehensive Finance & Accounting Services Portfolio</h2>
-  <div class="content-layout">
-    <div class="content-image animate-slide-right">
-      <img src="https://i.pinimg.com/736x/a8/f0/ce/a8f0ce4ecc18d1e31df31ef2b553a29c.jpg" alt="Finance Services">
-    </div>
-    <div class="content-text">
-      <p class="text-justify animate-fade-up delay-1" data-i18n="section4_desc">
-        Our wide range of financial services covers every aspect of business finance, from strategic planning and compliance to day-to-day accounting and reporting. We collaborate with clients to understand their unique financial requirements and deliver tailored solutions that ensure accuracy, efficiency, and long-term business success.
-      </p>
-      <ul class="service-list animate-fade-up delay-2">
-        <li data-i18n="service1"><i class="fas fa-circle"></i> Financial Planning & Advisory</li>
-        <li data-i18n="service2"><i class="fas fa-circle"></i> Bookkeeping & Accounting Services</li>
-        <li data-i18n="service3"><i class="fas fa-circle"></i> Payroll Management</li>
-        <li data-i18n="service4"><i class="fas fa-circle"></i> Tax Planning & Compliance</li>
-        <li data-i18n="service5"><i class="fas fa-circle"></i> Financial Analysis & Reporting</li>
-        <li data-i18n="service6"><i class="fas fa-circle"></i> Risk Management & Compliance</li>
-      </ul>
-      <a href="services.html" class="btn btn-primary animate-fade-up delay-3" data-i18n="section4_btn">View All Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- Section : 5 -->
-<section class="stats-section section-padding">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item animate-count-up">
-        <div class="stat-number stat-number2" data-count="750">0</div>
-        <div class="stat-label" data-i18n="stat1">Financial Reports Delivered</div>
-      </div>
-      <div class="stat-item animate-count-up">
-        <div class="stat-number stat-number2" data-count="300">0</div>
-        <div class="stat-label" data-i18n="stat2">Trusted Business Clients</div>
-      </div>
-      <div class="stat-item animate-count-up">
-        <div class="stat-number stat-number3" data-count="98">0</div>
-        <div class="stat-label" data-i18n="stat3">Compliance Accuracy Rate</div>
-      </div>
-      <div class="stat-item animate-count-up">
-        <div class="stat-number">24/7</div>
-        <div class="stat-label" data-i18n="stat4">Dedicated Client Support</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section : 6 -->
-<section class="testimonials-section">
-  <h2 class="animate-fade-up heading-title" data-i18n="section6_title">Client Experiences</h2>
-  <div class="testimonials-wrapper">
-    <div class="left-content">
-      <img src="https://images.pexels.com/photos/7734590/pexels-photo-7734590.jpeg" alt="Client Testimonials">
-    </div>
-    <div class="right-content">
-      <p data-i18n="section6_desc">Our dedication to accuracy, transparency, and efficiency is reflected in the experiences of our clients who have strengthened their businesses with our finance and accounting services.</p>
-      <div class="testimonial">
-        <blockquote data-i18n="testimonial1">
-          "Stackly’s accounting services streamlined our entire financial process, from bookkeeping to tax compliance. We now save hours each week on reporting, and the accuracy has given us full confidence in our financial records."
-        </blockquote>
-        <cite data-i18n="testimonial1_cite">— Anita Sharma, CFO, GreenLeaf Enterprises</cite>
-      </div>
-      <div class="testimonial">
-        <blockquote data-i18n="testimonial2">
-          "The financial planning and advisory team at Stackly helped us optimize our cash flow and reduce unnecessary expenses by 25%. Their insights have been invaluable in guiding our long-term growth strategy."
-        </blockquote>
-        <cite data-i18n="testimonial2_cite">— Rajesh Mehta, Managing Director, Horizon Traders</cite>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section : 7 -->
-<section class="cta-section section-padding">
-  <div class="container">
-    <div class="cta-content animate-fade-up">
-      <h2 data-i18n="section7_title">Ready to Transform Your Business with Finance & Accounting Excellence</h2>
-      <p class="text-justify" data-i18n="section7_desc">
-        Join the growing number of businesses that have streamlined their financial operations with our trusted accounting and advisory services. Our team of experts is ready to help you manage compliance, optimize cash flow, reduce costs, and provide accurate insights that will strengthen your business in today’s competitive market.
-      </p>
-      <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-primary" data-i18n="section7_btn1">Start Your AI Journey</a>
-        <a href="services.html" class="btn btn-secondary" data-i18n="section7_btn2">Learn More</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section : 8 -->
-<section class="contact-banner section-padding">
-  <div class="container">
-    <div class="contact-banner-content">
-      <h2 data-i18n="section8_title">Get In Touch With Our Finance Experts</h2>
-      <p data-i18n="section8_desc">Ready to simplify and optimize your financial operations</p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="section8_btn">Contact Us</a>
-    </div>
-  </div>
-</section>
-
-
-<script>
-// Translation dictionary
-const translations = {
-  en: {
-    "home": "Home",
-    "home1": "Home 1",
-    "home2": "Home 2",
-    "about": "About",
-    "services": "Services",
-    "allServices": "All Services",
-    "service_1": "Bookkeeping Services",
-    "service_2": "Tax Preparation & Filing",
-    "service_3": "Financial Reporting",
-    "service_4": "Payroll Management",
-    "service_5": "Budgeting & Forecasting",
-    "service_6": "Audit & Compliance",
-    "service6": "Legal & Documentation Support",
-    "blog": "Blog",
-    "allPosts": "All Posts",
-    "blog_1": "Smart Tax Planning",
-    "blog_2": "Financial Growth Strategies",
-    "blog_3": "Modern Accounting Trends",
-    "contact": "Contact",
-    "logout": "Logout",
-
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
-    "footer_home": "Home",
-    "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
-    "footer_services": "Services",
-    "footer_blog": "Blog",
-    "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Bookkeeping Services",
-    "footer_service2": "Tax Preparation & Filing",
-    "footer_service3": "Financial Reporting",
-    "footer_service4": "Payroll Management",
-    "footer_service5": "Budgeting & Forecasting",
-    "footer_service6": "Audit & Compliance",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
-    "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-
-    "hero_title": "Simplifying Finance. Empowering Businesses.",
-    "hero_paragraph": "From bookkeeping to financial strategy, we’ve got you covered.",
-    "hero_btn": "Explore services",
-
-    "section2_title": "Smart Accounting Solutions for Smarter Business Growth",
-    "section2_p1": "With our smart accounting approach, you gain more than just organized numbers; you gain the power to make informed, strategic decisions. From optimizing cash flow to identifying growth opportunities, our services are designed to unlock your business’s true potential. We simplify the complexities of finance so you can focus on what matters most — scaling your business with confidence.",
-    "section2_p2": "In today’s fast-paced business world, smart financial management is the foundation of sustainable growth. Our accounting solutions go beyond traditional bookkeeping — we provide real-time insights, streamlined processes, and tailored strategies that help businesses stay ahead.By combining expert knowledge with innovative tools, we ensure accuracy, compliance, and clarity at every step of your financial journey.",
-    "section2_btn1": "Explore Services",
-    "section2_btn2": "Get Started",
-
-    "section3_title": "Why Choose Stackly for Finance & Accounting Services",
-    "section3_desc": "Our finance and accounting solutions are built to simplify complex financial processes, enhance accuracy, and drive smarter decision-making. With a focus on efficiency, compliance, and transparency, we help businesses manage their financial operations seamlessly while ensuring long-term growth and stability.",
-    "feature1_title": "Advanced Financial Management",
-    "feature1_desc": "Utilize cutting-edge tools and strategies that streamline bookkeeping, payroll, tax management, and financial reporting. Our solutions are designed to reduce errors, improve compliance, and give you greater control over your business finances.",
-    "feature2_title": "Data-Driven Financial Insights",
-    "feature2_desc": "Turn financial data into actionable strategies with our analytics-driven approach. We identify spending patterns, forecast financial trends, and provide tailored recommendations that help you optimize costs, maximize profits, and plan for sustainable growth.",
-    "feature3_title": "Seamless System Integration",
-    "feature3_desc": "Our services integrate smoothly with your existing financial systems and ERP solutions, ensuring minimal disruption during implementation. This allows your business to maintain continuity while enhancing overall efficiency and accuracy in day-to-day financial operations.",
-
-    "section4_title": "Comprehensive Finance & Accounting Services Portfolio",
-    "section4_desc": "Our wide range of financial services covers every aspect of business finance, from strategic planning and compliance to day-to-day accounting and reporting. We collaborate with clients to understand their unique financial requirements and deliver tailored solutions that ensure accuracy, efficiency, and long-term business success.",
-    "service1": "Financial Planning & Advisory",
-    "service2": "Bookkeeping & Accounting Services",
-    "service3": "Payroll Management",
-    "service4": "Tax Planning & Compliance",
-    "service5": "Financial Analysis & Reporting",
-    "service6": "Risk Management & Compliance",
-    "section4_btn": "View All Services",
-
-    "stat1": "Financial Reports Delivered",
-    "stat2": "Trusted Business Clients",
-    "stat3": "Compliance Accuracy Rate",
-    "stat4": "Dedicated Client Support",
-
-    "section6_title": "Client Experiences",
-    "section6_desc": "Our dedication to accuracy, transparency, and efficiency is reflected in the experiences of our clients who have strengthened their businesses with our finance and accounting services.",
-    "testimonial1": "Stackly’s accounting services streamlined our entire financial process, from bookkeeping to tax compliance. We now save hours each week on reporting, and the accuracy has given us full confidence in our financial records.",
-    "testimonial1_cite": "— Anita Sharma, CFO, GreenLeaf Enterprises",
-    "testimonial2": "The financial planning and advisory team at Stackly helped us optimize our cash flow and reduce unnecessary expenses by 25%. Their insights have been invaluable in guiding our long-term growth strategy.",
-    "testimonial2_cite": "— Rajesh Mehta, Managing Director, Horizon Traders",
-
-    "section7_title": "Ready to Transform Your Business with Finance & Accounting Excellence",
-    "section7_desc": "Join the growing number of businesses that have streamlined their financial operations with our trusted accounting and advisory services. Our team of experts is ready to help you manage compliance, optimize cash flow, reduce costs, and provide accurate insights that will strengthen your business in today’s competitive market.",
-    "section7_btn1": "Start Your AI Journey",
-    "section7_btn2": "Learn More",
-
-    "section8_title": "Get In Touch With Our Finance Experts",
-    "section8_desc": "Ready to simplify and optimize your financial operations",
-    "section8_btn": "Contact Us",
-              
-  },
-  ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "معلومات عنا",
-    "services": "الخدمات",
-    "allServices": "جميع الخدمات",
-    "service_1": "خدمات مسك الدفاتر",
-    "service_2": "إعداد وتقديم الضرائب",
-    "service_3": "التقارير المالية",
-    "service_4": "إدارة الرواتب",
-    "service_5": "إعداد الميزانية والتوقعات",
-    "service_6": "التدقيق والامتثال",
-    "service6": "الدعم القانوني والوثائق",
-    "blog": "المدونة",
-    "allPosts": "جميع المقالات",
-    "blog_1": "التخطيط الضريبي الذكي",
-    "blog_2": "استراتيجيات النمو المالي",
-    "blog_3": "اتجاهات المحاسبة الحديثة",
-    "contact": "اتصل بنا",
-    "logout": "تسجيل الخروج",
-
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
-    "footer_home": "الرئيسية",
-    "footer_home2": "الرئيسية 2",
-    "footer_aboutUs": "معلومات عنا",
-    "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
-    "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "خدمات مسك الدفاتر",
-    "footer_service2": "إعداد وتقديم الضرائب",
-    "footer_service3": "التقارير المالية",
-    "footer_service4": "إدارة الرواتب",
-    "footer_service5": "إعداد الميزانية والتوقعات",
-    "footer_service6": "التدقيق والامتثال",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
-    "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 شارع ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
-
-     "hero_title": "تبسيط التمويل. تمكين الأعمال.",
-    "hero_paragraph": "من مسك الدفاتر إلى الاستراتيجية المالية، نحن نغطي كل شيء.",
-    "hero_btn": "استكشاف الخدمات",
-
-    "section2_title": "حلول محاسبية ذكية لنمو أعمال أذكى",
-    "section2_p1": "من خلال نهجنا الذكي في المحاسبة، تحصل على أكثر من مجرد أرقام منظمة؛ بل تحصل على القوة لاتخاذ قرارات استراتيجية مستنيرة. من تحسين التدفق النقدي إلى تحديد فرص النمو، تم تصميم خدماتنا لإطلاق الإمكانات الحقيقية لعملك. نحن نبسط تعقيدات التمويل حتى تتمكن من التركيز على ما يهم أكثر — توسيع أعمالك بثقة.",
-    "section2_p2": "في عالم الأعمال السريع اليوم، يعد الإدارة المالية الذكية أساس النمو المستدام. تتجاوز حلولنا المحاسبية مسك الدفاتر التقليدي — حيث نوفر رؤى في الوقت الفعلي، وعمليات مبسطة، واستراتيجيات مخصصة تساعد الشركات على البقاء في المقدمة. من خلال الجمع بين المعرفة المتخصصة والأدوات المبتكرة، نضمن الدقة والامتثال والوضوح في كل خطوة من رحلتك المالية.",
-    "section2_btn1": "استكشاف الخدمات",
-    "section2_btn2": "ابدأ الآن",
-
-    "section3_title": "لماذا تختار Stackly لخدمات التمويل والمحاسبة",
-    "section3_desc": "تم تصميم حلولنا المالية والمحاسبية لتبسيط العمليات المالية المعقدة، وتعزيز الدقة، ودفع اتخاذ القرارات الأكثر ذكاءً. مع التركيز على الكفاءة والامتثال والشفافية، نساعد الشركات على إدارة عملياتها المالية بسلاسة مع ضمان النمو والاستقرار على المدى الطويل.",
-    "feature1_title": "إدارة مالية متقدمة",
-    "feature1_desc": "استخدم أدوات واستراتيجيات متطورة تعمل على تبسيط مسك الدفاتر، وإدارة الرواتب، وإدارة الضرائب، والتقارير المالية. تم تصميم حلولنا لتقليل الأخطاء وتحسين الامتثال ومنحك سيطرة أكبر على الشؤون المالية لعملك.",
-    "feature2_title": "رؤى مالية تعتمد على البيانات",
-    "feature2_desc": "حوّل البيانات المالية إلى استراتيجيات قابلة للتنفيذ باستخدام نهجنا القائم على التحليلات. نحدد أنماط الإنفاق، ونتوقع الاتجاهات المالية، ونوفر توصيات مخصصة تساعدك على تحسين التكاليف، وتعظيم الأرباح، والتخطيط للنمو المستدام.",
-    "feature3_title": "تكامل سلس للأنظمة",
-    "feature3_desc": "تندمج خدماتنا بسلاسة مع أنظمتك المالية الحالية وحلول ERP، مما يضمن الحد الأدنى من الانقطاع أثناء التنفيذ. يتيح ذلك لشركتك الحفاظ على الاستمرارية مع تحسين الكفاءة والدقة العامة في العمليات المالية اليومية.",
-
-    "section4_title": "محفظة شاملة لخدمات التمويل والمحاسبة",
-    "section4_desc": "يغطي نطاقنا الواسع من الخدمات المالية كل جانب من جوانب تمويل الأعمال، من التخطيط الاستراتيجي والامتثال إلى المحاسبة اليومية وإعداد التقارير. نتعاون مع العملاء لفهم متطلباتهم المالية الفريدة وتقديم حلول مخصصة تضمن الدقة والكفاءة ونجاح الأعمال على المدى الطويل.",
-    "service1": "التخطيط المالي والاستشارات",
-    "service2": "خدمات مسك الدفاتر والمحاسبة",
-    "service3": "إدارة الرواتب",
-    "service4": "التخطيط الضريبي والامتثال",
-    "service5": "التحليل المالي والتقارير",
-    "service6": "إدارة المخاطر والامتثال",
-    "section4_btn": "عرض جميع الخدمات",
-
-    "stat1": "التقارير المالية المقدمة",
-    "stat2": "عملاء أعمال موثوقون",
-    "stat3": "معدل دقة الامتثال",
-    "stat4": "دعم العملاء على مدار الساعة",
-
-    "section6_title": "تجارب العملاء",
-    "section6_desc": "ينعكس التزامنا بالدقة والشفافية والكفاءة في تجارب عملائنا الذين عززوا أعمالهم من خلال خدماتنا المالية والمحاسبية.",
-    "testimonial1": "قامت خدمات المحاسبة في Stackly بتبسيط عملية التمويل بأكملها لدينا، من مسك الدفاتر إلى الامتثال الضريبي. نوفر الآن ساعات عديدة كل أسبوع في التقارير، وقد منحتنا الدقة ثقة كاملة في سجلاتنا المالية.",
-    "testimonial1_cite": "— أنيتا شارما، المديرة المالية، GreenLeaf Enterprises",
-    "testimonial2": "ساعدنا فريق التخطيط المالي والاستشارات في Stackly على تحسين التدفق النقدي وتقليل النفقات غير الضرورية بنسبة 25%. كانت رؤاهم ذات قيمة كبيرة في توجيه استراتيجيتنا للنمو على المدى الطويل.",
-    "testimonial2_cite": "— راجيش ميهتا، المدير العام، Horizon Traders",
-
-    "section7_title": "جاهز لتحويل عملك من خلال التميز في التمويل والمحاسبة",
-    "section7_desc": "انضم إلى العدد المتزايد من الشركات التي قامت بتبسيط عملياتها المالية من خلال خدماتنا المحاسبية والاستشارية الموثوقة. فريق خبرائنا جاهز لمساعدتك في إدارة الامتثال، وتحسين التدفق النقدي، وتقليل التكاليف، وتوفير رؤى دقيقة ستعزز عملك في السوق التنافسية اليوم.",
-    "section7_btn1": "ابدأ رحلتك مع الذكاء الاصطناعي",
-    "section7_btn2": "اعرف المزيد",
-
-    "section8_title": "تواصل مع خبرائنا الماليين",
-    "section8_desc": "جاهز لتبسيط وتحسين عملياتك المالية",
-    "section8_btn": "اتصل بنا",
-  
-
-
-     },
-  he: {
-   "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
-    "about": "אודות",
-    "services": "שירותים",
-    "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
-    "blog": "בלוג",
-    "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
-    "contact": "צור קשר",
-    "logout": "התנתק",
-
-    "footer_about": "ספקית מובילה של פתרונות בינה מלאכותית, המסייעת לעסקים לעבור שינוי באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
-    "footer_home": "בית",
-    "footer_home2": "בית 2",
-    "footer_aboutUs": "אודות",
-    "footer_services": "שירותים",
-    "footer_blog": "בלוג",
-    "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "שירותי הנהלת חשבונות",
-    "footer_service2": "הכנת והגשת מסים",
-    "footer_service3": "דוחות כספיים",
-    "footer_service4": "ניהול שכר",
-    "footer_service5": "תכנון תקציב ותחזיות",
-    "footer_service6": "ביקורת וציות",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
-    "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 דרך חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
- 
-     "hero_title": "פישוט הפיננסים. העצמת עסקים.",
-    "hero_paragraph": "מהנהלת חשבונות ועד אסטרטגיה פיננסית – אנחנו מכסים הכל.",
-    "hero_btn": "גלה שירותים",
-
-    "section2_title": "פתרונות חשבונאות חכמים לצמיחה עסקית חכמה יותר",
-    "section2_p1": "עם הגישה החכמה שלנו לחשבונאות, אתה מקבל יותר ממספרים מסודרים; אתה מקבל את הכוח לקבל החלטות אסטרטגיות מבוססות. מהאצת תזרים המזומנים ועד זיהוי הזדמנויות צמיחה, השירותים שלנו נועדו לשחרר את הפוטנציאל האמיתי של העסק שלך. אנו מפשטים את המורכבויות הפיננסיות כך שתוכל להתמקד במה שחשוב ביותר — הגדלת העסק שלך בביטחון.",
-    "section2_p2": "בעולם העסקי המהיר של היום, ניהול פיננסי חכם הוא הבסיס לצמיחה בת קיימא. פתרונות החשבונאות שלנו חורגים מהנהלת חשבונות מסורתית — אנו מספקים תובנות בזמן אמת, תהליכים פשוטים ואסטרטגיות מותאמות אישית שעוזרות לעסקים להישאר קדימה. בשילוב ידע מקצועי עם כלים חדשניים, אנו מבטיחים דיוק, עמידה בתקנות ובהירות בכל שלב במסע הפיננסי שלך.",
-    "section2_btn1": "גלה שירותים",
-    "section2_btn2": "התחל עכשיו",
-
-    "section3_title": "למה לבחור ב-Stackly לשירותי כספים וחשבונאות",
-    "section3_desc": "הפתרונות שלנו נבנו כדי לפשט תהליכים פיננסיים מורכבים, לשפר דיוק ולקדם קבלת החלטות חכמה יותר. עם דגש על יעילות, עמידה ו שקיפות, אנו עוזרים לעסקים לנהל את פעילותם הפיננסית בצורה חלקה תוך הבטחת צמיחה ויציבות לטווח ארוך.",
-    "feature1_title": "ניהול פיננסי מתקדם",
-    "feature1_desc": "נצל כלים ואסטרטגיות מתקדמות שמייעלות הנהלת חשבונות, ניהול שכר, ניהול מסים ודיווח כספי. הפתרונות שלנו נועדו להפחית טעויות, לשפר עמידה בתקנות ולתת לך שליטה גדולה יותר על הפיננסים של העסק שלך.",
-    "feature2_title": "תובנות פיננסיות מבוססות נתונים",
-    "feature2_desc": "הפוך נתונים פיננסיים לאסטרטגיות ניתנות ליישום עם הגישה שלנו מבוססת האנליטיקה. אנו מזהים דפוסי הוצאה, חוזים מגמות פיננסיות ומספקים המלצות מותאמות אישית שיעזרו לך לייעל עלויות, למקסם רווחים ולתכנן לצמיחה בת קיימא.",
-    "feature3_title": "שילוב מערכות חלק",
-    "feature3_desc": "השירותים שלנו משתלבים בצורה חלקה עם המערכות הפיננסיות הקיימות שלך ופתרונות ERP, ומבטיחים הפרעה מינימלית במהלך ההטמעה. זה מאפשר לעסק שלך לשמור על רציפות תוך שיפור היעילות והדיוק הכולל בפעילות היומיומית.",
-
-    "section4_title": "תיק שירותי כספים וחשבונאות מקיף",
-    "section4_desc": "מגוון השירותים הפיננסיים הרחב שלנו מכסה כל היבט של כספי העסק, מהתכנון האסטרטגי והעמידה בתקנות ועד הנהלת החשבונות היומיומית ודיווח. אנו משתפים פעולה עם לקוחות כדי להבין את דרישותיהם הייחודיות ולספק פתרונות מותאמים אישית המבטיחים דיוק, יעילות והצלחה עסקית ארוכת טווח.",
-    "service1": "תכנון פיננסי וייעוץ",
-    "service2": "שירותי הנהלת חשבונות וחשבונאות",
-    "service3": "ניהול שכר",
-    "service4": "תכנון מס ועמידה בתקנות",
-    "service5": "ניתוח פיננסי ודיווח",
-    "service6": "ניהול סיכונים ועמידה בתקנות",
-    "section4_btn": "צפה בכל השירותים",
-
-    "stat1": "דוחות פיננסיים שסופקו",
-    "stat2": "לקוחות עסקיים מהימנים",
-    "stat3": "שיעור דיוק בעמידה בתקנות",
-    "stat4": "תמיכת לקוחות 24/7",
-
-    "section6_title": "חוויות לקוחות",
-    "section6_desc": "המחויבות שלנו לדיוק, שקיפות ויעילות משתקפת בחוויות של לקוחותינו שחיזקו את עסקיהם באמצעות שירותי הכספים והחשבונאות שלנו.",
-    "testimonial1": "שירותי החשבונאות של Stackly ייעלו את כל התהליך הפיננסי שלנו, מהנהלת חשבונות ועד עמידה במסים. אנו חוסכים כעת שעות רבות בכל שבוע בדיווח, והדיוק נתן לנו ביטחון מלא ברישומים הפיננסיים שלנו.",
-    "testimonial1_cite": "— אניטה שארמה, סמנכ\"לית כספים, GreenLeaf Enterprises",
-    "testimonial2": "צוות התכנון הפיננסי והייעוץ של Stackly עזר לנו לייעל את תזרים המזומנים ולהפחית הוצאות מיותרות ב-25%. התובנות שלהם היו בעלות ערך רב בהכוונת אסטרטגיית הצמיחה שלנו לטווח הארוך.",
-    "testimonial2_cite": "— ראג'ש מהטה, מנכ\"ל, Horizon Traders",
-
-    "section7_title": "מוכן להפוך את העסק שלך למצוינות פיננסית וחשבונאית",
-    "section7_desc": "הצטרף למספר ההולך וגדל של עסקים שפישטו את פעילותם הפיננסית באמצעות שירותי החשבונאות והייעוץ המהימנים שלנו. צוות המומחים שלנו מוכן לעזור לך לנהל עמידה בתקנות, לייעל תזרים מזומנים, להפחית עלויות ולספק תובנות מדויקות שיחזקו את העסק שלך בשוק התחרותי של היום.",
-    "section7_btn1": "התחל את מסע ה-AI שלך",
-    "section7_btn2": "למד עוד",
-
-    "section8_title": "צור קשר עם המומחים הפיננסיים שלנו",
-    "section8_desc": "מוכן לפשט ולייעל את הפעילות הפיננסית שלך",
-    "section8_btn": "צור קשר",
-   
-  }
-};
-
-// Function to change language
-function changeLanguage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if(translations[lang] && translations[lang][key]) {
-      el.innerText = translations[lang][key];
-    }
-  });
-
-  // Handle RTL for Arabic & Hebrew
-  if(lang === "ar" || lang === "he") {
-    document.documentElement.dir = "rtl";
-  } else {
-    document.documentElement.dir = "ltr";
-  }
-}
-
-// Optional: automatically switch to selected language on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const langSelect = document.getElementById("langSelect");
-  changeLanguage(langSelect.value);
-});
-</script>
-
 
 
 <script>
@@ -758,6 +271,26 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "index.html";
   });
 </script>
+
+<!-- 🔷 Protest home page  -->
+
+  <script>
+    // Protect this page
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+      window.location.href = "index.html"; // ✅ go back to login
+    } else {
+      document.getElementById("userMail").innerText = localStorage.getItem("currentUser");
+    }
+
+    // Logout
+    function logout(){
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html"; // ✅ back to login
+    }
+  </script>
+
+
 
 <style>
   /* Base styles for hamburger icon */
@@ -963,23 +496,500 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 </style>
 
-<!-- 🔷 Protest home page  -->
 
-  <script>
-    // Protect this page
-    if(localStorage.getItem("isLoggedIn") !== "true"){
-      window.location.href = "index.html"; // ✅ go back to login
-    } else {
-      document.getElementById("userMail").innerText = localStorage.getItem("currentUser");
-    }
 
-    // Logout
-    function logout(){
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html"; // ✅ back to login
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="video/site_20_v1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Simplifying Finance. Empowering Businesses.</h1>
+      <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="hero_paragraph">
+        From bookkeeping to financial strategy, we’ve got you covered.
+      </p>
+      <a href="services.html" class="btn custom-btn" data-i18n="hero_btn">Explore services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ai-section">
+  <h1 class="ai-heading" data-i18n="section2_title">Smart Accounting Solutions for Smarter Business Growth</h1>
+  <div class="ai-content">
+    <div class="ai-text">
+      <p data-i18n="section2_p1">
+        With our smart accounting approach, you gain more than just organized numbers; you gain the power to make informed, strategic decisions. From optimizing cash flow to identifying growth opportunities, our services are designed to unlock your business’s true potential. We simplify the complexities of finance so you can focus on what matters most — scaling your business with confidence.
+      </p>
+      <p data-i18n="section2_p2">
+        In today’s fast-paced business world, smart financial management is the foundation of sustainable growth. Our accounting solutions go beyond traditional bookkeeping — we provide real-time insights, streamlined processes, and tailored strategies that help businesses stay ahead.By combining expert knowledge with innovative tools, we ensure accuracy, compliance, and clarity at every step of your financial journey.
+      </p>
+      <div class="ai-buttons">
+        <a href="services.html" class="btn btn-primary" data-i18n="section2_btn1">Explore Services</a>
+        <a href="contact.html" class="btn btn-secondary" data-i18n="section2_btn2">Get Started</a>
+      </div>
+    </div>
+    <div class="ai-image">
+      <img src="https://i.pinimg.com/736x/be/94/a7/be94a73658ed1cdfd754e962d8c7644a.jpg" alt="AI Solutions">
+    </div>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="features-section section-padding">
+  <div class="container">
+    <div class="section-header animate-fade-up">
+      <h2 data-i18n="section3_title">Why Choose Stackly for Finance & Accounting Services</h2>
+      <p class="text-justify" style="font-size: 18px; color: white; text-align: center;" data-i18n="section3_desc">
+        Our finance and accounting solutions are built to simplify complex financial processes, enhance accuracy, and drive smarter decision-making. With a focus on efficiency, compliance, and transparency, we help businesses manage their financial operations seamlessly while ensuring long-term growth and stability.
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card animate-fade-up delay-1">
+        <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+        <h3 data-i18n="feature1_title">Advanced Financial Management</h3>
+        <p class="text-justify" style="font-size: 16px;" data-i18n="feature1_desc">
+          Utilize cutting-edge tools and strategies that streamline bookkeeping, payroll, tax management, and financial reporting. Our solutions are designed to reduce errors, improve compliance, and give you greater control over your business finances.
+        </p>
+      </div>
+      <div class="feature-card animate-fade-up delay-2">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3 data-i18n="feature2_title">Data-Driven Financial Insights</h3>
+        <p class="text-justify" style="font-size: 16px;" data-i18n="feature2_desc">
+          Turn financial data into actionable strategies with our analytics-driven approach. We identify spending patterns, forecast financial trends, and provide tailored recommendations that help you optimize costs, maximize profits, and plan for sustainable growth.
+        </p>
+      </div>
+      <div class="feature-card animate-fade-up delay-3">
+        <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+        <h3 data-i18n="feature3_title">Seamless System Integration</h3>
+        <p class="text-justify" style="font-size: 16px;" data-i18n="feature3_desc">
+          Our services integrate smoothly with your existing financial systems and ERP solutions, ensuring minimal disruption during implementation. This allows your business to maintain continuity while enhancing overall efficiency and accuracy in day-to-day financial operations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="services-overview section-padding">
+  <h2 class="animate-fade-up heading-title" data-i18n="section4_title">Comprehensive Finance & Accounting Services Portfolio</h2>
+  <div class="content-layout">
+    <div class="content-image animate-slide-right">
+      <img src="https://i.pinimg.com/736x/a8/f0/ce/a8f0ce4ecc18d1e31df31ef2b553a29c.jpg" alt="Finance Services">
+    </div>
+    <div class="content-text">
+      <p class="text-justify animate-fade-up delay-1" data-i18n="section4_desc">
+        Our wide range of financial services covers every aspect of business finance, from strategic planning and compliance to day-to-day accounting and reporting. We collaborate with clients to understand their unique financial requirements and deliver tailored solutions that ensure accuracy, efficiency, and long-term business success.
+      </p>
+      <ul class="service-list animate-fade-up delay-2">
+        <li data-i18n="service1"><i class="fas fa-circle"></i> Financial Planning & Advisory</li>
+        <li data-i18n="service2"><i class="fas fa-circle"></i> Bookkeeping & Accounting Services</li>
+        <li data-i18n="service3"><i class="fas fa-circle"></i> Payroll Management</li>
+        <li data-i18n="service4"><i class="fas fa-circle"></i> Tax Planning & Compliance</li>
+        <li data-i18n="service5"><i class="fas fa-circle"></i> Financial Analysis & Reporting</li>
+        <li data-i18n="service6"><i class="fas fa-circle"></i> Risk Management & Compliance</li>
+      </ul>
+      <a href="services.html" class="btn btn-primary animate-fade-up delay-3" data-i18n="section4_btn">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="stats-section section-padding">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item animate-count-up">
+        <div class="stat-number stat-number2" data-count="750">0</div>
+        <div class="stat-label" data-i18n="stat1">Financial Reports Delivered</div>
+      </div>
+      <div class="stat-item animate-count-up">
+        <div class="stat-number stat-number2" data-count="300">0</div>
+        <div class="stat-label" data-i18n="stat2">Trusted Business Clients</div>
+      </div>
+      <div class="stat-item animate-count-up">
+        <div class="stat-number stat-number3" data-count="98">0</div>
+        <div class="stat-label" data-i18n="stat3">Compliance Accuracy Rate</div>
+      </div>
+      <div class="stat-item animate-count-up">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label" data-i18n="stat4">Dedicated Client Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 6 -->
+<section class="testimonials-section">
+  <h2 class="animate-fade-up heading-title" data-i18n="section6_title">Client Experiences</h2>
+  <div class="testimonials-wrapper">
+    <div class="left-content">
+      <img src="https://images.pexels.com/photos/7734590/pexels-photo-7734590.jpeg" alt="Client Testimonials">
+    </div>
+    <div class="right-content">
+      <p data-i18n="section6_desc">Our dedication to accuracy, transparency, and efficiency is reflected in the experiences of our clients who have strengthened their businesses with our finance and accounting services.</p>
+      <div class="testimonial">
+        <blockquote data-i18n="testimonial1">
+          "Stackly’s accounting services streamlined our entire financial process, from bookkeeping to tax compliance. We now save hours each week on reporting, and the accuracy has given us full confidence in our financial records."
+        </blockquote>
+        <cite data-i18n="testimonial1_cite">— Anita Sharma, CFO, GreenLeaf Enterprises</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote data-i18n="testimonial2">
+          "The financial planning and advisory team at Stackly helped us optimize our cash flow and reduce unnecessary expenses by 25%. Their insights have been invaluable in guiding our long-term growth strategy."
+        </blockquote>
+        <cite data-i18n="testimonial2_cite">— Rajesh Mehta, Managing Director, Horizon Traders</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="cta-section section-padding">
+  <div class="container">
+    <div class="cta-content animate-fade-up">
+      <h2 data-i18n="section7_title">Ready to Transform Your Business with Finance & Accounting Excellence</h2>
+      <p class="text-justify" data-i18n="section7_desc">
+        Join the growing number of businesses that have streamlined their financial operations with our trusted accounting and advisory services. Our team of experts is ready to help you manage compliance, optimize cash flow, reduce costs, and provide accurate insights that will strengthen your business in today’s competitive market.
+      </p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary" data-i18n="section7_btn1">Start Your AI Journey</a>
+        <a href="services.html" class="btn btn-secondary" data-i18n="section7_btn2">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 8 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="section8_title">Get In Touch With Our Finance Experts</h2>
+      <p data-i18n="section8_desc">Ready to simplify and optimize your financial operations</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="section8_btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+// Translation dictionary
+const translations = {
+  en: {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Bookkeeping Services",
+    "service_2": "Tax Preparation & Filing",
+    "service_3": "Financial Reporting",
+    "service_4": "Payroll Management",
+    "service_5": "Budgeting & Forecasting",
+    "service_6": "Audit & Compliance",
+    "service6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Tax Planning",
+    "blog_2": "Financial Growth Strategies",
+    "blog_3": "Modern Accounting Trends",
+    "contact": "Contact",
+    "logout": "Logout",
+
+    "footer_about": "Trusted financial services firm, providing expert guidance in wealth management, investments, tax planning, and corporate solutions to help clients achieve sustainable growth and financial security.",
+    "footer_quicklinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutus": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_services_title": "Services",
+    "footer_service1": "Bookkeeping Services",
+    "footer_service2": "Tax Preparation & Filing",
+    "footer_service3": "Financial Reporting",
+    "footer_service4": "Payroll Management",
+    "footer_service5": "Budgeting & Forecasting",
+    "footer_service6": "Audit & Compliance",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+
+
+    "hero_title": "Simplifying Finance. Empowering Businesses.",
+    "hero_paragraph": "From bookkeeping to financial strategy, we’ve got you covered.",
+    "hero_btn": "Explore services",
+
+    "section2_title": "Smart Accounting Solutions for Smarter Business Growth",
+    "section2_p1": "With our smart accounting approach, you gain more than just organized numbers; you gain the power to make informed, strategic decisions. From optimizing cash flow to identifying growth opportunities, our services are designed to unlock your business’s true potential. We simplify the complexities of finance so you can focus on what matters most — scaling your business with confidence.",
+    "section2_p2": "In today’s fast-paced business world, smart financial management is the foundation of sustainable growth. Our accounting solutions go beyond traditional bookkeeping — we provide real-time insights, streamlined processes, and tailored strategies that help businesses stay ahead.By combining expert knowledge with innovative tools, we ensure accuracy, compliance, and clarity at every step of your financial journey.",
+    "section2_btn1": "Explore Services",
+    "section2_btn2": "Get Started",
+
+    "section3_title": "Why Choose Stackly for Finance & Accounting Services",
+    "section3_desc": "Our finance and accounting solutions are built to simplify complex financial processes, enhance accuracy, and drive smarter decision-making. With a focus on efficiency, compliance, and transparency, we help businesses manage their financial operations seamlessly while ensuring long-term growth and stability.",
+    "feature1_title": "Advanced Financial Management",
+    "feature1_desc": "Utilize cutting-edge tools and strategies that streamline bookkeeping, payroll, tax management, and financial reporting. Our solutions are designed to reduce errors, improve compliance, and give you greater control over your business finances.",
+    "feature2_title": "Data-Driven Financial Insights",
+    "feature2_desc": "Turn financial data into actionable strategies with our analytics-driven approach. We identify spending patterns, forecast financial trends, and provide tailored recommendations that help you optimize costs, maximize profits, and plan for sustainable growth.",
+    "feature3_title": "Seamless System Integration",
+    "feature3_desc": "Our services integrate smoothly with your existing financial systems and ERP solutions, ensuring minimal disruption during implementation. This allows your business to maintain continuity while enhancing overall efficiency and accuracy in day-to-day financial operations.",
+
+    "section4_title": "Comprehensive Finance & Accounting Services Portfolio",
+    "section4_desc": "Our wide range of financial services covers every aspect of business finance, from strategic planning and compliance to day-to-day accounting and reporting. We collaborate with clients to understand their unique financial requirements and deliver tailored solutions that ensure accuracy, efficiency, and long-term business success.",
+    "service1": "Financial Planning & Advisory",
+    "service2": "Bookkeeping & Accounting Services",
+    "service3": "Payroll Management",
+    "service4": "Tax Planning & Compliance",
+    "service5": "Financial Analysis & Reporting",
+    "service6": "Risk Management & Compliance",
+    "section4_btn": "View All Services",
+
+    "stat1": "Financial Reports Delivered",
+    "stat2": "Trusted Business Clients",
+    "stat3": "Compliance Accuracy Rate",
+    "stat4": "Dedicated Client Support",
+
+    "section6_title": "Client Experiences",
+    "section6_desc": "Our dedication to accuracy, transparency, and efficiency is reflected in the experiences of our clients who have strengthened their businesses with our finance and accounting services.",
+    "testimonial1": "Stackly’s accounting services streamlined our entire financial process, from bookkeeping to tax compliance. We now save hours each week on reporting, and the accuracy has given us full confidence in our financial records.",
+    "testimonial1_cite": "— Anita Sharma, CFO, GreenLeaf Enterprises",
+    "testimonial2": "The financial planning and advisory team at Stackly helped us optimize our cash flow and reduce unnecessary expenses by 25%. Their insights have been invaluable in guiding our long-term growth strategy.",
+    "testimonial2_cite": "— Rajesh Mehta, Managing Director, Horizon Traders",
+
+    "section7_title": "Ready to Transform Your Business with Finance & Accounting Excellence",
+    "section7_desc": "Join the growing number of businesses that have streamlined their financial operations with our trusted accounting and advisory services. Our team of experts is ready to help you manage compliance, optimize cash flow, reduce costs, and provide accurate insights that will strengthen your business in today’s competitive market.",
+    "section7_btn1": "Start Your AI Journey",
+    "section7_btn2": "Learn More",
+
+    "section8_title": "Get In Touch With Our Finance Experts",
+    "section8_desc": "Ready to simplify and optimize your financial operations",
+    "section8_btn": "Contact Us",
+              
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "خدمات مسك الدفاتر",
+    "service_2": "إعداد وتقديم الضرائب",
+    "service_3": "التقارير المالية",
+    "service_4": "إدارة الرواتب",
+    "service_5": "إعداد الميزانية والتوقعات",
+    "service_6": "التدقيق والامتثال",
+    "service6": "الدعم القانوني والوثائق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "التخطيط الضريبي الذكي",
+    "blog_2": "استراتيجيات النمو المالي",
+    "blog_3": "اتجاهات المحاسبة الحديثة",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل الخروج",
+
+    "footer_about": "شركة خدمات مالية موثوقة تقدم إرشادات خبراء في إدارة الثروات، الاستثمارات، التخطيط الضريبي، والحلول المؤسسية لمساعدة العملاء على تحقيق نمو مستدام وأمان مالي.",
+    "footer_quicklinks": "روابط سريعة",
+    "footer_home": "الصفحة الرئيسية",
+    "footer_home2": "الصفحة الرئيسية 2",
+    "footer_aboutus": "معلومات عنا",
+    "footer_services": "الخدمات",
+    "footer_blog": "مدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "خدمات مسك الدفاتر",
+    "footer_service2": "إعداد وتقديم الضرائب",
+    "footer_service3": "التقارير المالية",
+    "footer_service4": "إدارة الرواتب",
+    "footer_service5": "إعداد الميزانية والتنبؤ",
+    "footer_service6": "التدقيق والامتثال",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 ستاكلي. جميع الحقوق محفوظة.",
+
+
+     "hero_title": "تبسيط التمويل. تمكين الأعمال.",
+    "hero_paragraph": "من مسك الدفاتر إلى الاستراتيجية المالية، نحن نغطي كل شيء.",
+    "hero_btn": "استكشاف الخدمات",
+
+    "section2_title": "حلول محاسبية ذكية لنمو أعمال أذكى",
+    "section2_p1": "من خلال نهجنا الذكي في المحاسبة، تحصل على أكثر من مجرد أرقام منظمة؛ بل تحصل على القوة لاتخاذ قرارات استراتيجية مستنيرة. من تحسين التدفق النقدي إلى تحديد فرص النمو، تم تصميم خدماتنا لإطلاق الإمكانات الحقيقية لعملك. نحن نبسط تعقيدات التمويل حتى تتمكن من التركيز على ما يهم أكثر — توسيع أعمالك بثقة.",
+    "section2_p2": "في عالم الأعمال السريع اليوم، يعد الإدارة المالية الذكية أساس النمو المستدام. تتجاوز حلولنا المحاسبية مسك الدفاتر التقليدي — حيث نوفر رؤى في الوقت الفعلي، وعمليات مبسطة، واستراتيجيات مخصصة تساعد الشركات على البقاء في المقدمة. من خلال الجمع بين المعرفة المتخصصة والأدوات المبتكرة، نضمن الدقة والامتثال والوضوح في كل خطوة من رحلتك المالية.",
+    "section2_btn1": "استكشاف الخدمات",
+    "section2_btn2": "ابدأ الآن",
+
+    "section3_title": "لماذا تختار Stackly لخدمات التمويل والمحاسبة",
+    "section3_desc": "تم تصميم حلولنا المالية والمحاسبية لتبسيط العمليات المالية المعقدة، وتعزيز الدقة، ودفع اتخاذ القرارات الأكثر ذكاءً. مع التركيز على الكفاءة والامتثال والشفافية، نساعد الشركات على إدارة عملياتها المالية بسلاسة مع ضمان النمو والاستقرار على المدى الطويل.",
+    "feature1_title": "إدارة مالية متقدمة",
+    "feature1_desc": "استخدم أدوات واستراتيجيات متطورة تعمل على تبسيط مسك الدفاتر، وإدارة الرواتب، وإدارة الضرائب، والتقارير المالية. تم تصميم حلولنا لتقليل الأخطاء وتحسين الامتثال ومنحك سيطرة أكبر على الشؤون المالية لعملك.",
+    "feature2_title": "رؤى مالية تعتمد على البيانات",
+    "feature2_desc": "حوّل البيانات المالية إلى استراتيجيات قابلة للتنفيذ باستخدام نهجنا القائم على التحليلات. نحدد أنماط الإنفاق، ونتوقع الاتجاهات المالية، ونوفر توصيات مخصصة تساعدك على تحسين التكاليف، وتعظيم الأرباح، والتخطيط للنمو المستدام.",
+    "feature3_title": "تكامل سلس للأنظمة",
+    "feature3_desc": "تندمج خدماتنا بسلاسة مع أنظمتك المالية الحالية وحلول ERP، مما يضمن الحد الأدنى من الانقطاع أثناء التنفيذ. يتيح ذلك لشركتك الحفاظ على الاستمرارية مع تحسين الكفاءة والدقة العامة في العمليات المالية اليومية.",
+
+    "section4_title": "محفظة شاملة لخدمات التمويل والمحاسبة",
+    "section4_desc": "يغطي نطاقنا الواسع من الخدمات المالية كل جانب من جوانب تمويل الأعمال، من التخطيط الاستراتيجي والامتثال إلى المحاسبة اليومية وإعداد التقارير. نتعاون مع العملاء لفهم متطلباتهم المالية الفريدة وتقديم حلول مخصصة تضمن الدقة والكفاءة ونجاح الأعمال على المدى الطويل.",
+    "service1": "التخطيط المالي والاستشارات",
+    "service2": "خدمات مسك الدفاتر والمحاسبة",
+    "service3": "إدارة الرواتب",
+    "service4": "التخطيط الضريبي والامتثال",
+    "service5": "التحليل المالي والتقارير",
+    "service6": "إدارة المخاطر والامتثال",
+    "section4_btn": "عرض جميع الخدمات",
+
+    "stat1": "التقارير المالية المقدمة",
+    "stat2": "عملاء أعمال موثوقون",
+    "stat3": "معدل دقة الامتثال",
+    "stat4": "دعم العملاء على مدار الساعة",
+
+    "section6_title": "تجارب العملاء",
+    "section6_desc": "ينعكس التزامنا بالدقة والشفافية والكفاءة في تجارب عملائنا الذين عززوا أعمالهم من خلال خدماتنا المالية والمحاسبية.",
+    "testimonial1": "قامت خدمات المحاسبة في Stackly بتبسيط عملية التمويل بأكملها لدينا، من مسك الدفاتر إلى الامتثال الضريبي. نوفر الآن ساعات عديدة كل أسبوع في التقارير، وقد منحتنا الدقة ثقة كاملة في سجلاتنا المالية.",
+    "testimonial1_cite": "— أنيتا شارما، المديرة المالية، GreenLeaf Enterprises",
+    "testimonial2": "ساعدنا فريق التخطيط المالي والاستشارات في Stackly على تحسين التدفق النقدي وتقليل النفقات غير الضرورية بنسبة 25%. كانت رؤاهم ذات قيمة كبيرة في توجيه استراتيجيتنا للنمو على المدى الطويل.",
+    "testimonial2_cite": "— راجيش ميهتا، المدير العام، Horizon Traders",
+
+    "section7_title": "جاهز لتحويل عملك من خلال التميز في التمويل والمحاسبة",
+    "section7_desc": "انضم إلى العدد المتزايد من الشركات التي قامت بتبسيط عملياتها المالية من خلال خدماتنا المحاسبية والاستشارية الموثوقة. فريق خبرائنا جاهز لمساعدتك في إدارة الامتثال، وتحسين التدفق النقدي، وتقليل التكاليف، وتوفير رؤى دقيقة ستعزز عملك في السوق التنافسية اليوم.",
+    "section7_btn1": "ابدأ رحلتك مع الذكاء الاصطناعي",
+    "section7_btn2": "اعرف المزيد",
+
+    "section8_title": "تواصل مع خبرائنا الماليين",
+    "section8_desc": "جاهز لتبسيط وتحسين عملياتك المالية",
+    "section8_btn": "اتصل بنا",
+    
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+   "footer_about": "חברת שירותים פיננסיים אמינה המספקת ייעוץ מומחים בניהול עושר, השקעות, תכנון מס ופתרונות עסקיים כדי לעזור ללקוחות להשיג צמיחה יציבה וביטחון פיננסי.",
+    "footer_quicklinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutus": "עלינו",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_services_title": "שירותים",
+    "footer_service1": "שירותי הנהלת חשבונות",
+    "footer_service2": "הכנת והגשת מס",
+    "footer_service3": "דיווח כספי",
+    "footer_service4": "ניהול שכר",
+    "footer_service5": "תכנון תקציב וחיזוי",
+    "footer_service6": "ביקורת וציות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 סטאקלי. כל הזכויות שמורות.",
+
+ 
+     "hero_title": "פישוט הפיננסים. העצמת עסקים.",
+    "hero_paragraph": "מהנהלת חשבונות ועד אסטרטגיה פיננסית – אנחנו מכסים הכל.",
+    "hero_btn": "גלה שירותים",
+
+    "section2_title": "פתרונות חשבונאות חכמים לצמיחה עסקית חכמה יותר",
+    "section2_p1": "עם הגישה החכמה שלנו לחשבונאות, אתה מקבל יותר ממספרים מסודרים; אתה מקבל את הכוח לקבל החלטות אסטרטגיות מבוססות. מהאצת תזרים המזומנים ועד זיהוי הזדמנויות צמיחה, השירותים שלנו נועדו לשחרר את הפוטנציאל האמיתי של העסק שלך. אנו מפשטים את המורכבויות הפיננסיות כך שתוכל להתמקד במה שחשוב ביותר — הגדלת העסק שלך בביטחון.",
+    "section2_p2": "בעולם העסקי המהיר של היום, ניהול פיננסי חכם הוא הבסיס לצמיחה בת קיימא. פתרונות החשבונאות שלנו חורגים מהנהלת חשבונות מסורתית — אנו מספקים תובנות בזמן אמת, תהליכים פשוטים ואסטרטגיות מותאמות אישית שעוזרות לעסקים להישאר קדימה. בשילוב ידע מקצועי עם כלים חדשניים, אנו מבטיחים דיוק, עמידה בתקנות ובהירות בכל שלב במסע הפיננסי שלך.",
+    "section2_btn1": "גלה שירותים",
+    "section2_btn2": "התחל עכשיו",
+
+    "section3_title": "למה לבחור ב-Stackly לשירותי כספים וחשבונאות",
+    "section3_desc": "הפתרונות שלנו נבנו כדי לפשט תהליכים פיננסיים מורכבים, לשפר דיוק ולקדם קבלת החלטות חכמה יותר. עם דגש על יעילות, עמידה ו שקיפות, אנו עוזרים לעסקים לנהל את פעילותם הפיננסית בצורה חלקה תוך הבטחת צמיחה ויציבות לטווח ארוך.",
+    "feature1_title": "ניהול פיננסי מתקדם",
+    "feature1_desc": "נצל כלים ואסטרטגיות מתקדמות שמייעלות הנהלת חשבונות, ניהול שכר, ניהול מסים ודיווח כספי. הפתרונות שלנו נועדו להפחית טעויות, לשפר עמידה בתקנות ולתת לך שליטה גדולה יותר על הפיננסים של העסק שלך.",
+    "feature2_title": "תובנות פיננסיות מבוססות נתונים",
+    "feature2_desc": "הפוך נתונים פיננסיים לאסטרטגיות ניתנות ליישום עם הגישה שלנו מבוססת האנליטיקה. אנו מזהים דפוסי הוצאה, חוזים מגמות פיננסיות ומספקים המלצות מותאמות אישית שיעזרו לך לייעל עלויות, למקסם רווחים ולתכנן לצמיחה בת קיימא.",
+    "feature3_title": "שילוב מערכות חלק",
+    "feature3_desc": "השירותים שלנו משתלבים בצורה חלקה עם המערכות הפיננסיות הקיימות שלך ופתרונות ERP, ומבטיחים הפרעה מינימלית במהלך ההטמעה. זה מאפשר לעסק שלך לשמור על רציפות תוך שיפור היעילות והדיוק הכולל בפעילות היומיומית.",
+
+    "section4_title": "תיק שירותי כספים וחשבונאות מקיף",
+    "section4_desc": "מגוון השירותים הפיננסיים הרחב שלנו מכסה כל היבט של כספי העסק, מהתכנון האסטרטגי והעמידה בתקנות ועד הנהלת החשבונות היומיומית ודיווח. אנו משתפים פעולה עם לקוחות כדי להבין את דרישותיהם הייחודיות ולספק פתרונות מותאמים אישית המבטיחים דיוק, יעילות והצלחה עסקית ארוכת טווח.",
+    "service1": "תכנון פיננסי וייעוץ",
+    "service2": "שירותי הנהלת חשבונות וחשבונאות",
+    "service3": "ניהול שכר",
+    "service4": "תכנון מס ועמידה בתקנות",
+    "service5": "ניתוח פיננסי ודיווח",
+    "service6": "ניהול סיכונים ועמידה בתקנות",
+    "section4_btn": "צפה בכל השירותים",
+
+    "stat1": "דוחות פיננסיים שסופקו",
+    "stat2": "לקוחות עסקיים מהימנים",
+    "stat3": "שיעור דיוק בעמידה בתקנות",
+    "stat4": "תמיכת לקוחות 24/7",
+
+    "section6_title": "חוויות לקוחות",
+    "section6_desc": "המחויבות שלנו לדיוק, שקיפות ויעילות משתקפת בחוויות של לקוחותינו שחיזקו את עסקיהם באמצעות שירותי הכספים והחשבונאות שלנו.",
+    "testimonial1": "שירותי החשבונאות של Stackly ייעלו את כל התהליך הפיננסי שלנו, מהנהלת חשבונות ועד עמידה במסים. אנו חוסכים כעת שעות רבות בכל שבוע בדיווח, והדיוק נתן לנו ביטחון מלא ברישומים הפיננסיים שלנו.",
+    "testimonial1_cite": "— אניטה שארמה, סמנכ\"לית כספים, GreenLeaf Enterprises",
+    "testimonial2": "צוות התכנון הפיננסי והייעוץ של Stackly עזר לנו לייעל את תזרים המזומנים ולהפחית הוצאות מיותרות ב-25%. התובנות שלהם היו בעלות ערך רב בהכוונת אסטרטגיית הצמיחה שלנו לטווח הארוך.",
+    "testimonial2_cite": "— ראג'ש מהטה, מנכ\"ל, Horizon Traders",
+
+    "section7_title": "מוכן להפוך את העסק שלך למצוינות פיננסית וחשבונאית",
+    "section7_desc": "הצטרף למספר ההולך וגדל של עסקים שפישטו את פעילותם הפיננסית באמצעות שירותי החשבונאות והייעוץ המהימנים שלנו. צוות המומחים שלנו מוכן לעזור לך לנהל עמידה בתקנות, לייעל תזרים מזומנים, להפחית עלויות ולספק תובנות מדויקות שיחזקו את העסק שלך בשוק התחרותי של היום.",
+    "section7_btn1": "התחל את מסע ה-AI שלך",
+    "section7_btn2": "למד עוד",
+
+    "section8_title": "צור קשר עם המומחים הפיננסיים שלנו",
+    "section8_desc": "מוכן לפשט ולייעל את הפעילות הפיננסית שלך",
+    "section8_btn": "צור קשר",
+   
+  }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
     }
-  </script>
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
 
 <!-- 🔷 HERO SECTION START video_code  -->
 
@@ -1927,17 +1937,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+            Trusted financial services firm, providing expert guidance in wealth management, investments, tax planning, 
+            and corporate solutions to help clients achieve sustainable growth and financial security.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1947,12 +1962,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -1960,8 +1975,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
           <li><a href="service1.html"><span data-i18n="footer_service1">Bookkeeping Services</span></a></li>
           <li><a href="service2.html"><span data-i18n="footer_service2">Tax Preparation & Filing</span></a></li>
@@ -1973,127 +1988,120 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 
-
-
-
-
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
-
-.footer .footer-bottom {
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
+
 
 </div>
     <script src="assets/js/script.js"></script>
